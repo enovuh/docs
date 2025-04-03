@@ -1,170 +1,79 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "$schema": "https://mintlify.com/schema.json",
   "name": "Jugg Docs",
+  "logo": {
+    "dark": "https://jugg.lol/branding/jugg-dark.svg",
+    "light": "https://jugg.lol/branding/jugg-light.svg"
+  },
+  "favicon": "favicon.svg",
   "colors": {
     "primary": "#6D28D9",
     "light": "#A78BFA",
-    "dark": "#4C1D95"
-  },
-  "favicon": "/icons/jugg-favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "**Guides**",
-        "groups": [
-          {
-            "group": "**Get Started**",
-            "pages": [
-              "introduction",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "**Jugg Essentials**",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "**Protection**",
-        "groups": [
-          {
-            "group": "**Security & Anti-Nuke**",
-            "pages": [
-              "protection/security",
-              "protection/anti-nuke",
-              "protection/raid-detection"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "**Settings**",
-        "groups": [
-          {
-            "group": "**Customization & Configuration**",
-            "pages": [
-              "settings/customization",
-              "settings/configuration",
-              "settings/prefix"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "**Misc**",
-        "groups": [
-          {
-            "group": "**General & Fun**",
-            "pages": [
-              "misc/general",
-              "misc/fun",
-              "misc/economy"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "**Utilities**",
-        "groups": [
-          {
-            "group": "**Server Management**",
-            "pages": [
-              "utilities/server-management",
-              "utilities/logging",
-              "utilities/commands"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "**API**",
-        "groups": [
-          {
-            "group": "**Developer Integrations**",
-            "pages": [
-              "api/developer-setup",
-              "api/endpoints",
-              "api/authentication"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "**Issues**",
-        "groups": [
-          {
-            "group": "**Troubleshooting & Support**",
-            "pages": [
-              "issues/bug-reports",
-              "issues/known-issues",
-              "issues/support"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Commands",
-          "href": "https://jugg.lol/commands",
-          "icon": "terminal"
-        },
-        {
-          "anchor": "Dashboard",
-          "href": "https://jugg.lol/dashboard",
-          "icon": "chart-line"
-        },
-        {
-          "anchor": "Support",
-          "href": "https://jugg.lol/support",
-          "icon": "lifebuoy"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://jugg.lol/community",
-          "icon": "users"
-        }
-      ]
+    "dark": "#4C1D95",
+    "anchors": {
+      "from": "#6D28D9",
+      "to": "#A78BFA"
     }
   },
-  "logo": {
-    "light": "/branding/jugg-light.svg",
-    "dark": "/branding/jugg-dark.svg"
+  "modeToggle": {
+    "default": "dark",
+    "isHidden": true
   },
-  "navbar": {
-    "links": [
-      {
-        "label": "Premium",
-        "href": "https://jugg.lol/premium"
-      },
-      {
-        "label": "Support",
-        "href": "https://jugg.lol/support"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://jugg.lol/dashboard"
+  "metadata": {
+    "theme-color": "#6D28D9",
+    "og:site_name": "Jugg"
+  },
+  "topbarLinks": [
+    {
+      "name": "Support Server",
+      "url": "https://jugg.lol/support"
     }
+  ],
+  "topbarCtaButton": {
+    "name": "Home",
+    "url": "https://jugg.lol"
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/jugg",
-      "github": "https://github.com/jugg-bot",
-      "discord": "https://discord.gg/jugg"
+  "redirects": [
+    {
+      "source": "/commands",
+      "destination": "https://jugg.lol/commands"
     },
-    "credits": "© 2025 Jugg - All Rights Reserved"
-  }
-}
+    {
+      "source": "/status",
+      "destination": "https://jugg.lol/status"
+    },
+    {
+      "source": "/invite",
+      "destination": "https://jugg.lol/invite"
+    },
+    {
+      "source": "/discord",
+      "destination": "https://discord.gg/jugg"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Overview",
+      "pages": [
+        "overview/introduction",
+        "overview/features",
+        "overview/installation"
+      ]
+    },
+    {
+      "group": "Protection",
+      "pages": [
+        "protection/antinuke",
+        "protection/antiraid",
+        "protection/security"
+      ]
+    },
+    {
+      "group": "Server Configuration",
+      "pages": [
+        {
+          "group": "Roles",
+          "icon": "users-gear",
+          "pages": [
+            "configuration/roles/vanity",
+            "configuration/roles/bo

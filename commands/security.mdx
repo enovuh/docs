@@ -1,0 +1,47 @@
+---
+title: 'Security Commands'
+description: 'Advanced security features to protect against raids and nukes'
+icon: 'lock'
+---
+
+# Security Commands
+
+Security commands provide advanced protection for your Discord server against raids, nukes, and other malicious activities. These features help server owners maintain control and prevent unauthorized actions.
+
+## Anti-Nuke Protection
+
+Anti-nuke protection prevents unauthorized users from making destructive changes to your server, such as mass-deleting channels or roles.
+
+| Command | Description | Usage | Example |
+| ------- | ----------- | ----- | ------- |
+| `antinuke` | View anti-nuke status | `!antinuke` | `!antinuke` |
+| `antinuke enable` | Enable anti-nuke protection | `!antinuke enable` | `!antinuke enable` |
+| `antinuke disable` | Disable anti-nuke protection | `!antinuke disable` | `!antinuke disable` |
+| `antinuke whitelist add` | Add a user to the anti-nuke whitelist | `!antinuke whitelist add @user` | `!antinuke whitelist add @user` |
+| `antinuke whitelist remove` | Remove a user from the anti-nuke whitelist | `!antinuke whitelist remove @user` | `!antinuke whitelist remove @user` |
+| `antinuke whitelist list` | View the anti-nuke whitelist | `!antinuke whitelist list` | `!antinuke whitelist list` |
+
+## Anti-Raid Protection
+
+Anti-raid protection helps prevent coordinated attacks on your server by detecting and handling sudden influxes of new members or suspicious activity.
+
+| Command | Description | Usage | Example |
+| ------- | ----------- | ----- | ------- |
+| `antiraid` | View anti-raid status | `!antiraid` | `!antiraid` |
+| `antiraid enable` | Enable anti-raid protection | `!antiraid enable` | `!antiraid enable` |
+| `antiraid disable` | Disable anti-raid protection | `!antiraid disable` | `!antiraid disable` |
+| `antiraid threshold` | Set the anti-raid detection threshold | `!antiraid threshold <number>` | `!antiraid threshold 10` |
+| `antiraid action` | Set the action to take when a raid is detected | `!antiraid action <kick/ban/mute>` | `!antiraid action ban` |
+| `antiraid logs` | View recent anti-raid logs | `!antiraid logs` | `!antiraid logs` |
+
+## Security Best Practices
+
+For optimal server security:
+
+1. Only add trusted users to the anti-nuke whitelist
+2. Regularly review your security logs
+3. Set appropriate thresholds for your server size
+4. Combine anti-raid with verification systems for new members
+5. Ensure the bot has the necessary permissions to enforce security measures
+
+These security features are designed to work alongside Discord's built-in security measures and should be configured according to your server's specific needs.

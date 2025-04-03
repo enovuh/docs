@@ -40,9 +40,9 @@
           {
             "group": "**Security & Anti-Nuke**",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images"
+              "protection/security",
+              "protection/anti-nuke",
+              "protection/raid-detection"
             ]
           }
         ]
@@ -51,11 +51,11 @@
         "tab": "**Settings**",
         "groups": [
           {
-            "group": "**Customization & Config**",
+            "group": "**Customization & Configuration**",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "settings/customization",
+              "settings/configuration",
+              "settings/prefix"
             ]
           }
         ]
@@ -66,9 +66,9 @@
           {
             "group": "**General & Fun**",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images"
+              "misc/general",
+              "misc/fun",
+              "misc/economy"
             ]
           }
         ]
@@ -79,9 +79,9 @@
           {
             "group": "**Server Management**",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "utilities/server-management",
+              "utilities/logging",
+              "utilities/commands"
             ]
           }
         ]
@@ -92,9 +92,9 @@
           {
             "group": "**Developer Integrations**",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images"
+              "api/developer-setup",
+              "api/endpoints",
+              "api/authentication"
             ]
           }
         ]
@@ -105,9 +105,9 @@
           {
             "group": "**Troubleshooting & Support**",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "issues/bug-reports",
+              "issues/known-issues",
+              "issues/support"
             ]
           }
         ]

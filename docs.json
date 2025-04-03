@@ -40,10 +40,9 @@
           {
             "group": "**Security & Anti-Nuke**",
             "pages": [
-              "protection/antinuke",
-              "protection/raidmode",
-              "protection/logging",
-              "protection/whitelist"
+              "essentials/markdown",
+              "essentials/code",
+              "essentials/images"
             ]
           }
         ]
@@ -54,10 +53,9 @@
           {
             "group": "**Customization & Config**",
             "pages": [
-              "settings/prefix",
-              "settings/permissions",
-              "settings/customization",
-              "settings/automod"
+              "essentials/settings",
+              "essentials/navigation",
+              "essentials/reusable-snippets"
             ]
           }
         ]
@@ -68,10 +66,9 @@
           {
             "group": "**General & Fun**",
             "pages": [
-              "misc/avatar",
-              "misc/userinfo",
-              "misc/serverinfo",
-              "misc/afk"
+              "essentials/markdown",
+              "essentials/code",
+              "essentials/images"
             ]
           }
         ]
@@ -82,10 +79,9 @@
           {
             "group": "**Server Management**",
             "pages": [
-              "utilities/roles",
-              "utilities/channels",
-              "utilities/purge",
-              "utilities/webhooks"
+              "essentials/settings",
+              "essentials/navigation",
+              "essentials/reusable-snippets"
             ]
           }
         ]
@@ -96,10 +92,9 @@
           {
             "group": "**Developer Integrations**",
             "pages": [
-              "api/webhooks",
-              "api/integrations",
-              "api/endpoints",
-              "api/auth"
+              "essentials/markdown",
+              "essentials/code",
+              "essentials/images"
             ]
           }
         ]
@@ -110,9 +105,9 @@
           {
             "group": "**Troubleshooting & Support**",
             "pages": [
-              "issues/common-errors",
-              "issues/debugging",
-              "issues/contact-support"
+              "essentials/settings",
+              "essentials/navigation",
+              "essentials/reusable-snippets"
             ]
           }
         ]

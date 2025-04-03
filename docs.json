@@ -11,7 +11,6 @@
     "primary": "#6D28D9",
     "light": "#A78BFA",
     "dark": "#4C1D95"
-    }
   },
   "modeToggle": {
     "default": "dark",
@@ -91,6 +90,20 @@
         "configuration/reaction-triggers",
         "configuration/command-aliases",
         "configuration/logging"
+      ]
+    },
+    {
+      "group": "Commands",
+      "pages": [
+        "commands/protection",
+        "commands/security",
+        "commands/utility",
+        "commands/configuration",
+        "commands/levels",
+        "commands/music",
+        "commands/support",
+        "commands/fun",
+        "commands/social"
       ]
     },
     {

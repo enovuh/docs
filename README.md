@@ -1,32 +1,21 @@
-# Mintlify Starter Kit
+# jugg Documentation
 
-Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
+This directory contains the documentation for jugg, a powerful Discord bot.
 
-- Guide pages
-- Navigation
-- Customizations
-- API Reference pages
-- Use of popular components
+## Structure
 
-### Development
+- `commands/`: Documentation for all bot commands
+- `overview/`: General information about the bot
+- `docs.json`: Documentation configuration file
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command
+## Local Development
 
-```
-npm i -g mintlify
-```
+To run the documentation locally:
 
-Run the following command at the root of your documentation (where docs.json is)
+1. Install Mintlify: `npm install -g mintlify`
+2. Start the development server: `mintlify dev`
+3. Open your browser at `http://localhost:3000`
 
-```
-mintlify dev
-```
+## Deployment
 
-### Publishing Changes
-
-Install our Github App to auto propagate changes from your repo to your deployment. Changes will be deployed to production automatically after pushing to the default branch. Find the link to install on your dashboard. 
-
-#### Troubleshooting
-
-- Mintlify dev isn't running - Run `mintlify install` it'll re-install dependencies.
-- Page loads as a 404 - Make sure you are running in a folder with `docs.json`
+The documentation is automatically deployed when changes are pushed to the main branch.

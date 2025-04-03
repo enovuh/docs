@@ -1,0 +1,54 @@
+---
+title: 'Configuration Commands'
+description: 'Commands for configuring server automation and settings'
+icon: 'gear'
+---
+
+# Configuration Commands
+
+Configuration commands allow server administrators to customize how the bot interacts with their server. These commands help set up automated systems and personalize the bot's behavior.
+
+## Welcome & Goodbye Messages
+
+| Command | Description | Usage | Example |
+| ------- | ----------- | ----- | ------- |
+| `welcome` | View welcome message settings | `!welcome` | `!welcome` |
+| `welcome enable` | Enable welcome messages | `!welcome enable` | `!welcome enable` |
+| `welcome disable` | Disable welcome messages | `!welcome disable` | `!welcome disable` |
+| `welcome channel` | Set the welcome message channel | `!welcome channel #channel` | `!welcome channel #welcome` |
+| `welcome message` | Set the welcome message text | `!welcome message <text>` | `!welcome message Welcome {user} to {server}!` |
+| `goodbye` | View goodbye message settings | `!goodbye` | `!goodbye` |
+| `goodbye enable` | Enable goodbye messages | `!goodbye enable` | `!goodbye enable` |
+| `goodbye channel` | Set the goodbye message channel | `!goodbye channel #channel` | `!goodbye channel #farewells` |
+
+## Role Management
+
+| Command | Description | Usage | Example |
+| ------- | ----------- | ----- | ------- |
+| `autorole` | View autorole settings | `!autorole` | `!autorole` |
+| `autorole add` | Add a role to be automatically assigned | `!autorole add <role>` | `!autorole add Member` |
+| `autorole remove` | Remove a role from autorole | `!autorole remove <role>` | `!autorole remove Member` |
+
+## Auto-Responder
+
+| Command | Description | Usage | Example |
+| ------- | ----------- | ----- | ------- |
+| `autoresponder` | View auto-responder settings | `!autoresponder` | `!autoresponder` |
+| `autoresponder add` | Add an auto-response trigger | `!autoresponder add <trigger> <response>` | `!autoresponder add hello Hi there!` |
+| `autoresponder remove` | Remove an auto-response trigger | `!autoresponder remove <trigger>` | `!autoresponder remove hello` |
+| `autoresponder list` | List all auto-response triggers | `!autoresponder list` | `!autoresponder list` |
+
+## Message Variables
+
+When setting up welcome, goodbye, or auto-response messages, you can use these variables:
+
+- `{user}` - Mentions the user
+- `{username}` - The user's name without mention
+- `{server}` - The server name
+- `{membercount}` - The current member count
+- `{user.id}` - The user's ID
+- `{user.tag}` - The user's tag (username#discriminator)
+
+## Required Permissions
+
+Configuration commands typically require the **Manage Server** permission to use.

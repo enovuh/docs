@@ -11,10 +11,10 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "**Guides**",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "**Get Started**",
             "pages": [
               "introduction",
               "quickstart",
@@ -22,7 +22,7 @@
             ]
           },
           {
-            "group": "Jugg Essentials",
+            "group": "**Jugg Essentials**",
             "pages": [
               "essentials/markdown",
               "essentials/code",
@@ -35,75 +35,80 @@
         ]
       },
       {
-        "tab": "Commands",
+        "tab": "**Protection**",
         "groups": [
           {
-            "group": "Protection",
+            "group": "**Security & Anti-Nuke**",
             "pages": [
-              "commands/protection/antinuke",
-              "commands/protection/raidmode",
-              "commands/protection/logging"
-            ]
-          },
-          {
-            "group": "Settings",
-            "pages": [
-              "commands/settings/prefix",
-              "commands/settings/permissions",
-              "commands/settings/customization"
-            ]
-          },
-          {
-            "group": "Misc",
-            "pages": [
-              "commands/misc/avatar",
-              "commands/misc/userinfo",
-              "commands/misc/serverinfo"
-            ]
-          },
-          {
-            "group": "Utilities",
-            "pages": [
-              "commands/utilities/roles",
-              "commands/utilities/channels",
-              "commands/utilities/purge"
-            ]
-          },
-          {
-            "group": "API",
-            "pages": [
-              "commands/api/webhooks",
-              "commands/api/integrations",
-              "commands/api/endpoints"
+              "protection/antinuke",
+              "protection/raidmode",
+              "protection/logging",
+              "protection/whitelist"
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "tab": "**Settings**",
         "groups": [
           {
-            "group": "API Overview",
+            "group": "**Customization & Config**",
             "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoints",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "settings/prefix",
+              "settings/permissions",
+              "settings/customization",
+              "settings/automod"
             ]
           }
         ]
       },
       {
-        "tab": "Issues",
+        "tab": "**Misc**",
         "groups": [
           {
-            "group": "Known Issues",
+            "group": "**General & Fun**",
+            "pages": [
+              "misc/avatar",
+              "misc/userinfo",
+              "misc/serverinfo",
+              "misc/afk"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "**Utilities**",
+        "groups": [
+          {
+            "group": "**Server Management**",
+            "pages": [
+              "utilities/roles",
+              "utilities/channels",
+              "utilities/purge",
+              "utilities/webhooks"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "**API**",
+        "groups": [
+          {
+            "group": "**Developer Integrations**",
+            "pages": [
+              "api/webhooks",
+              "api/integrations",
+              "api/endpoints",
+              "api/auth"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "**Issues**",
+        "groups": [
+          {
+            "group": "**Troubleshooting & Support**",
             "pages": [
               "issues/common-errors",
               "issues/debugging",

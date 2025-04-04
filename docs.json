@@ -45,40 +45,38 @@
     }
   ],
   "navigation": {
-    "Overview": {
-      "pages": [
-        "overview/introduction",
-        "overview/features",
-        "overview/installation"
-      ]
-    },
-    "Protection": {
-      "pages": [
-        "protection/antinuke",
-        "protection/antiraid",
-        "protection/security"
-      ]
-    },
-    "Server Configuration": {
-      "pages": {
-        "Roles": {
-          "icon": "users-gear",
-          "pages": [
-            "configuration/roles/vanity",
-            "configuration/roles/booster",
-            "configuration/roles/reaction",
-            "configuration/roles/button"
-          ]
-        },
-        "Messages": {
-          "icon": "message",
-          "pages": [
-            "configuration/messages/system",
-            "configuration/messages/responder",
-            "configuration/messages/timer"
-          ]
-        },
-        "Other": [
+    "languages": [],
+    "versions": [],
+    "tabs": [],
+    "dropdowns": [],
+    "anchors": [],
+    "groups": [
+      {
+        "name": "Overview",
+        "pages": [
+          "overview/introduction",
+          "overview/features",
+          "overview/installation"
+        ]
+      },
+      {
+        "name": "Protection",
+        "pages": [
+          "protection/antinuke",
+          "protection/antiraid",
+          "protection/security"
+        ]
+      },
+      {
+        "name": "Server Configuration",
+        "pages": [
+          "configuration/roles/vanity",
+          "configuration/roles/booster",
+          "configuration/roles/reaction",
+          "configuration/roles/button",
+          "configuration/messages/system",
+          "configuration/messages/responder",
+          "configuration/messages/timer",
           "configuration/starboard",
           "configuration/voicemaster",
           "configuration/level-rewards",
@@ -87,59 +85,66 @@
           "configuration/command-aliases",
           "configuration/logging"
         ]
+      },
+      {
+        "name": "Commands",
+        "pages": [
+          "commands/protection",
+          "commands/security",
+          "commands/utility",
+          "commands/configuration",
+          "commands/levels",
+          "commands/music",
+          "commands/support",
+          "commands/fun",
+          "commands/social"
+        ]
+      },
+      {
+        "name": "Settings",
+        "pages": [
+          "settings/customization",
+          "settings/commands",
+          "settings/dashboard"
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "pages": [
+          "miscellaneous/music",
+          "miscellaneous/webhook",
+          "miscellaneous/giveaway",
+          "miscellaneous/counters"
+        ]
+      },
+      {
+        "name": "Integrations",
+        "pages": [
+          "integrations/spotify",
+          "integrations/lastfm",
+          "integrations/fortnite",
+          "integrations/social-notifications"
+        ]
+      },
+      {
+        "name": "API",
+        "pages": [
+          "api/developer-intro",
+          "api/endpoints",
+          "api/authentication",
+          "api/rate-limiting"
+        ]
+      },
+      {
+        "name": "Common Issues",
+        "pages": [
+          "common-issues/ios-dash",
+          "common-issues/permissions",
+          "common-issues/server-removal"
+        ]
       }
-    },
-    "Commands": {
-      "pages": [
-        "commands/protection",
-        "commands/security",
-        "commands/utility",
-        "commands/configuration",
-        "commands/levels",
-        "commands/music",
-        "commands/support",
-        "commands/fun",
-        "commands/social"
-      ]
-    },
-    "Settings": {
-      "pages": [
-        "settings/customization",
-        "settings/commands",
-        "settings/dashboard"
-      ]
-    },
-    "Miscellaneous": {
-      "pages": [
-        "miscellaneous/music",
-        "miscellaneous/webhook",
-        "miscellaneous/giveaway",
-        "miscellaneous/counters"
-      ]
-    },
-    "Integrations": {
-      "pages": [
-        "integrations/spotify",
-        "integrations/lastfm",
-        "integrations/fortnite",
-        "integrations/social-notifications"
-      ]
-    },
-    "API": {
-      "pages": [
-        "api/developer-intro",
-        "api/endpoints",
-        "api/authentication",
-        "api/rate-limiting"
-      ]
-    },
-    "Common Issues": {
-      "pages": [
-        "common-issues/ios-dash",
-        "common-issues/permissions",
-        "common-issues/server-removal"
-      ]
-    }
+    ],
+    "pages": []
   },
   "footerSocials": {
     "discord": "https://discord.gg/jugg",

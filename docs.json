@@ -44,28 +44,24 @@
       "destination": "https://discord.gg/jugg"
     }
   ],
-  "navigation": [
-    {
-      "group": "Overview",
+  "navigation": {
+    "Overview": {
       "pages": [
         "overview/introduction",
         "overview/features",
         "overview/installation"
       ]
     },
-    {
-      "group": "Protection",
+    "Protection": {
       "pages": [
         "protection/antinuke",
         "protection/antiraid",
         "protection/security"
       ]
     },
-    {
-      "group": "Server Configuration",
-      "pages": [
-        {
-          "group": "Roles",
+    "Server Configuration": {
+      "pages": {
+        "Roles": {
           "icon": "users-gear",
           "pages": [
             "configuration/roles/vanity",
@@ -74,8 +70,7 @@
             "configuration/roles/button"
           ]
         },
-        {
-          "group": "Messages",
+        "Messages": {
           "icon": "message",
           "pages": [
             "configuration/messages/system",
@@ -83,17 +78,18 @@
             "configuration/messages/timer"
           ]
         },
-        "configuration/starboard",
-        "configuration/voicemaster",
-        "configuration/level-rewards",
-        "configuration/bump-reminder",
-        "configuration/reaction-triggers",
-        "configuration/command-aliases",
-        "configuration/logging"
-      ]
+        "Other": [
+          "configuration/starboard",
+          "configuration/voicemaster",
+          "configuration/level-rewards",
+          "configuration/bump-reminder",
+          "configuration/reaction-triggers",
+          "configuration/command-aliases",
+          "configuration/logging"
+        ]
+      }
     },
-    {
-      "group": "Commands",
+    "Commands": {
       "pages": [
         "commands/protection",
         "commands/security",
@@ -106,16 +102,14 @@
         "commands/social"
       ]
     },
-    {
-      "group": "Settings",
+    "Settings": {
       "pages": [
         "settings/customization",
         "settings/commands",
         "settings/dashboard"
       ]
     },
-    {
-      "group": "Miscellaneous",
+    "Miscellaneous": {
       "pages": [
         "miscellaneous/music",
         "miscellaneous/webhook",
@@ -123,8 +117,7 @@
         "miscellaneous/counters"
       ]
     },
-    {
-      "group": "Integrations",
+    "Integrations": {
       "pages": [
         "integrations/spotify",
         "integrations/lastfm",
@@ -132,8 +125,7 @@
         "integrations/social-notifications"
       ]
     },
-    {
-      "group": "API",
+    "API": {
       "pages": [
         "api/developer-intro",
         "api/endpoints",
@@ -141,15 +133,14 @@
         "api/rate-limiting"
       ]
     },
-    {
-      "group": "Common Issues",
+    "Common Issues": {
       "pages": [
         "common-issues/ios-dash",
         "common-issues/permissions",
         "common-issues/server-removal"
       ]
     }
-  ],
+  },
   "footerSocials": {
     "discord": "https://discord.gg/jugg",
     "github": "https://github.com/jugg-bot",

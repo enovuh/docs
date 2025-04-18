@@ -24,7 +24,7 @@
   ],
   "topbarCtaButton": {
     "name": "invite bot",
-    "url": "https://enovuh.com/invite"
+    "url": "https://enovuh.lol/invite"
   },
   "redirects": [
     {
@@ -55,64 +55,40 @@
         ]
       },
       {
-        "group": "protection",
+        "group": "modules",
         "icon": "cube",
         "pages": [
           "modules/antinuke",
           "modules/automod",
-          "modules/verification",
-          "modules/xp"
+          "modules/verification"
         ]
       },
       {
-        "group": "management tools",
-        "icon": "toolbox",
+        "group": "config",
+        "icon": "gear",
+        "pages": []
+      },
+      {
+        "group": "integrations",
+        "icon": "music",
         "pages": [
-          "tools/roles",
-          "tools/access",
-          "tools/events",
-          "tools/channels",
-          "tools/greetings",
-          "tools/tasks"
+          "integrations/music",
+          "integrations/lastfm",
+          "integrations/spotify"
         ]
       },
       {
-        "group": "entertainment",
-        "icon": "gamepad",
+        "group": "social integrations",
+        "icon": "hashtag",
         "pages": [
-          "fun/music",
-          "fun/minigames",
-          "fun/images",
-          "fun/reaction-roles",
-          "fun/giveaways"
-        ]
-      },
-      {
-        "group": "social connections",
-        "icon": "share-nodes",
-        "pages": [
-          "social/spotify",
+          "social/instagram",
+          "social/pinterest",
           "social/twitter",
+          "social/youtube",
+          "social/tiktok",
           "social/twitch",
-          "social/youtube"
-        ]
-      },
-      {
-        "group": "bot settings",
-        "icon": "sliders",
-        "pages": [
-          "settings/prefix",
-          "settings/permissions",
-          "settings/logging"
-        ]
-      },
-      {
-        "group": "help center",
-        "icon": "circle-question",
-        "pages": [
-          "help/dashboard",
-          "help/common-errors",
-          "help/contact"
+          "social/reddit",
+          "social/soundcloud"
         ]
       }
     ]

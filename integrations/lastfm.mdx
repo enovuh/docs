@@ -1,0 +1,379 @@
+---
+title: "lastfm"
+description: "powerful last.fm integration with rich music stats"
+icon: "radio"
+---
+
+# last.fm integration
+
+connect your last.fm account to enovuh to display your music statistics, compare your taste with others, view listening patterns, and much more.
+
+## getting started
+
+### connecting your account
+
+link your last.fm account to enovuh:
+
+```
+,lastfm connect
+```
+
+generates a link to authorize enovuh with your last.fm account
+
+```
+,lastfm set <username>
+```
+
+manually connect to an existing last.fm account
+
+verify your connection:
+
+```
+,lastfm
+```
+
+shows your profile and current or recent track
+
+### managing your connection
+
+remove your account:
+
+```
+,lastfm logout
+```
+
+disconnects your last.fm account from enovuh
+
+## nowplaying commands
+
+display what you're currently listening to:
+
+```
+,fm
+,lastfm
+```
+
+shows your profile and current track
+
+```
+,fm np
+,lastfm np
+```
+
+shows only your current or most recently played track
+
+### custom nowplaying display
+
+set custom display elements:
+
+```
+,fm prefix <text>
+```
+
+adds custom text before your nowplaying displays
+
+```
+,fm color <hex code>
+```
+
+changes the embed color of your last.fm displays
+
+## track information
+
+get detailed information about your music:
+
+```
+,fm recent [user] [limit]
+```
+
+shows your recently played tracks (limit defaults to 5)
+
+```
+,fm plays <artist name> [user]
+```
+
+shows how many times you've listened to an artist
+
+```
+,fm playsalbum <artist name> <album name> [user]
+```
+
+shows how many times you've listened to an album
+
+```
+,fm playsall <album name> [user]
+```
+
+shows plays for every song on an album
+
+## statistics and rankings
+
+view your listening statistics:
+
+```
+,fm count [user]
+```
+
+displays total number of scrobbles
+
+```
+,fm topartists [period] [user]
+```
+
+shows your most listened artists
+
+```
+,fm toptracks [period] [user]
+```
+
+shows your most listened tracks
+
+```
+,fm topalbums [period] [user]
+```
+
+shows your most listened albums
+
+time periods:
+
+- `7day` (default)
+- `1month`
+- `3month`
+- `6month`
+- `12month`
+- `overall`
+
+## taste comparison
+
+compare music taste with others:
+
+```
+,fm taste <@user> [period]
+```
+
+compares your music taste with another user
+
+```
+,fm playing
+```
+
+shows what everyone in the server is currently listening to
+
+## server-wide stats
+
+see who else enjoys the same music:
+
+```
+,fm whoknows [artist]
+```
+
+shows who in the server listens to an artist
+
+```
+,fm globalwhoknows [artist]
+```
+
+shows who across all servers listens to an artist
+
+```
+,fm wkalbum <album name>
+```
+
+shows who in the server listens to an album
+
+## visual displays
+
+generate visual representations of your music:
+
+```
+,fm chart [size] [period]
+```
+
+generates a visual chart of your top albums
+
+```
+,fm collage [period] [user]
+```
+
+generates a collage of your top albums
+
+chart sizes: `3x3`, `4x4`, `5x5`
+
+## profile information
+
+view detailed profile information:
+
+```
+,fm whois [user]
+```
+
+shows last.fm profile information
+
+```
+,fm score [user]
+```
+
+displays your last.fm score and statistics
+
+## music discovery
+
+find more about the artists you love:
+
+```
+,fm overview [user] <artist>
+```
+
+shows your listening history for an artist
+
+```
+,fm library [user] <artist>
+```
+
+displays all songs from an artist in your library
+
+## listening milestones
+
+track your listening achievements:
+
+```
+,fm milestone <number>
+```
+
+shows what track was your Nth scrobble
+
+```
+,fm streak [user]
+```
+
+displays your current artist listening streak
+
+## crowns and achievements
+
+compete for artist crowns:
+
+```
+,fm crowns [user]
+```
+
+shows your artist crowns (most plays in server)
+
+## custom commands
+
+create personalized commands:
+
+```
+,fm custom
+```
+
+manage custom last.fm commands
+
+## media links
+
+find your current song on other platforms:
+
+```
+,fm lyrics [user]
+```
+
+gets lyrics for your currently playing song
+
+```
+,fm spotify [user]
+```
+
+searches for your current song on spotify
+
+```
+,fm youtube [user]
+```
+
+searches for your current song on youtube
+
+```
+,fm soundcloud [user]
+```
+
+searches for your current song on soundcloud
+
+## customization options
+
+personalize your last.fm experience:
+
+```
+,fm mode <mode>
+```
+
+changes the embed style for nowplaying displays
+
+```
+,fm react <upvote> <downvote>
+```
+
+sets custom reactions for your last.fm commands
+
+## artwork management
+
+manage custom album artwork:
+
+```
+,artwork <artist> <album> <url>
+```
+
+adds custom artwork for an album
+
+```
+,artwork_list <artist> <album>
+```
+
+shows artwork for an album
+
+```
+,artwork_top [limit]
+```
+
+shows top voted artwork
+
+```
+,artwork_vote <artist> <album>
+```
+
+votes on custom artwork
+
+## troubleshooting
+
+### common issues
+
+if your commands aren't working:
+
+- ensure your account is properly connected with `,fm`
+- check that the username is spelled correctly
+- verify your last.fm account is public
+- ensure you have recent scrobbles
+
+### hidden tracks
+
+manage tracks you don't want displayed:
+
+```
+,hide
+```
+
+hides your currently playing song from np
+
+```
+,unhide
+```
+
+unhides a song
+
+```
+,hidden_list
+```
+
+shows your hidden songs
+
+<Card title="pro tip" icon="lightbulb" color="#9333EA">
+  use different time periods in your statistics commands to discover trends in
+  your listening habits. try `,fm topartists overall` vs `,fm topartists 1month`
+  to see how your taste has evolved.
+</Card>{" "}

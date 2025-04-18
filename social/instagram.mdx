@@ -1,0 +1,169 @@
+---
+title: "instagram"
+description: "receive instagram post notifications in discord"
+icon: "instagram"
+---
+
+# instagram integration
+
+keep your community updated with the latest instagram content by setting up automatic notifications for new posts, stories, and reels.
+
+## setup
+
+configure instagram notifications:
+
+```
+,instagram setup <channel> <username>
+```
+
+sets up notifications for a specific instagram account to be sent to the specified channel
+
+## managing subscriptions
+
+manage instagram notification subscriptions:
+
+```
+,instagram add <username>
+```
+
+adds a new instagram account to monitor
+
+```
+,instagram remove <username>
+```
+
+stops monitoring an instagram account
+
+```
+,instagram list
+```
+
+shows all instagram accounts currently being monitored
+
+## notification settings
+
+customize your notification preferences:
+
+```
+,instagram channel <username> <#channel>
+```
+
+changes the channel where notifications for a specific account are sent
+
+```
+,instagram mode <username> <mode>
+```
+
+changes the notification mode (all, posts, stories, reels)
+
+available notification modes:
+
+- `all` - receive notifications for all content (default)
+- `posts` - only receive notifications for posts
+- `stories` - only receive notifications for stories
+- `reels` - only receive notifications for reels
+
+## customization
+
+personalize your instagram notifications:
+
+```
+,instagram mention <username> <@role>
+```
+
+adds a role mention to notifications for a specific account
+
+```
+,instagram color <username> <hex color>
+```
+
+sets a custom color for notification embeds
+
+```
+,instagram message <username> <message>
+```
+
+sets a custom message to be sent with notifications
+
+## checking content
+
+manually check for instagram content:
+
+```
+,instagram check <username>
+```
+
+manually checks for new content from an account
+
+```
+,instagram view <username>
+```
+
+views the latest post from an account
+
+## profile information
+
+view information about instagram profiles:
+
+```
+,instagram profile <username>
+```
+
+displays information about an instagram account
+
+## usage examples
+
+### basic setup
+
+set up notifications for an instagram account:
+
+```
+,instagram setup #social-media elonmusk
+```
+
+### targeting specific content
+
+set up notifications for reels only:
+
+```
+,instagram add nike
+,instagram mode nike reels
+,instagram channel nike #nike-reels
+```
+
+### promoting notifications
+
+make notifications more visible:
+
+```
+,instagram add xbox
+,instagram mention xbox @gaming
+,instagram message xbox "New Xbox content just dropped! 🎮"
+```
+
+## troubleshooting
+
+### common issues
+
+if notifications aren't working:
+
+- ensure enovuh has permission to send messages in the target channel
+- verify the instagram account username is spelled correctly
+- check if the instagram account is private (only public accounts are supported)
+- confirm instagram's API is operational
+
+### updating notifications
+
+if notifications stop working:
+
+```
+,instagram refresh <username>
+```
+
+refreshes the connection to an instagram account
+
+<Card title="pro tip" icon="lightbulb" color="#9333EA">
+  for community-focused servers, set up separate channels for different content
+  types. use `,instagram mode` to direct posts to an announcements channel,
+  while sending reels to an entertainment channel.
+</Card>{" "}

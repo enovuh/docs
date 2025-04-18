@@ -1,0 +1,265 @@
+---
+title: "spotify"
+description: "control and interact with spotify through discord"
+icon: "spotify"
+---
+
+# spotify integration
+
+control your spotify account directly through discord with enovuh. play music, manage playback, view what you're listening to, and interact with your playlists without ever leaving discord.
+
+## connecting your account
+
+link your spotify account to enovuh:
+
+```
+,spotify login
+```
+
+generates a link to authorize enovuh with your spotify account
+
+remove access:
+
+```
+,spotify logout
+```
+
+disconnects your spotify account from enovuh
+
+## playback controls
+
+control your spotify playback:
+
+### basic controls
+
+```
+,spotify play
+,sp play
+```
+
+resumes playback or plays a specific song/album/playlist if a query is provided
+
+```
+,spotify pause
+,sp pause
+```
+
+pauses the current playback
+
+```
+,spotify skip
+,sp skip
+```
+
+skips to the next track
+
+```
+,spotify previous
+,sp previous
+```
+
+goes back to the previous track
+
+### playback details
+
+```
+,spotify np
+,sp np
+```
+
+shows what you're currently playing on spotify
+
+```
+,spotify volume <0-100>
+,sp volume <0-100>
+```
+
+adjusts the playback volume
+
+### playlist management
+
+```
+,spotify queue
+,sp queue
+```
+
+displays your current spotify queue
+
+```
+,spotify clear
+,sp clear
+```
+
+clears your spotify queue
+
+## advanced controls
+
+### repeat and shuffle
+
+```
+,spotify repeat
+,sp repeat
+```
+
+cycles through repeat modes (off, context, track)
+
+```
+,spotify shuffle
+,sp shuffle
+```
+
+toggles shuffle mode on/off
+
+### track management
+
+```
+,spotify save
+,sp save
+,sp like
+```
+
+saves the current track to your liked songs
+
+```
+,spotify unsave
+,sp unsave
+,sp unlike
+```
+
+removes the current track from your liked songs
+
+```
+,spotify saved
+,sp saved
+,sp liked
+```
+
+checks if the current track is in your liked songs
+
+### search functionality
+
+```
+,spotify search <query>
+,sp search <query>
+```
+
+searches for tracks, albums, or playlists on spotify
+
+### device management
+
+```
+,spotify devices
+,sp devices
+```
+
+lists all available spotify devices and lets you select one
+
+## visual interface
+
+create an interactive control panel:
+
+```
+,spotify panel
+,sp panel
+```
+
+displays an interactive spotify controller with buttons for:
+
+- play/pause
+- previous/next track
+- shuffle toggle
+- repeat mode cycling
+- saving/unsaving tracks
+- viewing queue
+
+## playback features
+
+enjoy these convenient features:
+
+- **cross-device control** - control spotify on any of your devices
+- **context awareness** - smart handling of albums, playlists, and tracks
+- **seamless auth** - easy login process with persistent session
+- **device selection** - choose which device to control
+- **rich display** - detailed track information with album art
+
+## usage tips
+
+### playing content
+
+play a specific track:
+
+```
+,sp play astronaut in the ocean
+```
+
+play an album:
+
+```
+,sp play album astroworld
+```
+
+play a playlist:
+
+```
+,sp play playlist workout motivation
+```
+
+play a spotify URL:
+
+```
+,sp play https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b
+```
+
+### active listening
+
+create a better listening experience:
+
+```
+,sp panel
+```
+
+use the interactive panel for all controls
+
+```
+,sp devices
+```
+
+choose your best audio output device
+
+## device management
+
+manage which device plays your music:
+
+```
+,sp devices
+```
+
+lists your available devices with an interactive selector
+
+if no active device is found, enovuh will attempt to activate your most recently used device.
+
+## troubleshooting
+
+### common issues
+
+if your commands aren't working:
+
+- ensure your spotify account is connected
+- verify your spotify premium status (required for most controls)
+- check that you have an active device
+- try re-authenticating with `,sp login`
+
+### connection problems
+
+if you're having trouble connecting:
+
+- make sure you've granted all required permissions
+- check that your spotify account is active
+- verify that you have at least one playback device available
+- ensure your spotify premium subscription is active
+
+<Card title="pro tip" icon="lightbulb" color="#9333EA">
+  use the `,sp panel` command during group activities to give everyone
+  visibility into what's playing, while maintaining control over your spotify
+  playback.
+</Card>{" "}

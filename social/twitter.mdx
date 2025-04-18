@@ -1,0 +1,220 @@
+---
+title: "twitter"
+description: "receive twitter post notifications in discord"
+icon: "twitter"
+---
+
+# twitter integration
+
+keep your server updated with real-time notifications whenever specified twitter accounts post new tweets, replies, or retweets.
+
+## setup
+
+configure twitter notifications:
+
+```
+,twitter setup <#channel> <@username>
+```
+
+sets up notifications for a specific twitter account to be sent to the specified channel
+
+## managing subscriptions
+
+manage twitter notification subscriptions:
+
+```
+,twitter add <@username>
+```
+
+adds a new twitter account to monitor
+
+```
+,twitter remove <@username>
+```
+
+stops monitoring a twitter account
+
+```
+,twitter list
+```
+
+shows all twitter accounts currently being monitored in your server
+
+## notification settings
+
+customize your notification preferences:
+
+```
+,twitter channel <@username> <#channel>
+```
+
+changes the channel where notifications for a specific account are sent
+
+```
+,twitter mode <@username> <mode>
+```
+
+changes what types of tweets trigger notifications
+
+available notification modes:
+
+- `all` - all tweets, retweets, and replies (default)
+- `tweets` - only original tweets
+- `retweets` - only retweets
+- `replies` - only replies
+- `media` - only tweets containing media
+- `tweets+media` - original tweets and media tweets
+
+## customization
+
+personalize your twitter notifications:
+
+```
+,twitter mention <@username> <@role>
+```
+
+adds a role mention to notifications for a specific account
+
+```
+,twitter color <@username> <hex color>
+```
+
+sets a custom color for notification embeds
+
+```
+,twitter message <@username> <message>
+```
+
+sets a custom message to be sent with notifications
+
+## filtering options
+
+fine-tune what notifications you receive:
+
+```
+,twitter filter <@username> <keyword>
+```
+
+only send notifications for tweets containing specific keywords
+
+```
+,twitter blacklist <@username> <keyword>
+```
+
+ignore tweets containing specific keywords
+
+```
+,twitter clear-filters <@username>
+```
+
+removes all filters for an account
+
+## manual actions
+
+manually interact with twitter data:
+
+```
+,twitter check <@username>
+```
+
+manually checks for new tweets from an account
+
+```
+,twitter view <@username>
+```
+
+displays the latest tweet from an account
+
+## profile information
+
+view information about twitter profiles:
+
+```
+,twitter profile <@username>
+```
+
+displays information about a twitter account
+
+## usage examples
+
+### basic setup
+
+set up notifications for a twitter account:
+
+```
+,twitter setup #announcements elonmusk
+```
+
+### focused updates
+
+set up notifications for only original tweets:
+
+```
+,twitter add nasa
+,twitter mode nasa tweets
+,twitter channel nasa #space-news
+```
+
+### community engagement
+
+make notifications more engaging:
+
+```
+,twitter add minecraft
+,twitter mention minecraft @gamers
+,twitter message minecraft "New Minecraft update! 🎮"
+```
+
+### filtered content
+
+filter notifications for specific content:
+
+```
+,twitter add PlayStation
+,twitter filter PlayStation "PS5"
+,twitter filter PlayStation "giveaway"
+```
+
+## batch management
+
+manage multiple subscriptions efficiently:
+
+```
+,twitter import <url>
+```
+
+imports a list of twitter accounts from a text file
+
+```
+,twitter export
+```
+
+exports your current twitter subscriptions to a file
+
+## troubleshooting
+
+### common issues
+
+if notifications aren't working:
+
+- ensure enovuh has permission to send messages in the target channel
+- verify the twitter account exists and is public
+- check if the account has tweeted recently
+- confirm twitter's API is operational
+
+### rate limits
+
+if you hit twitter API rate limits:
+
+```
+,twitter status
+```
+
+shows the current API status and remaining rate limits
+
+<Card title="pro tip" icon="lightbulb" color="#9333EA">
+  for gaming servers, create a "release-tracker" channel and add twitter
+  notifications for game developers, publishers, and news accounts using
+  `,twitter mode` set to "tweets" to avoid cluttering the channel with retweets
+  and replies.
+</Card>{" "}

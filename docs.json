@@ -47,76 +47,72 @@
   "navigation": {
     "groups": [
       {
-        "group": "getting started",
-        "icon": "rocket",
+        "group": "start here",
+        "icon": "play",
         "pages": [
           "index",
-          "overview/introduction"
+          "intro/quickstart"
         ]
       },
       {
-        "group": "security setup",
-        "icon": "shield",
+        "group": "core modules",
+        "icon": "cube",
         "pages": [
-          "protection/antinuke",
-          "protection/joingate",
-          "protection/moderation",
-          "protection/fake-permissions"
+          "modules/antinuke",
+          "modules/automod",
+          "modules/verification",
+          "modules/xp"
         ]
       },
       {
-        "group": "server configuration",
-        "icon": "gear",
+        "group": "management tools",
+        "icon": "toolbox",
         "pages": [
-          "configuration/roles",
-          "configuration/messages",
-          "configuration/starboard",
-          "configuration/voicemaster",
-          "configuration/level-rewards",
-          "configuration/bump-reminder",
-          "configuration/reaction-triggers",
-          "configuration/command-aliases",
-          "configuration/logging"
+          "tools/roles",
+          "tools/access",
+          "tools/events",
+          "tools/channels",
+          "tools/greetings",
+          "tools/tasks"
         ]
       },
       {
-        "group": "miscellaneous",
-        "icon": "sparkles",
+        "group": "entertainment",
+        "icon": "gamepad",
         "pages": [
-          "features/music",
-          "features/webhook",
-          "features/giveaway",
-          "features/counters"
+          "fun/music",
+          "fun/minigames",
+          "fun/images",
+          "fun/reaction-roles",
+          "fun/giveaways"
         ]
       },
       {
-        "group": "integrations",
-        "icon": "plug",
+        "group": "social connections",
+        "icon": "share-nodes",
         "pages": [
-          "integrations/spotify",
-          "integrations/lastfm",
-          "integrations/fortnite",
-          "integrations/social-notifications"
+          "social/spotify",
+          "social/twitter",
+          "social/twitch",
+          "social/youtube"
         ]
       },
       {
-        "group": "resources",
-        "icon": "book",
+        "group": "bot settings",
+        "icon": "sliders",
         "pages": [
-          "resources/syntax",
-          "resources/scripting",
-          "resources/permissions",
-          "resources/speech-voices",
-          "resources/translation-languages"
+          "settings/prefix",
+          "settings/permissions",
+          "settings/logging"
         ]
       },
       {
-        "group": "common issues",
-        "icon": "wrench",
+        "group": "help center",
+        "icon": "circle-question",
         "pages": [
-          "common-issues/ios-dash",
-          "common-issues/permissions",
-          "common-issues/server-removal"
+          "help/dashboard",
+          "help/common-errors",
+          "help/contact"
         ]
       }
     ]

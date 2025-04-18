@@ -1,0 +1,409 @@
+---
+title: 'verification'
+description: 'multi-layer member authentication'
+icon: 'fingerprint'
+---
+
+# gatekeeper verification
+
+enovuh's gatekeeper system provides robust, customizable verification processes to protect your server from unauthorized access, raids, and malicious accounts while creating a frictionless experience for legitimate members.
+
+## verification philosophy
+
+gatekeeper uses a risk-based approach where:
+- verification difficulty scales with detected risk
+- multiple verification methods can be combined
+- user experience is prioritized for legitimate users
+- suspicious patterns trigger additional checks
+
+## basic setup
+
+enable verification with a simple command:
+
+```
+,gate
+```
+
+this activates the default verification setup. for customization:
+
+```
+,gate setup
+```
+
+## verification methods
+
+gatekeeper offers multiple verification approaches that can be used individually or in combination:
+
+### captcha challenge
+
+protect against automated bots with image-based verification:
+
+```
+,gate captcha <on/off>
+```
+
+captcha options:
+```
+,gate captcha difficulty <easy/medium/hard>
+```
+
+```
+,gate captcha attempts <number>
+```
+sets maximum failed attempts before timeout.
+
+### reaction verification
+
+simple, one-click verification process:
+
+```
+,gate reaction <on/off> [emoji]
+```
+
+custom reaction message:
+```
+,gate reaction message <text>
+```
+
+### account screening
+
+filter members based on account criteria:
+
+```
+,gate screen <on/off>
+```
+
+screening options:
+```
+,gate screen age <days>
+```
+requires accounts to be older than specified days.
+
+```
+,gate screen avatar <on/off>
+```
+requires members to have a custom avatar.
+
+```
+,gate screen username <filter>
+```
+screens for suspicious username patterns.
+
+### verification questions
+
+require members to answer custom questions:
+
+```
+,gate questions <on/off>
+```
+
+manage questions:
+```
+,gate questions add <question> <answer>
+```
+
+```
+,gate questions remove <id>
+```
+
+```
+,gate questions list
+```
+
+### email verification
+
+connect discord accounts to email addresses:
+
+```
+,gate email <on/off> [domain]
+```
+
+email options:
+```
+,gate email required <on/off>
+```
+determines if email verification is mandatory.
+
+```
+,gate email domains <add/remove> <domain>
+```
+manage allowed email domains.
+
+### phone verification
+
+require phone verification for higher security:
+
+```
+,gate phone <on/off>
+```
+
+phone options:
+```
+,gate phone countries <add/remove> <country-code>
+```
+manage allowed country codes.
+
+## verification flow
+
+### welcome message
+
+customize the initial greeting:
+
+```
+,gate welcome <message>
+```
+
+dynamic welcome:
+```
+,gate welcome dynamic <on/off>
+```
+changes welcome message based on server activity.
+
+### verification channel
+
+designate where verification occurs:
+
+```
+,gate channel <#channel>
+```
+
+channel options:
+```
+,gate channel type <public/private>
+```
+controls visibility of the verification process.
+
+```
+,gate channel timeout <minutes>
+```
+automatically removes inactive verification attempts.
+
+### completion message
+
+set the message shown after successful verification:
+
+```
+,gate complete <message>
+```
+
+### verification logs
+
+track verification attempts:
+
+```
+,gate logs <#channel>
+```
+
+log options:
+```
+,gate logs detail <basic/normal/verbose>
+```
+controls the amount of information logged.
+
+## access management
+
+### verified role
+
+assign a role upon verification:
+
+```
+,gate role <@role>
+```
+
+### automatic permissions
+
+configure server access before and after verification:
+
+```
+,gate access before <deny/limited/read>
+```
+sets pre-verification permissions.
+
+```
+,gate access after <full/custom>
+```
+sets post-verification permissions.
+
+For custom access:
+```
+,gate access custom <@role>
+```
+uses an existing role's permissions as a template.
+
+## advanced configuration
+
+### verification layers
+
+create multi-step verification processes:
+
+```
+,gate layers <number>
+```
+
+layer configuration:
+```
+,gate layer <number> <method>
+```
+
+example creating a two-layer system:
+```
+,gate layers 2
+,gate layer 1 reaction
+,gate layer 2 captcha
+```
+
+### risk-based verification
+
+enable adaptive verification difficulty:
+
+```
+,gate adaptive <on/off>
+```
+
+when enabled, verification becomes more rigorous for suspicious accounts.
+
+risk triggers:
+```
+,gate risk <trigger> <on/off>
+```
+
+available triggers:
+- `newaccount` - recently created accounts
+- `noavatar` - accounts without avatars
+- `suspicious` - accounts with suspicious patterns
+- `vpn` - detected vpn/proxy usage
+- `rapid` - rapid join patterns
+
+### raid protection
+
+activate enhanced verification during detected raids:
+
+```
+,gate raid <on/off>
+```
+
+raid options:
+```
+,gate raid threshold <joins> <seconds>
+```
+defines what constitutes a raid pattern.
+
+```
+,gate raid mode <lockdown/challenge/manual>
+```
+determines how the system responds during raids.
+
+### verification limits
+
+control verification flow:
+
+```
+,gate limit <per-minute> <max-pending>
+```
+
+example:
+```
+,gate limit 10 30
+```
+allows 10 verifications per minute with maximum 30 pending.
+
+## member management
+
+### manual verification
+
+verify members manually:
+
+```
+,gate verify <@user>
+```
+
+### bypassing verification
+
+exempt certain users from verification:
+
+```
+,gate bypass user <@user>
+```
+
+exempt roles from verification:
+```
+,gate bypass role <@role>
+```
+
+view all exemptions:
+```
+,gate bypass list
+```
+
+### reverification
+
+require existing members to verify again:
+
+```
+,gate reverify <@role>
+```
+
+scheduled reverification:
+```
+,gate reverify schedule <interval>
+```
+periodically requires members to re-verify.
+
+## advanced features
+
+### verification analytics
+
+view verification statistics:
+
+```
+,gate stats
+```
+
+this shows:
+- success/failure rates
+- common failure reasons
+- verification times
+- suspicious patterns
+
+### custom verification scripts
+
+create advanced verification logic:
+
+```
+,gate script <create/edit/delete> <name>
+```
+
+script editing opens an interactive editor for creating verification flows.
+
+### member scoring
+
+enable risk score calculation for new members:
+
+```
+,gate score <on/off>
+```
+
+when enabled, members receive a trust score that can be used with other enovuh features.
+
+view member scores:
+```
+,gate score <@user>
+```
+
+### anti-alt detection
+
+identify and manage alternate accounts:
+
+```
+,gate alts <on/off>
+```
+
+alt management:
+```
+,gate alts action <log/restrict/block>
+```
+determines how alt accounts are handled.
+
+<Card title="pro tip" icon="shield" color="#9333EA">
+  combine gatekeeper with enovuh's sentinel automod system to create a comprehensive security pipeline, where newly verified members are subject to stricter content filtering until they build trust over time.
+</Card> 

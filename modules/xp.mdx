@@ -1,0 +1,416 @@
+---
+title: 'xp system'
+description: 'customizable activity-based progression'
+icon: 'chart-line'
+---
+
+# pulse xp system
+
+enovuh's pulse xp system transforms server activity into a rewarding progression journey, driving engagement through personalized advancement paths, achievements, and rewards.
+
+## core mechanics
+
+the pulse system awards experience points based on meaningful engagement:
+
+- message quality and engagement
+- voice participation
+- community contributions
+- special event participation
+
+## activation
+
+enable the xp system for your server:
+
+```
+,pulse
+```
+
+view current system settings:
+
+```
+,pulse config
+```
+
+## experience sources
+
+pulse offers multiple ways for members to earn xp:
+
+### text participation
+
+earn xp through chat activity:
+
+```
+,pulse text <multiplier>
+```
+
+the multiplier controls how much xp is earned per qualifying message (default: 1.0).
+
+custom text settings:
+```
+,pulse text mindist <seconds>
+```
+sets the minimum time between xp awards to prevent spam.
+
+```
+,pulse text minlength <characters>
+```
+sets the minimum message length that qualifies for xp.
+
+### voice activity
+
+earn xp while in voice channels:
+
+```
+,pulse voice <multiplier>
+```
+
+the multiplier controls xp rate in voice channels (default: 1.0).
+
+voice options:
+```
+,pulse voice interval <minutes>
+```
+sets how often xp is awarded during voice activity.
+
+```
+,pulse voice mute <on/off>
+```
+determines if muted users still earn xp.
+
+### interactive rewards
+
+award xp for interactive participation:
+
+```
+,pulse interact <on/off>
+```
+
+enables xp for:
+- reactions given/received
+- thread participation
+- forum post creation
+- event attendance
+
+## progression setup
+
+### level curves
+
+choose how quickly members advance:
+
+```
+,pulse curve <type>
+```
+
+available curves:
+- `linear` - consistent xp requirements
+- `exponential` - increasingly challenging levels
+- `logarithmic` - easier early levels, plateau later
+- `custom` - define your own formula
+
+for custom curves:
+```
+,pulse formula "<expression>"
+```
+
+example:
+```
+,pulse formula "100 * level^1.5"
+```
+
+### prestige system
+
+enable advanced progression with multiple tiers:
+
+```
+,pulse prestige <on/off>
+```
+
+prestige configuration:
+```
+,pulse prestige levels <number>
+```
+sets how many levels before prestige is available.
+
+```
+,pulse prestige rewards <on/off>
+```
+toggles special rewards for prestiging.
+
+## engagement tools
+
+### level notifications
+
+customize how members are notified of level ups:
+
+```
+,pulse notify <mode>
+```
+
+notification modes:
+- `current` - in the active channel
+- `private` - via direct message
+- `focused` - in a designated channel
+- `silent` - no notifications
+
+for focused mode:
+```
+,pulse notify channel <#channel>
+```
+
+### achievements
+
+create special milestone rewards:
+
+```
+,pulse achieve add <name> <description> <requirement> <reward>
+```
+
+example:
+```
+,pulse achieve add "night owl" "active after midnight" "messages:night:100" "role:nightowl"
+```
+
+view all achievements:
+```
+,pulse achieve list
+```
+
+### leaderboards
+
+display top members by experience:
+
+```
+,pulse top [page]
+```
+
+specialized leaderboards:
+```
+,pulse top voice
+,pulse top daily
+,pulse top weekly
+```
+
+## reward system
+
+### automated role rewards
+
+assign roles when members reach certain levels:
+
+```
+,pulse reward <level> <@role>
+```
+
+remove a level reward:
+```
+,pulse reward <level> remove
+```
+
+view all rewards:
+```
+,pulse rewards
+```
+
+### multiplier roles
+
+grant special roles bonus xp:
+
+```
+,pulse boost <@role> <multiplier>
+```
+
+example:
+```
+,pulse boost @supporter 1.5
+```
+gives supporters 50% more xp.
+
+### seasonal events
+
+create limited-time xp events:
+
+```
+,pulse event <name> <duration> <multiplier>
+```
+
+example:
+```
+,pulse event "summer bash" 7d 2.0
+```
+doubles xp for 7 days.
+
+## customization options
+
+### rank cards
+
+customize how progress is displayed:
+
+```
+,pulse card <template>
+```
+
+available templates:
+- `minimal` - clean, streamlined design
+- `detailed` - shows extensive statistics
+- `themed` - matches server aesthetic
+- `dynamic` - changes based on level
+
+custom background:
+```
+,pulse card background <url>
+```
+
+color scheme:
+```
+,pulse card colors <primary> <secondary> <accent>
+```
+
+### level badges
+
+create custom badges for different level ranges:
+
+```
+,pulse badge <level-range> <emoji>
+```
+
+example:
+```
+,pulse badge 10-20 🌟
+```
+
+## targeting options
+
+### channel multipliers
+
+adjust xp rates in specific channels:
+
+```
+,pulse channel <#channel> <multiplier>
+```
+
+example:
+```
+,pulse channel #general 1.2
+,pulse channel #off-topic 0.8
+```
+
+### activity zones
+
+create channel groups with unified settings:
+
+```
+,pulse zone create <name>
+```
+
+add channels to a zone:
+```
+,pulse zone <name> add <#channel1> <#channel2>
+```
+
+set zone multiplier:
+```
+,pulse zone <name> rate <multiplier>
+```
+
+### no-xp designations
+
+exclude specific elements from earning xp:
+
+```
+,pulse exclude role <@role>
+,pulse exclude channel <#channel>
+,pulse exclude user <@user>
+```
+
+## administrative tools
+
+### member management
+
+adjust individual member progress:
+
+```
+,pulse set <@user> <level>
+```
+
+add or remove xp:
+```
+,pulse add <@user> <amount>
+,pulse remove <@user> <amount>
+```
+
+### data management
+
+reset the xp system:
+
+```
+,pulse reset [confirmation]
+```
+
+import from other bots:
+```
+,pulse import <bot> [options]
+```
+
+supported imports:
+- mee6
+- dyno
+- amari
+- custom csv
+
+export xp data:
+```
+,pulse export <format>
+```
+
+### analytics dashboard
+
+view system performance:
+
+```
+,pulse stats
+```
+
+this displays:
+- engagement metrics
+- level distribution
+- activity patterns
+- reward effectiveness
+
+## unique features
+
+### activity trends
+
+view server engagement patterns:
+
+```
+,pulse trends
+```
+
+this shows hourly, daily, and weekly activity patterns.
+
+### goal system
+
+create server-wide xp challenges:
+
+```
+,pulse goal set <amount> <reward>
+```
+
+members collectively work toward xp goals for server rewards.
+
+### smart anti-abuse
+
+enable intelligent xp qualification:
+
+```
+,pulse quality <on/off>
+```
+
+when enabled, the system:
+- rewards meaningful contributions
+- identifies and ignores spam patterns
+- adapts to different conversation styles
+- weights xp based on engagement quality
+
+<Card title="pro tip" icon="wand-magic-sparkles" color="#9333EA">
+  create distinct activity zones for different types of engagement - gaming channels, creative showcases, and discussions - each with tailored xp rates to encourage diverse participation.
+</Card> 

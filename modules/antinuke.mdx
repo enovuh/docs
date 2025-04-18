@@ -1,0 +1,260 @@
+---
+title: 'antinuke'
+description: 'shield your server from destruction attempts'
+icon: 'shield-alt'
+---
+
+# antinuke defender
+
+the antinuke system monitors your server for suspicious administrative actions and automatically counters potential nuking attempts. unlike other bots, enovuh uses an advanced neural detection system to distinguish between normal admin activities and malicious patterns.
+
+## how it works
+
+enovuh's antinuke system uses three layers of protection:
+
+1. **real-time monitoring** - continuously analyzes all administrative actions
+2. **pattern recognition** - identifies suspicious sequences of actions
+3. **automatic response** - instantly counters threats based on your settings
+
+## setup guide
+
+activate antinuke with a single command:
+
+```
+,defend
+```
+
+this enables the default protection settings. to customize:
+
+```
+,defend setup
+```
+
+this walks you through customizing each protection module for your server.
+
+## protection layers
+
+enovuh divides protection into three severity layers:
+
+### layer 1: basic protection
+
+monitors essential server elements:
+
+```
+,defend basic <on/off>
+```
+
+this layer protects:
+- server settings (name, icon, region)
+- vanity url
+- community features
+- verification level
+
+### layer 2: structural protection
+
+monitors server structure changes:
+
+```
+,defend structure <on/off>
+```
+
+this layer protects:
+- channels (creation, deletion, permission changes)
+- roles (creation, deletion, permission changes)
+- webhooks (creation, deletion)
+- emoji (mass deletion)
+- integrations (api access)
+
+### layer 3: member protection
+
+monitors actions affecting server members:
+
+```
+,defend members <on/off>
+```
+
+this layer protects against:
+- mass bans
+- mass kicks
+- permission escalation
+- dangerous bot additions
+
+## sensitivity settings
+
+adjust how quickly enovuh responds to suspicious activity:
+
+```
+,defend sensitivity <low/medium/high/custom>
+```
+
+custom sensitivity allows fine-tuning:
+
+```
+,defend threshold <action> <count> <seconds>
+```
+
+examples:
+```
+,defend threshold channels 3 10
+,defend threshold bans 5 30
+```
+
+## response options
+
+choose how enovuh responds to detected threats:
+
+```
+,defend response <action>
+```
+
+available responses:
+- `monitor` - only log detected threats
+- `restrict` - remove dangerous permissions
+- `isolate` - quarantine the user with a special role
+- `eject` - kick the user from the server
+- `block` - ban the user and revert their actions
+- `lockdown` - temporarily halt all administrative actions
+
+## trusted users
+
+add users who should bypass antinuke protection:
+
+```
+,defend trust <@user>
+```
+
+remove trust:
+
+```
+,defend untrust <@user>
+```
+
+view trusted users:
+
+```
+,defend trusted
+```
+
+## trust levels
+
+for granular control, set different trust levels:
+
+```
+,defend trust <@user> <level>
+```
+
+trust levels:
+- `0` - no special trust
+- `1` - can modify channels
+- `2` - can modify roles and channels
+- `3` - can modify members and structure
+- `4` - full administrative trust
+
+## smart monitoring
+
+enable advanced detection system that learns your server's normal patterns:
+
+```
+,defend smart <on/off>
+```
+
+when enabled, the system:
+- builds a baseline of normal admin activity
+- reduces false positives
+- adapts to your server's management style
+- creates a trust score for all admins
+
+## recovery options
+
+if a nuke event occurs, recover your server:
+
+```
+,defend recover
+```
+
+specific recovery options:
+```
+,defend recover channels
+,defend recover roles
+,defend recover permissions
+,defend recover bans
+```
+
+## activity logs
+
+track all administrative activities:
+
+```
+,defend logs <#channel>
+```
+
+filter logs by severity:
+```
+,defend logs filter <low/medium/high/all>
+```
+
+## unique features
+
+### auto-backup
+
+automatically creates server structure backups:
+
+```
+,defend backup <daily/weekly/off>
+```
+
+view backup status:
+```
+,defend backup status
+```
+
+### emergency mode
+
+activate heightened security during suspicious periods:
+
+```
+,defend emergency
+```
+
+in emergency mode:
+- all admin actions require confirmation
+- new members cannot perform moderation actions
+- suspicious actions trigger immediate lockdown
+- only server owner can disable emergency mode
+
+### secure roles
+
+prevent specific roles from being modified:
+
+```
+,defend secure <@role>
+```
+
+### raid detection
+
+integrates with antinuke to protect during raids:
+
+```
+,defend raid <on/off>
+```
+
+## performance impact
+
+antinuke uses intelligent caching to minimize performance impact:
+- essential data cached locally
+- minimal api calls
+- optimized monitoring intervals
+- smart filter to ignore routine changes
+
+## best practices
+
+for optimal protection:
+1. trust only essential administrators
+2. use role permissions instead of administrator
+3. enable all three protection layers
+4. choose appropriate response settings
+5. regularly review defend logs
+
+<Card title="pro tip" icon="bolt" color="#9333EA">
+  enable smart monitoring for at least 7 days to help enovuh learn your server's normal administrative patterns and reduce false positives.
+</Card> 

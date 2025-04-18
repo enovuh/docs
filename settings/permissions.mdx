@@ -1,0 +1,269 @@
+---
+title: 'permissions'
+description: 'customizing command access and privileges'
+icon: 'key'
+---
+
+# permission system
+
+enovuh's permission system provides precise control over who can use which commands in your server, allowing you to create a custom hierarchy that matches your server's needs.
+
+## permission concepts
+
+enovuh's permission system works through:
+
+1. **command groups** - sets of related commands
+2. **permission levels** - numeric values (0-5) determining access
+3. **role bindings** - associations between discord roles and permission levels
+4. **command overrides** - specific exceptions to the general permissions
+5. **channel restrictions** - limiting where commands can be used
+
+## basic permissions
+
+view current permission settings:
+
+```
+,perms view
+```
+
+this displays all permission levels and associated roles.
+
+## permission levels
+
+enovuh uses six permission levels:
+
+| level | name | default access | typical roles |
+|-------|------|----------------|--------------|
+| 0 | member | basic utility commands | @everyone |
+| 1 | helper | informational commands | helpers, trial mods |
+| 2 | moderator | moderation tools | moderators |
+| 3 | administrator | configuration commands | admins |
+| 4 | manager | critical server settings | server managers |
+| 5 | owner | all commands | server owner |
+
+## setting permissions
+
+### role-based permissions
+
+assign a permission level to a role:
+
+```
+,perms role <@role> <level>
+```
+
+example:
+```
+,perms role @Moderator 2
+```
+
+view role permissions:
+```
+,perms roles
+```
+
+### user-based permissions
+
+assign a permission level to a specific user:
+
+```
+,perms user <@user> <level>
+```
+
+this overrides the user's role-based permissions.
+
+view user-specific permissions:
+```
+,perms users
+```
+
+## command management
+
+### viewing command requirements
+
+check what permission level a command requires:
+
+```
+,perms cmd <command>
+```
+
+### command overrides
+
+change the permission level for a specific command:
+
+```
+,perms override <command> <level>
+```
+
+example:
+```
+,perms override ban 3
+```
+this changes the `ban` command to require level 3 instead of its default.
+
+view all command overrides:
+```
+,perms overrides
+```
+
+remove a command override:
+```
+,perms override <command> reset
+```
+
+## group management
+
+commands are organized into logical groups for easier management.
+
+view command groups:
+```
+,perms groups
+```
+
+set permission level for an entire group:
+```
+,perms group <group-name> <level>
+```
+
+## channel restrictions
+
+### command channels
+
+restrict a command to specific channels:
+
+```
+,perms channel <command> <#channel1> <#channel2>
+```
+
+remove channel restrictions:
+```
+,perms channel <command> reset
+```
+
+### disabled channels
+
+disable commands in specific channels:
+
+```
+,perms disable <#channel> <commands/all>
+```
+
+re-enable commands:
+```
+,perms enable <#channel> <commands/all>
+```
+
+## advanced management
+
+### permission templates
+
+save your current permission setup as a template:
+
+```
+,perms template save <name>
+```
+
+load a template:
+```
+,perms template load <name>
+```
+
+view available templates:
+```
+,perms templates
+```
+
+### permission audit
+
+view a log of permission changes:
+
+```
+,perms audit
+```
+
+### permission reset
+
+reset all permissions to default:
+
+```
+,perms reset
+```
+
+this requires confirmation and can't be undone.
+
+## common use cases
+
+### moderator setup
+
+establish basic moderation permissions:
+
+```
+,perms role @Moderator 2
+,perms override warn 1
+,perms override mute 2
+,perms override ban 3
+```
+
+this gives moderators standard moderation powers, allows helpers to warn, but reserves bans for administrators.
+
+### public commands
+
+create a channel for public utility commands:
+
+```
+,perms disable #general all
+,perms enable #general weather avatar profile
+```
+
+this restricts most commands from #general but allows a few helpful ones.
+
+### tiered moderation
+
+create a moderation ladder:
+
+```
+,perms role @Helper 1
+,perms role @Moderator 2
+,perms role @SeniorMod 3
+,perms override kick 2
+,perms override tempban 2
+,perms override ban 3
+```
+
+this creates a progression from helpers to senior moderators with increasing capabilities.
+
+## contextual permission checks
+
+enable smart permission evaluation:
+
+```
+,perms context <on/off>
+```
+
+when enabled, enovuh considers:
+- self-target actions (allowing users to use commands on themselves)
+- role hierarchy (preventing moderation of higher-ranked users)
+- permission inheritance (allowing higher levels to use lower-level commands)
+
+## cross-server permissions
+
+for users with enovuh in multiple servers:
+
+```
+,perms global <@user> <level>
+```
+
+this command is restricted to the bot owner.
+
+## permission troubleshooting
+
+if someone can't use a command they should have access to, check:
+
+1. their assigned role permissions with `,perms role <@role>`
+2. any user-specific overrides with `,perms user <@user>`
+3. command-specific requirements with `,perms cmd <command>`
+4. channel restrictions with `,perms channels <command>`
+5. disabled channels with `,perms disabled`
+
+<Card title="pro tip" icon="lightbulb" color="#9333EA">
+  create a special "command access" role that doesn't provide any discord permissions but grants enovuh permission level 1 – this lets you give members access to utility commands without moderation privileges.
+</Card> 

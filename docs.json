@@ -44,104 +44,106 @@
       "destination": "https://discord.gg/enovuh"
     }
   ],
-  "navigation": [
-    {
-      "group": "getting started",
-      "pages": [
-        "index",
-        "overview/introduction",
-        "overview/protection",
-        "overview/configuration"
-      ]
-    },
-    {
-      "group": "protection & security",
-      "pages": [
-        "protection/antinuke",
-        "protection/antiraid",
-        "protection/joingate",
-        "protection/automod"
-      ]
-    },
-    {
-      "group": "server configuration",
-      "pages": [
-        {
-          "group": "role management",
-          "pages": [
-            "configuration/roles/reaction-roles",
-            "configuration/roles/autoroles",
-            "configuration/roles/vanity-roles",
-            "configuration/roles/booster-roles"
-          ]
-        },
-        {
-          "group": "messages & notifications",
-          "pages": [
-            "configuration/messages/welcome",
-            "configuration/messages/goodbye",
-            "configuration/messages/autoreplies"
-          ]
-        },
-        "configuration/starboard",
-        "configuration/voicemaster",
-        "configuration/levels",
-        "configuration/bumpreminder",
-        "configuration/logging"
-      ]
-    },
-    {
-      "group": "commands",
-      "pages": [
-        "commands/protection",
-        "commands/security",
-        "commands/utility",
-        "commands/configuration",
-        "commands/levels",
-        "commands/music",
-        "commands/support",
-        "commands/fun",
-        "commands/social"
-      ]
-    },
-    {
-      "group": "features",
-      "pages": [
-        "features/music",
-        "features/economy",
-        "features/leveling",
-        "features/counters",
-        "features/image-generation",
-        "features/threads",
-        "features/translation",
-        "features/wordcloud"
-      ]
-    },
-    {
-      "group": "integrations",
-      "pages": [
-        "integrations/spotify",
-        "integrations/lastfm",
-        "integrations/social"
-      ]
-    },
-    {
-      "group": "common issues",
-      "pages": [
-        "common-issues/permissions",
-        "common-issues/errors",
-        "common-issues/troubleshooting"
-      ]
-    },
-    {
-      "group": "developer resources",
-      "pages": [
-        "developers/api",
-        "developers/self-hosting",
-        "developers/contributing"
-      ]
-    }
-  ],
+  "navigation": {
+    "groups": [
+      {
+        "group": "getting started",
+        "pages": [
+          "index",
+          "overview/introduction",
+          "overview/protection",
+          "overview/configuration"
+        ]
+      },
+      {
+        "group": "protection & security",
+        "pages": [
+          "protection/antinuke",
+          "protection/antiraid",
+          "protection/joingate",
+          "protection/automod"
+        ]
+      },
+      {
+        "group": "server configuration",
+        "pages": [
+          {
+            "group": "role management",
+            "pages": [
+              "configuration/roles/reaction-roles",
+              "configuration/roles/autoroles",
+              "configuration/roles/vanity-roles",
+              "configuration/roles/booster-roles"
+            ]
+          },
+          {
+            "group": "messages & notifications",
+            "pages": [
+              "configuration/messages/welcome",
+              "configuration/messages/goodbye",
+              "configuration/messages/autoreplies"
+            ]
+          },
+          "configuration/starboard",
+          "configuration/voicemaster",
+          "configuration/levels",
+          "configuration/bumpreminder",
+          "configuration/logging"
+        ]
+      },
+      {
+        "group": "commands",
+        "pages": [
+          "commands/protection",
+          "commands/security",
+          "commands/utility",
+          "commands/configuration",
+          "commands/levels",
+          "commands/music",
+          "commands/support",
+          "commands/fun",
+          "commands/social"
+        ]
+      },
+      {
+        "group": "features",
+        "pages": [
+          "features/music",
+          "features/economy",
+          "features/leveling",
+          "features/counters",
+          "features/image-generation",
+          "features/threads",
+          "features/translation",
+          "features/wordcloud"
+        ]
+      },
+      {
+        "group": "integrations",
+        "pages": [
+          "integrations/spotify",
+          "integrations/lastfm",
+          "integrations/social"
+        ]
+      },
+      {
+        "group": "common issues",
+        "pages": [
+          "common-issues/permissions",
+          "common-issues/errors",
+          "common-issues/troubleshooting"
+        ]
+      },
+      {
+        "group": "developer resources",
+        "pages": [
+          "developers/api",
+          "developers/self-hosting",
+          "developers/contributing"
+        ]
+      }
+    ]
+  },
   "footerSocials": {
     "discord": "https://discord.gg/enovuh",
     "github": "https://github.com/enovuh-bot",

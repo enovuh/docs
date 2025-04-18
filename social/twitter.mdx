@@ -6,14 +6,14 @@ icon: "twitter"
 
 # twitter integration
 
-keep your server updated with real-time notifications whenever specified twitter accounts post new tweets, replies, or retweets.
+keep your server updated with real-time notifications whenever specified twitter accounts post new tweets.
 
 ## setup
 
 configure twitter notifications:
 
 ```
-,twitter setup <#channel> <@username>
+,twitter add <#channel> <@username>
 ```
 
 sets up notifications for a specific twitter account to be sent to the specified channel
@@ -23,16 +23,10 @@ sets up notifications for a specific twitter account to be sent to the specified
 manage twitter notification subscriptions:
 
 ```
-,twitter add <@username>
+,twitter remove <#channel> <@username>
 ```
 
-adds a new twitter account to monitor
-
-```
-,twitter remove <@username>
-```
-
-stops monitoring a twitter account
+stops monitoring a twitter account in a specific channel
 
 ```
 ,twitter list
@@ -56,9 +50,9 @@ changes the channel where notifications for a specific account are sent
 
 changes what types of tweets trigger notifications
 
-available notification modes:
+available modes:
 
-- `all` - all tweets, retweets, and replies (default)
+- `all` - all tweets, retweets, and replies
 - `tweets` - only original tweets
 - `retweets` - only retweets
 - `replies` - only replies
@@ -73,7 +67,7 @@ personalize your twitter notifications:
 ,twitter mention <@username> <@role>
 ```
 
-adds a role mention to notifications for a specific account
+adds a role mention to notifications
 
 ```
 ,twitter color <@username> <hex color>
@@ -87,7 +81,22 @@ sets a custom color for notification embeds
 
 sets a custom message to be sent with notifications
 
-## filtering options
+available placeholders:
+
+- `{username}` - twitter username
+- `{text}` - tweet content
+- `{url}` - tweet url
+- `{retweets}` - retweet count
+- `{likes}` - like count
+- `{replies}` - reply count
+
+add the `--ping` flag to allow mentions in the message:
+
+```
+,twitter message <@username> new post from our partner! check it out! --ping
+```
+
+## filtering
 
 fine-tune what notifications you receive:
 
@@ -109,28 +118,12 @@ ignore tweets containing specific keywords
 
 removes all filters for an account
 
-## manual actions
-
-manually interact with twitter data:
-
-```
-,twitter check <@username>
-```
-
-manually checks for new tweets from an account
-
-```
-,twitter view <@username>
-```
-
-displays the latest tweet from an account
-
 ## profile information
 
 view information about twitter profiles:
 
 ```
-,twitter profile <@username>
+,twitter <@username>
 ```
 
 displays information about a twitter account
@@ -142,7 +135,7 @@ displays information about a twitter account
 set up notifications for a twitter account:
 
 ```
-,twitter setup #announcements elonmusk
+add #announcements elonmusk
 ```
 
 ### focused updates
@@ -150,19 +143,8 @@ set up notifications for a twitter account:
 set up notifications for only original tweets:
 
 ```
-,twitter add nasa
-,twitter mode nasa tweets
-,twitter channel nasa #space-news
-```
-
-### community engagement
-
-make notifications more engaging:
-
-```
-,twitter add minecraft
-,twitter mention minecraft @gamers
-,twitter message minecraft "New Minecraft update! 🎮"
+add #space-news nasa
+mode nasa tweets
 ```
 
 ### filtered content
@@ -170,26 +152,25 @@ make notifications more engaging:
 filter notifications for specific content:
 
 ```
-,twitter add PlayStation
-,twitter filter PlayStation "PS5"
-,twitter filter PlayStation "giveaway"
+add #gaming playstation
+filter playstation "ps5"
+filter playstation "giveaway"
 ```
 
-## batch management
+### customizing notifications
 
-manage multiple subscriptions efficiently:
-
-```
-,twitter import <url>
-```
-
-imports a list of twitter accounts from a text file
+add a custom message with notifications:
 
 ```
-,twitter export
+add #gaming-news xbox
+message xbox "new xbox update! 🎮 {url}"
 ```
 
-exports your current twitter subscriptions to a file
+allow role mentions in your notifications:
+
+```
+message xbox "@gaming check out the latest xbox tweet! {url}" --ping
+```
 
 ## troubleshooting
 
@@ -197,24 +178,13 @@ exports your current twitter subscriptions to a file
 
 if notifications aren't working:
 
-- ensure enovuh has permission to send messages in the target channel
+- ensure the bot has permission to send messages in the target channel
 - verify the twitter account exists and is public
 - check if the account has tweeted recently
-- confirm twitter's API is operational
-
-### rate limits
-
-if you hit twitter API rate limits:
-
-```
-,twitter status
-```
-
-shows the current API status and remaining rate limits
+- the bot checks for updates every 15 minutes, so new tweets won't appear immediately
 
 <Card title="pro tip" icon="lightbulb" color="#9333EA">
-  for gaming servers, create a "release-tracker" channel and add twitter
-  notifications for game developers, publishers, and news accounts using
-  `,twitter mode` set to "tweets" to avoid cluttering the channel with retweets
-  and replies.
+  for best results, use twitter accounts that post regularly and are public. the
+  bot automatically stores the latest tweet id to avoid sending duplicate
+  notifications.
 </Card>{" "}

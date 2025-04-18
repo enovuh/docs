@@ -1,7 +1,7 @@
 ---
-title: 'leveling'
-description: 'engage your community with a customizable xp system'
-icon: 'chart-line'
+title: "leveling"
+description: "engage your community with a customizable xp system"
+icon: "chart-line"
 ---
 
 # leveling system
@@ -9,7 +9,11 @@ icon: 'chart-line'
 enovuh's leveling system helps increase server engagement by rewarding active members with experience points (xp) and levels as they participate in conversations. this gamified approach encourages members to remain active and contribute meaningfully to your community.
 
 <Frame>
-  <img src="https://enovuh.lol/images/leveling-example.png" alt="server member leveling up" className="rounded-lg" />
+  <img
+    src="https://enovuh.lol/images/leveling-example.png"
+    alt="server member leveling up"
+    className="rounded-lg"
+  />
 </Frame>
 
 ## key features
@@ -20,19 +24,21 @@ enovuh's leveling system helps increase server engagement by rewarding active me
 - **leaderboards** - competitive rankings to showcase top contributors
 - **multi-channel configuration** - adjust xp rates for different channels
 
-## getting started
+## setup
 
 enable the leveling system for your server:
 
 ```
-,leveling
+,levels unlock
 ```
 
-to view your current leveling system settings:
+enables the leveling system in your server
 
 ```
-,leveling config
+,levels config
 ```
+
+displays current leveling system settings
 
 ## member progression
 
@@ -45,21 +51,28 @@ members earn xp through regular conversation, with built-in rate limiting to pre
 
 ## viewing ranks
 
-members can check their current level and rank with:
+check current level and rank:
 
 ```
 ,rank [@user]
 ```
 
-this displays a customized rank card showing:
-- current level and xp
-- progress to next level
-- server rank position
-- total messages sent
-- member since date
+displays a customized rank card showing current level, xp, progress to next level, server rank position
+
+or
+
+```
+,levels [@user]
+```
+
+alternative way to view rank information
 
 <Frame>
-  <img src="https://enovuh.lol/images/rank-card.png" alt="customized rank card" className="rounded-lg" />
+  <img
+    src="https://enovuh.lol/images/rank-card.png"
+    alt="customized rank card"
+    className="rounded-lg"
+  />
 </Frame>
 
 ## leaderboard
@@ -70,110 +83,40 @@ view the server's top members by xp:
 ,leaderboard
 ```
 
-you can also view specific leaderboard pages:
+displays the server's top members by xp
 
 ```
-,leaderboard [page]
+,levelboard
 ```
+
+alternative command to show the leaderboard
 
 ## level-up notifications
 
 customize how members are notified when they level up:
 
 ```
-,levelup <mode> [#channel]
+,levels messagemode <mode>
 ```
+
+configures level-up notification settings
 
 available notification modes:
-- `current` - send in the channel where the level-up occurred (default)
+
+- `channel` - send in the channel where the level-up occurred
 - `dm` - send a direct message to the user
-- `channel` - send to a specific channel
-- `off` - disable level-up messages
+- `none` - disable level-up messages
+- `#channel` - specify a channel to send all level-up messages
 
-example setting a specific announcement channel:
-```
-,levelup channel #level-ups
-```
+## personal notifications
 
-## role rewards
-
-automatically assign roles when members reach certain levels:
+toggle level-up messages for yourself:
 
 ```
-,levelrole add <level> <@role>
+,levelmsg <on/off>
 ```
 
-to remove a level role:
-```
-,levelrole remove <level>
-```
-
-to view all configured level roles:
-```
-,levelrole list
-```
-
-example:
-```
-,levelrole add 10 @Active Member
-```
-
-## customization options
-
-### xp rates
-
-adjust how much xp members earn per message:
-
-```
-,leveling xprate <amount>
-```
-
-the default rate is 15-25 xp per qualifying message.
-
-### level-up multiplier
-
-control how difficult it becomes to level up:
-
-```
-,leveling multiplier <value>
-```
-
-higher values mean more xp is required between levels (default: 100).
-
-### channel settings
-
-boost or restrict xp gain in specific channels:
-
-```
-,leveling channel <#channel> <multiplier>
-```
-
-examples:
-- `0` - no xp in this channel
-- `0.5` - half the normal xp rate
-- `2` - double the normal xp rate
-
-```
-,leveling channel #general 1.5
-```
-
-### custom background
-
-personalize rank cards with a custom background:
-
-```
-,rankcard background <image_url>
-```
-
-### xp boost for server boosters
-
-reward members who boost your server with additional xp:
-
-```
-,leveling boosterbonus <multiplier>
-```
-
-a multiplier of 1.5 would give boosters 50% more xp.
+enables or disables level-up messages for yourself
 
 ## member management
 
@@ -182,121 +125,67 @@ a multiplier of 1.5 would give boosters 50% more xp.
 manually adjust a member's xp:
 
 ```
-,level set @user <amount>
+,setxp @user <amount>
 ```
 
-add xp to a member:
-```
-,level add @user <amount>
-```
-
-remove xp from a member:
-```
-,level remove @user <amount>
-```
-
-### resetting progress
-
-reset a single user's levels and xp:
-```
-,level reset @user
-```
-
-reset the entire server's leveling data:
-```
-,leveling reset
-```
-
-**note:** server-wide reset requires confirmation and can't be undone.
-
-## importing data
-
-enovuh supports importing level data from other popular leveling bots:
+sets a user's xp to a specific amount
 
 ```
-,leveling import <bot>
+,setlevel @user <level>
 ```
 
-supported bots for importing:
-- mee6
-- amari
-- atlas
-- lurkr
+sets a user's level directly
 
-## advanced features
+## usage examples
 
-### no-xp roles
+### basic setup
 
-designate roles that shouldn't earn xp:
+enable the leveling system:
 
 ```
-,leveling noxprole add @role
+levels unlock
 ```
 
-to remove a no-xp role:
-```
-,leveling noxprole remove @role
-```
+### configuring notifications
 
-to list all no-xp roles:
-```
-,leveling noxprole list
-```
-
-### voice channel xp
-
-enable xp for voice channel activity:
+set up level-up notifications:
 
 ```
-,leveling voice <on/off> [rate]
+levels messagemode channel
+levels messagemode dm
+levels messagemode #level-ups
 ```
 
-the rate determines how often xp is awarded (in minutes).
+### managing member xp
 
-### message requirements
-
-set minimum requirements for messages to earn xp:
+modify a user's xp or level manually:
 
 ```
-,leveling minlength <characters>
+setxp @user 1000
+setlevel @user 5
 ```
 
-messages shorter than this won't earn xp (default: 5).
+### personal preferences
 
-## analytics
-
-view detailed statistics about your leveling system:
+toggle level-up notifications for yourself:
 
 ```
-,leveling stats
+levelmsg on
+levelmsg off
 ```
-
-this shows:
-- total xp earned server-wide
-- average level of members
-- most active channels
-- leveling activity over time
-
-## best practices
-
-for an effective leveling system:
-
-1. **balance xp rates** - make progression challenging but achievable
-2. **create meaningful rewards** - ensure level roles provide actual benefits
-3. **promote the leaderboard** - encourage friendly competition
-4. **adjust channel multipliers** - reward participation in important channels
-5. **combine with other features** - integrate with giveaways, applications, or verification
 
 ## troubleshooting
 
 if the leveling system isn't working as expected:
 
-- ensure enovuh has the required permissions
+- ensure the bot has the required permissions
 - check if the user has a no-xp role assigned
 - verify the channel doesn't have a 0 multiplier
 - make sure messages meet the minimum length requirement
 - confirm the user hasn't reached a daily xp cap
 
 <Card title="did you know?" icon="lightbulb" color="#FEF3C7">
-  you can integrate leveling with enovuh's reaction roles to create level-gated access to channels, allowing you to build structured progression through your server.
-</Card> 
+  you can integrate leveling with enovuh's reaction roles to create level-gated
+  access to channels, allowing you to build structured progression through your
+  server.
+</Card>{" "}

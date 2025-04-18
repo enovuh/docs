@@ -1,7 +1,7 @@
 ---
-title: 'music system'
-description: 'high-quality music playback with multiple source support'
-icon: 'music'
+title: "music system"
+description: "high-quality music playback with multiple source support"
+icon: "music"
 ---
 
 # music system
@@ -15,25 +15,171 @@ enovuh offers a feature-rich music system, allowing your server to enjoy high-qu
 - extensive queue management
 - audio filters and effects
 - lyrics display
-- 24/7 playback option
 - dj role system
 
-## getting started
+## playback commands
 
-to start playing music, you or the bot must be in a voice channel. use the following commands to begin:
+play music in a voice channel:
 
 ```
 ,play <song name or url>
 ```
 
-for example:
+plays a song or adds it to the queue
+
 ```
-,play never gonna give you up
+,pause
 ```
 
-or directly with a link:
+pauses the current playback
+
 ```
-,play https://www.youtube.com/watch?v=dQw4w9WgXcQ
+,resume
+```
+
+resumes paused playback
+
+```
+,skip
+```
+
+skips to the next song
+
+```
+,stop
+```
+
+stops playback and clears queue
+
+```
+,now
+```
+
+shows currently playing song
+
+```
+,seek <time>
+```
+
+seeks to a position in the song
+
+## queue management
+
+manage your music queue:
+
+```
+,queue
+```
+
+views the current queue
+
+```
+,shuffle
+```
+
+shuffles songs in the queue
+
+```
+,loop <song/queue>
+```
+
+loops the current song or queue
+
+```
+,remove <position>
+```
+
+removes a song from the queue
+
+```
+,clear
+```
+
+clears the queue
+
+```
+,move <from> <to>
+```
+
+moves a song to another position
+
+```
+,skipto <position>
+```
+
+skips to a specific position in the queue
+
+## search
+
+search for songs to play:
+
+```
+,search <query>
+```
+
+searches for songs and lets you choose one from the results
+
+## volume control
+
+adjust the playback volume:
+
+```
+,volume <1-100>
+```
+
+adjusts playback volume
+
+## disconnecting
+
+disconnect from voice channel:
+
+```
+,disconnect
+```
+
+disconnects the bot from voice channel
+
+## usage examples
+
+### basic playback
+
+play a song by name:
+
+```
+play never gonna give you up
+```
+
+play a song by url:
+
+```
+play https://www.youtube.com/watch?v=dQw4w9WgXcQ
+```
+
+### managing the queue
+
+add multiple songs and manage them:
+
+```
+play highway to hell
+shuffle
+remove 3
+skipto 2
+```
+
+### searching for songs
+
+search for songs when you're not sure of the exact name:
+
+```
+search billie eilish bad guy
+```
+
+### adjusting volume
+
+control the volume of playback:
+
+```
+volume 75
 ```
 
 ## supported platforms
@@ -44,33 +190,32 @@ enovuh can play music from:
 - spotify (tracks, albums, playlists)
 - soundcloud
 - bandcamp
-- twitch streams
 - direct file links (mp3, wav, etc.)
 
 ## playback controls
 
-| command | description | usage | example |
-| ------- | ----------- | ----- | ------- |
-| `play` | play a song or add to queue | `play <song/url>` | `play highway to hell` |
-| `pause` | pause the current playback | `pause` | `pause` |
-| `resume` | resume paused playback | `resume` | `resume` |
-| `skip` | skip to the next song | `skip` | `skip` |
-| `stop` | stop playback and clear queue | `stop` | `stop` |
-| `now` | show currently playing song | `now` | `now` |
-| `seek` | seek to a position in the song | `seek <time>` | `seek 1:30` |
-| `replay` | restart the current song | `replay` | `replay` |
+| command  | description                    | usage             | example                |
+| -------- | ------------------------------ | ----------------- | ---------------------- |
+| `play`   | play a song or add to queue    | `play <song/url>` | `play highway to hell` |
+| `pause`  | pause the current playback     | `pause`           | `pause`                |
+| `resume` | resume paused playback         | `resume`          | `resume`               |
+| `skip`   | skip to the next song          | `skip`            | `skip`                 |
+| `stop`   | stop playback and clear queue  | `stop`            | `stop`                 |
+| `now`    | show currently playing song    | `now`             | `now`                  |
+| `seek`   | seek to a position in the song | `seek <time>`     | `seek 1:30`            |
+| `replay` | restart the current song       | `replay`          | `replay`               |
 
 ## queue management
 
-| command | description | usage | example |
-| ------- | ----------- | ----- | ------- |
-| `queue` | view the current queue | `queue` | `queue` |
-| `shuffle` | shuffle songs in the queue | `shuffle` | `shuffle` |
-| `loop` | loop the current song or queue | `loop <song/queue>` | `loop queue` |
-| `remove` | remove a song from the queue | `remove <position>` | `remove 3` |
-| `clear` | clear the queue | `clear` | `clear` |
-| `move` | move a song to another position | `move <from> <to>` | `move 2 5` |
-| `skipto` | skip to a specific position | `skipto <position>` | `skipto 4` |
+| command   | description                     | usage               | example      |
+| --------- | ------------------------------- | ------------------- | ------------ |
+| `queue`   | view the current queue          | `queue`             | `queue`      |
+| `shuffle` | shuffle songs in the queue      | `shuffle`           | `shuffle`    |
+| `loop`    | loop the current song or queue  | `loop <song/queue>` | `loop queue` |
+| `remove`  | remove a song from the queue    | `remove <position>` | `remove 3`   |
+| `clear`   | clear the queue                 | `clear`             | `clear`      |
+| `move`    | move a song to another position | `move <from> <to>`  | `move 2 5`   |
+| `skipto`  | skip to a specific position     | `skipto <position>` | `skipto 4`   |
 
 ## audio effects
 
@@ -81,6 +226,7 @@ enhance your listening experience with audio filters:
 ```
 
 available filters:
+
 - `bassboost` - enhance bass frequencies
 - `nightcore` - speed up and pitch up
 - `vaporwave` - slow down and pitch down
@@ -92,13 +238,13 @@ available filters:
 
 save and load your favorite playlists:
 
-| command | description | usage | example |
-| ------- | ----------- | ----- | ------- |
-| `playlist create` | create a new playlist | `playlist create <name>` | `playlist create favorites` |
-| `playlist add` | add current song to playlist | `playlist add <name>` | `playlist add favorites` |
-| `playlist remove` | remove song from playlist | `playlist remove <name> <position>` | `playlist remove favorites 2` |
-| `playlist view` | view songs in a playlist | `playlist view <name>` | `playlist view favorites` |
-| `playlist load` | load and play a playlist | `playlist load <name>` | `playlist load favorites` |
+| command           | description                  | usage                               | example                       |
+| ----------------- | ---------------------------- | ----------------------------------- | ----------------------------- |
+| `playlist create` | create a new playlist        | `playlist create <name>`            | `playlist create favorites`   |
+| `playlist add`    | add current song to playlist | `playlist add <name>`               | `playlist add favorites`      |
+| `playlist remove` | remove song from playlist    | `playlist remove <name> <position>` | `playlist remove favorites 2` |
+| `playlist view`   | view songs in a playlist     | `playlist view <name>`              | `playlist view favorites`     |
+| `playlist load`   | load and play a playlist     | `playlist load <name>`              | `playlist load favorites`     |
 
 ## lyrics
 
@@ -138,11 +284,11 @@ keep enovuh in the voice channel indefinitely:
 
 ## additional settings
 
-| command | description | usage | example |
-| ------- | ----------- | ----- | ------- |
-| `volume` | adjust playback volume | `volume <1-100>` | `volume 75` |
-| `disconnect` | disconnect from voice channel | `disconnect` | `disconnect` |
-| `autoplay` | toggle autoplay related songs | `autoplay` | `autoplay` |
+| command      | description                   | usage            | example      |
+| ------------ | ----------------------------- | ---------------- | ------------ |
+| `volume`     | adjust playback volume        | `volume <1-100>` | `volume 75`  |
+| `disconnect` | disconnect from voice channel | `disconnect`     | `disconnect` |
+| `autoplay`   | toggle autoplay related songs | `autoplay`       | `autoplay`   |
 
 ## troubleshooting
 
@@ -154,4 +300,9 @@ if you encounter issues with music playback:
 4. use the `,reconnect` command to refresh the connection
 5. make sure the bot has permission to join and speak in the channel
 
-for persistent issues, contact our support team via the support server. 
+for persistent issues, contact our support team via the support server.
+
+<Card title="pro tip" icon="lightbulb" color="#9333EA">
+  for best results, use direct links when possible and ensure you're in a voice
+  channel before using music commands.
+</Card>{" "}

@@ -1,0 +1,275 @@
+---
+title: 'leveling system'
+description: 'reward active members with xp, levels, and role rewards'
+icon: 'arrow-up-right-dots'
+---
+
+# leveling system
+
+enovuh's leveling system allows you to reward active members with experience points (xp), levels, and automatic role rewards. this creates a progression system that encourages engagement in your community.
+
+<img className="block mx-auto" src="https://enovuh.lol/images/leveling-example.png" alt="leveling system example" />
+
+## how it works
+
+members earn xp by chatting in your server. as they accumulate xp, they'll level up and can receive special roles automatically. the system uses a progressive xp curve, meaning higher levels require more xp to achieve.
+
+<Card title="xp formula" icon="calculator">
+  xp required for a level = 5 × (level²) + 50 × level + 100
+</Card>
+
+## enabling the system
+
+to enable the leveling system:
+
+```
+,levels unlock
+```
+
+to disable it:
+
+```
+,levels lock
+```
+
+## viewing levels
+
+### checking your level
+
+to see your current level and xp:
+
+```
+,rank
+```
+
+or use the alias:
+
+```
+,xp
+```
+
+### viewing someone else's level
+
+```
+,rank @username
+```
+
+### viewing the leaderboard
+
+to see the server's top members:
+
+```
+,leaderboard
+```
+
+or
+
+```
+,levelboard
+```
+
+## configuring the system
+
+### xp rate
+
+adjust how quickly members earn xp:
+
+```
+,levels setrate <multiplier>
+```
+
+example:
+```
+,levels setrate 1.5
+```
+
+this would make members earn xp 1.5× faster than the default rate.
+
+### level-up messages
+
+customize the message sent when members level up:
+
+```
+,levels message <text>
+```
+
+available variables:
+- `{user}` - mentions the user
+- `{username}` - user's name without mention
+- `{level}` - the new level
+- `{server}` - server name
+
+example:
+```
+,levels message **{username}** just reached level {level}! 🎉
+```
+
+### message mode
+
+choose where level-up messages are sent:
+
+```
+,levels messagemode <mode>
+```
+
+available modes:
+- `channel` - send in the same channel (default)
+- `dm` - send via direct message
+- `none` - don't send level-up messages
+
+### viewing current configuration
+
+to see your server's level settings:
+
+```
+,levels config
+```
+
+## level roles
+
+automatically assign roles when members reach specific levels.
+
+### adding a level role
+
+```
+,levels add @role <level>
+```
+
+example:
+```
+,levels add @Active Member 5
+```
+
+this assigns the "Active Member" role when someone reaches level 5.
+
+### updating a level role
+
+```
+,levels update @role <level>
+```
+
+### removing a level role
+
+```
+,levels remove <level>
+```
+
+### viewing all level roles
+
+```
+,levels roles
+```
+
+### role stacking
+
+control whether members keep lower-level roles when they level up:
+
+```
+,levels stackroles on
+```
+
+or
+
+```
+,levels stackroles off
+```
+
+## ignoring channels or roles
+
+exclude specific channels or roles from earning xp:
+
+```
+,levels ignore #channel
+```
+
+or
+
+```
+,levels ignore @role
+```
+
+to see what's being ignored:
+
+```
+,levels list
+```
+
+## advanced management
+
+### setting xp directly
+
+set a specific amount of xp for a member:
+
+```
+,setxp @username <amount>
+```
+
+### removing xp
+
+remove xp from a member:
+
+```
+,removexp @username <amount>
+```
+
+### setting level directly
+
+set a specific level for a member:
+
+```
+,setlevel @username <level>
+```
+
+### resetting everyone's levels
+
+to reset all levels and xp data:
+
+```
+,levels reset
+```
+
+⚠️ this action cannot be undone
+
+### syncing level roles
+
+force-update everyone's roles based on their current levels:
+
+```
+,levels sync
+```
+
+### cleaning up data
+
+remove level data for members who have left the server:
+
+```
+,levels cleanup
+```
+
+## personal settings
+
+### toggle level-up messages
+
+control whether you receive level-up notifications:
+
+```
+,levelmsg on
+```
+
+or
+
+```
+,levelmsg off
+```
+
+## xp cooldown
+
+to prevent spam, members can only earn xp once per minute in each server.
+
+## best practices
+
+- use level roles as incentives for active participation
+- create a dedicated channel for level-up announcements
+- balance xp rates to make progression feel rewarding but not too easy
+- consider ignoring bot command channels to focus xp on genuine conversation
+- use the leveling system alongside other engagement features for best results 

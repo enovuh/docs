@@ -3,10 +3,10 @@
   "name": "enovuh",
   "theme": "mint",
   "logo": {
-    "dark": "https://enovuh.lol/branding/enovuh-dark.svg",
-    "light": "https://enovuh.lol/branding/enovuh-light.svg"
+    "dark": "https://cdn.discordapp.com/avatars/1346591277944148119/e8b7a428a325ddb84d2478210c272915.png?size=1024",
+    "light": "https://cdn.discordapp.com/avatars/1346591277944148119/e8b7a428a325ddb84d2478210c272915.png?size=1024"
   },
-  "favicon": "favicon.svg",
+  "favicon": "https://cdn.discordapp.com/avatars/1346591277944148119/e8b7a428a325ddb84d2478210c272915.png?size=256",
   "colors": {
     "primary": "#6D28D9",
     "light": "#A78BFA",
@@ -19,12 +19,12 @@
   "topbarLinks": [
     {
       "name": "support server",
-      "url": "https://enovuh.lol/support"
+      "url": "https://discord.gg/enovuh"
     }
   ],
   "topbarCtaButton": {
-    "name": "home",
-    "url": "https://enovuh.lol"
+    "name": "invite bot",
+    "url": "https://enovuh.lol/invite"
   },
   "redirects": [
     {
@@ -44,86 +44,104 @@
       "destination": "https://discord.gg/enovuh"
     }
   ],
-  "navigation": {
-    "languages": [],
-    "versions": [],
-    "tabs": [],
-    "dropdowns": [],
-    "anchors": [],
-    "groups": [
-      {
-        "name": "overview",
-        "pages": [
-          "overview/introduction",
-          "overview/protection",
-          "overview/configuration"
-        ]
-      },
-      {
-        "name": "protection",
-        "pages": [
-          "protection/antinuke",
-          "protection/antiraid",
-          "protection/joingate",
-          "protection/automod"
-        ]
-      },
-      {
-        "name": "server configuration",
-        "pages": [
-          "configuration/roles",
-          "configuration/messages",
-          "configuration/starboard",
-          "configuration/voicemaster",
-          "configuration/levels",
-          "configuration/bumpreminder",
-          "configuration/autoresponses",
-          "configuration/aliases",
-          "configuration/logging"
-        ]
-      },
-      {
-        "name": "commands",
-        "pages": [
-          "commands/protection",
-          "commands/security",
-          "commands/utility",
-          "commands/configuration",
-          "commands/levels",
-          "commands/music",
-          "commands/support",
-          "commands/fun",
-          "commands/social"
-        ]
-      },
-      {
-        "name": "features",
-        "pages": [
-          "features/music",
-          "features/economy",
-          "features/leveling",
-          "features/counters"
-        ]
-      },
-      {
-        "name": "integrations",
-        "pages": [
-          "integrations/spotify",
-          "integrations/lastfm",
-          "integrations/social"
-        ]
-      },
-      {
-        "name": "common issues",
-        "pages": [
-          "common-issues/permissions",
-          "common-issues/errors",
-          "common-issues/troubleshooting"
-        ]
-      }
-    ],
-    "pages": []
-  },
+  "navigation": [
+    {
+      "group": "getting started",
+      "pages": [
+        "index",
+        "overview/introduction",
+        "overview/protection",
+        "overview/configuration"
+      ]
+    },
+    {
+      "group": "protection & security",
+      "pages": [
+        "protection/antinuke",
+        "protection/antiraid",
+        "protection/joingate",
+        "protection/automod"
+      ]
+    },
+    {
+      "group": "server configuration",
+      "pages": [
+        {
+          "group": "role management",
+          "pages": [
+            "configuration/roles/reaction-roles",
+            "configuration/roles/autoroles",
+            "configuration/roles/vanity-roles",
+            "configuration/roles/booster-roles"
+          ]
+        },
+        {
+          "group": "messages & notifications",
+          "pages": [
+            "configuration/messages/welcome",
+            "configuration/messages/goodbye",
+            "configuration/messages/autoreplies"
+          ]
+        },
+        "configuration/starboard",
+        "configuration/voicemaster",
+        "configuration/levels",
+        "configuration/bumpreminder",
+        "configuration/logging"
+      ]
+    },
+    {
+      "group": "commands",
+      "pages": [
+        "commands/protection",
+        "commands/security",
+        "commands/utility",
+        "commands/configuration",
+        "commands/levels",
+        "commands/music",
+        "commands/support",
+        "commands/fun",
+        "commands/social"
+      ]
+    },
+    {
+      "group": "features",
+      "pages": [
+        "features/music",
+        "features/economy",
+        "features/leveling",
+        "features/counters",
+        "features/image-generation",
+        "features/threads",
+        "features/translation",
+        "features/wordcloud"
+      ]
+    },
+    {
+      "group": "integrations",
+      "pages": [
+        "integrations/spotify",
+        "integrations/lastfm",
+        "integrations/social"
+      ]
+    },
+    {
+      "group": "common issues",
+      "pages": [
+        "common-issues/permissions",
+        "common-issues/errors",
+        "common-issues/troubleshooting"
+      ]
+    },
+    {
+      "group": "developer resources",
+      "pages": [
+        "developers/api",
+        "developers/self-hosting",
+        "developers/contributing"
+      ]
+    }
+  ],
   "footerSocials": {
     "discord": "https://discord.gg/enovuh",
     "github": "https://github.com/enovuh-bot",

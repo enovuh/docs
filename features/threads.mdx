@@ -1,0 +1,210 @@
+---
+title: 'thread management'
+description: 'advanced thread control and automation for discord servers'
+icon: 'comments'
+---
+
+# thread management
+
+enovuh provides powerful tools for managing discord threads, helping server admins and moderators maintain organized discussions and improve community engagement.
+
+<img className="block mx-auto" src="https://enovuh.lol/images/threads-example.png" alt="threads example" />
+
+## key features
+
+- automatically create threads for specific channels
+- maintain thread archives with extended durations
+- lock and unlock threads with simple commands
+- archive inactive threads manually or automatically
+- transfer thread ownership between members
+- bulk manage multiple threads at once
+- custom thread naming formats
+
+## thread commands
+
+| command | description | usage | example |
+| ------- | ----------- | ----- | ------- |
+| `thread create` | create a new thread | `thread create <name> [message]` | `thread create welcome please introduce yourself` |
+| `thread archive` | archive a thread | `thread archive [thread]` | `thread archive #introductions` |
+| `thread unarchive` | unarchive a thread | `thread unarchive [thread]` | `thread unarchive #introductions` |
+| `thread lock` | lock a thread | `thread lock [thread]` | `thread lock #support-123` |
+| `thread unlock` | unlock a thread | `thread unlock [thread]` | `thread unlock #support-123` |
+| `thread rename` | rename a thread | `thread rename <name> [thread]` | `thread rename resolved #support-123` |
+| `thread transfer` | transfer thread ownership | `thread transfer @user [thread]` | `thread transfer @moderator` |
+| `thread info` | show thread information | `thread info [thread]` | `thread info #support-123` |
+
+## thread auto-creation
+
+automatically create threads from new messages in specific channels:
+
+```
+,thread auto #channel
+```
+
+this will create a new thread for each message posted in the specified channel. perfect for support requests, suggestions, or feedback channels.
+
+to disable:
+
+```
+,thread noauto #channel
+```
+
+## thread settings
+
+### thread duration
+
+set how long threads stay active before archiving:
+
+```
+,thread duration <time>
+```
+
+available durations:
+- `1h` - 1 hour
+- `24h` - 24 hours
+- `3d` - 3 days (requires boost level 1)
+- `7d` - 7 days (requires boost level 2)
+
+### thread naming
+
+customize the format for automatically created threads:
+
+```
+,thread format <format>
+```
+
+variables:
+- `{username}` - thread creator's username
+- `{count}` - incremental counter
+- `{topic}` - first 10 words of the message
+- `{date}` - current date
+
+example:
+```
+,thread format support-{username}-{count}
+```
+
+## bulk thread management
+
+### archive all threads
+
+archive all threads in a channel:
+
+```
+,thread archiveall #channel
+```
+
+### lock all threads
+
+lock all threads in a channel:
+
+```
+,thread lockall #channel
+```
+
+### list all threads
+
+view all active threads in the server:
+
+```
+,thread list
+```
+
+## moderator controls
+
+these commands require manage threads permission:
+
+### slow mode
+
+set a cooldown for messages in a thread:
+
+```
+,thread slowmode <seconds> [thread]
+```
+
+example:
+```
+,thread slowmode 5
+```
+
+### private threads
+
+make a thread private or public:
+
+```
+,thread private [thread]
+```
+
+```
+,thread public [thread]
+```
+
+### thread pruning
+
+remove inactive threads older than a specified time:
+
+```
+,thread prune <time>
+```
+
+example:
+```
+,thread prune 30d
+```
+
+## automated thread features
+
+### auto-archiving
+
+automatically archive threads after a period of inactivity:
+
+```
+,thread autoarchive <time> #channel
+```
+
+example:
+```
+,thread autoarchive 24h #support
+```
+
+### welcome messages
+
+set custom welcome messages for new thread members:
+
+```
+,thread welcome <message>
+```
+
+example:
+```
+,thread welcome Thanks for joining the discussion! Please read the pinned message.
+```
+
+## thread tags
+
+organize threads with custom tags:
+
+```
+,thread tag add <tag>
+```
+
+remove a tag:
+
+```
+,thread tag remove <tag>
+```
+
+list all tags:
+
+```
+,thread tags
+```
+
+## troubleshooting
+
+if thread commands aren't working:
+
+- ensure enovuh has "manage threads" permission
+- check if the channel supports threads (text channels and announcements)
+- verify you have the appropriate permissions to manage the thread
+- for auto-thread creation, make sure the channel isn't at the thread limit 

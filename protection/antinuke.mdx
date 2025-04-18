@@ -1,0 +1,187 @@
+---
+title: 'antinuke protection'
+description: 'prevent server nuking and mass destruction events'
+icon: 'radiation'
+---
+
+# antinuke protection
+
+antinuke is enovuh's advanced security system designed to protect your server from nuking and mass destruction events. it monitors administrative actions and automatically punishes users who attempt to damage your server.
+
+<Frame>
+  <img src="https://enovuh.lol/images/antinuke-example.png" alt="antinuke protection example" />
+</Frame>
+
+## protection features
+
+antinuke can protect against various types of attacks:
+
+<AccordionGroup>
+  <Accordion title="webhook attacks" icon="link">
+    prevents mass webhook creation and deletion that can be used to spam your server
+  </Accordion>
+  <Accordion title="channel attacks" icon="hashtag">
+    detects and stops mass channel creation or deletion
+  </Accordion>
+  <Accordion title="role attacks" icon="users">
+    prevents mass role deletion or dangerous permission changes
+  </Accordion>
+  <Accordion title="member attacks" icon="user-minus">
+    stops mass banning or kicking of server members
+  </Accordion>
+  <Accordion title="emoji attacks" icon="face-smile">
+    prevents mass emoji deletion
+  </Accordion>
+  <Accordion title="vanity attacks" icon="link">
+    protects your custom server URL from being changed
+  </Accordion>
+  <Accordion title="malicious bot detection" icon="robot">
+    prevents potentially harmful bots from being added
+  </Accordion>
+</AccordionGroup>
+
+## getting started
+
+to set up antinuke protection:
+
+```
+,antinuke setup
+```
+
+this guided setup will help you configure all security modules with recommended settings.
+
+alternatively, you can enable it with default settings:
+
+```
+,antinuke
+```
+
+## configuration
+
+### viewing your configuration
+
+to see your current antinuke settings:
+
+```
+,antinuke config
+```
+
+### punishment types
+
+configure how antinuke responds to attacks:
+
+```
+,antinuke punishment <type>
+```
+
+available punishment types:
+- `ban` - permanently remove the attacker (default)
+- `kick` - remove the attacker but allow them to rejoin
+- `jail` - restrict the attacker's access without removing them
+
+### protection modules
+
+each security module can be configured separately with custom thresholds and time windows.
+
+| module | command | description |
+| ------ | ------- | ----------- |
+| webhook protection | `,antinuke webhook <on/off> [threshold] [time]` | prevent webhook abuse |
+| channel protection | `,antinuke channel <on/off> [threshold] [time]` | prevent channel destruction |
+| role protection | `,antinuke role <on/off> [threshold] [time]` | prevent role deletion |
+| ban protection | `,antinuke ban <on/off> [threshold] [time]` | prevent mass banning |
+| kick protection | `,antinuke kick <on/off> [threshold] [time]` | prevent mass kicking |
+| emoji protection | `,antinuke emoji <on/off> [threshold] [time]` | prevent emoji deletion |
+| bot protection | `,antinuke botadd <on/off>` | control bot additions |
+| permission protection | `,antinuke permissions <on/off>` | monitor permission changes |
+| vanity protection | `,antinuke vanity <on/off>` | protect custom url |
+
+### examples
+
+enable webhook protection with a threshold of 3 webhooks in 10 seconds:
+```
+,antinuke webhook on 3 10
+```
+
+enable channel protection with default settings:
+```
+,antinuke channel on
+```
+
+disable role protection:
+```
+,antinuke role off
+```
+
+## whitelist system
+
+trusted members can be whitelisted to prevent false triggers:
+
+```
+,antinuke whitelist @user
+```
+
+to view all whitelisted users:
+```
+,antinuke list
+```
+
+## antinuke admins
+
+server owners can designate trusted members as antinuke admins:
+
+```
+,antinuke admin @user
+```
+
+to view all antinuke admins:
+```
+,antinuke admins
+```
+
+## permission monitoring
+
+control which permission changes trigger the protection system:
+
+```
+,antinuke perm add administrator grant
+```
+
+this would monitor when administrator permissions are granted.
+
+to view monitored permissions:
+```
+,antinuke perm list
+```
+
+## how it works
+
+1. enovuh monitors all administrative actions in your server
+2. when suspicious activity is detected (exceeding thresholds), the protection triggers
+3. the offending user is punished according to your settings
+4. audit logs are created to document the incident
+5. server owner is notified of the security event
+
+## best practices
+
+for optimal protection:
+
+1. **whitelist trusted administrators** to prevent false positives
+2. **use appropriate thresholds** based on your server's activity level
+3. **keep antinuke enabled** at all times for continuous protection
+4. **regularly check logs** to monitor security events
+5. **limit administrator permissions** to only trusted members
+
+## requirements
+
+- enovuh must have **administrator** permissions
+- for vanity protection, your server must be level 3 with a custom url
+- server owner permission is required to toggle antinuke
+
+## troubleshooting
+
+if antinuke isn't working:
+
+- ensure enovuh has administrator permissions
+- verify that the correct modules are enabled
+- check if the offender is whitelisted
+- make sure thresholds aren't set too high 

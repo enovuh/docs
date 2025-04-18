@@ -24,7 +24,7 @@
   ],
   "topbarCtaButton": {
     "name": "invite bot",
-    "url": "https://enovuh.lol/invite"
+    "url": "https://enovuh.com/invite"
   },
   "redirects": [
     {
@@ -55,7 +55,7 @@
         ]
       },
       {
-        "group": "core modules",
+        "group": "protection",
         "icon": "cube",
         "pages": [
           "modules/antinuke",

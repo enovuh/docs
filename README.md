@@ -7,11 +7,13 @@ this repository contains the official documentation for the enovuh discord bot, 
 to run the documentation locally:
 
 1. install mintlify cli:
+
 ```bash
 npm i -g mintlify
 ```
 
 2. run the development server:
+
 ```bash
 mintlify dev
 ```
@@ -36,9 +38,9 @@ the documentation will be available at `http://localhost:3000`.
 
 ```md
 ---
-title: 'page title'
-description: 'page description'
-icon: 'icon-name'  # optional
+title: "page title"
+description: "page description"
+icon: "icon-name" # optional
 ---
 
 content goes here

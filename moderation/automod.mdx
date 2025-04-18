@@ -1,7 +1,7 @@
 ---
-title: 'automod'
-description: 'automatic content moderation for your server'
-icon: 'shield-check'
+title: "automod"
+description: "automatic content moderation for your server"
+icon: "shield-check"
 ---
 
 # automod
@@ -47,9 +47,11 @@ prevents rapid message sending and message repeating:
 - `time` - time period in seconds (default: 3)
 
 example:
+
 ```
 ,automod spam on 6 4
 ```
+
 this detects when a user sends 6 or more messages within 4 seconds.
 
 ### invite filter
@@ -67,6 +69,7 @@ you can whitelist specific servers whose invites are allowed:
 ```
 
 to remove a whitelisted server:
+
 ```
 ,automod invites whitelist remove <server_id>
 ```
@@ -80,21 +83,25 @@ blocks messages containing banned words or phrases:
 ```
 
 add words to the filter:
+
 ```
 ,automod filter add <word>
 ```
 
 remove words from the filter:
+
 ```
 ,automod filter remove <word>
 ```
 
 list all filtered words:
+
 ```
 ,automod filter list
 ```
 
 the filter is smart enough to detect:
+
 - variations of words (zero-width characters, special characters)
 - words embedded within other words
 - leetspeak substitutions (e.g., "3" for "e")
@@ -108,12 +115,14 @@ controls which links can be posted:
 ```
 
 available modes:
+
 - `off` - no link filtering
 - `blacklist` - only block specific domains
 - `whitelist` - block all domains except whitelisted ones
 - `all` - block all links
 
 manage domain lists:
+
 ```
 ,automod links add <domain>
 ,automod links remove <domain>
@@ -152,11 +161,13 @@ detects and mitigates server raids:
 - `seconds` - time window for those joins (default: 10)
 
 raid actions:
+
 ```
 ,automod raid action <action>
 ```
 
 available actions:
+
 - `alert` - notify moderators only
 - `lockdown` - temporarily lock all channels
 - `kick` - kick all new accounts joining during the raid
@@ -191,6 +202,7 @@ configure what happens when automod rules are triggered:
 ```
 
 available actions:
+
 - `delete` - delete the message only
 - `warn` - delete and warn the user
 - `timeout` - delete and timeout the user
@@ -198,6 +210,7 @@ available actions:
 - `ban` - delete and ban the user
 
 example:
+
 ```
 ,automod action spam timeout
 ```
@@ -211,10 +224,12 @@ set escalating punishments based on violation count:
 ```
 
 example:
+
 ```
 ,automod threshold 3 timeout 10m
 ,automod threshold 5 ban
 ```
+
 this applies a 10-minute timeout after 3 violations and a ban after 5.
 
 ### punishment durations
@@ -226,12 +241,14 @@ set the duration for timeouts:
 ```
 
 the duration format accepts:
+
 - `s` for seconds
 - `m` for minutes
 - `h` for hours
 - `d` for days
 
 example:
+
 ```
 ,automod timeout 2h
 ```
@@ -273,6 +290,7 @@ configure where automod actions are logged:
 ```
 
 disable logging:
+
 ```
 ,automod log off
 ```
@@ -292,9 +310,11 @@ create custom automod rules with complex conditions:
 - `action` - what happens when triggered
 
 example:
+
 ```
 ,automod custom add creditcard (\d{4}[-\s]?){4} delete
 ```
+
 this detects and removes messages containing credit card number patterns.
 
 ### anti-phishing
@@ -338,5 +358,7 @@ if automod isn't working as expected:
 - confirm punishment thresholds are configured correctly
 
 <Card title="did you know?" icon="lightbulb" color="#FEF3C7">
-  the automod system works alongside enovuh's manual moderation tools, creating a comprehensive security system. manual actions also count toward automod thresholds.
-</Card> 
+  the automod system works alongside enovuh's manual moderation tools, creating
+  a comprehensive security system. manual actions also count toward automod
+  thresholds.
+</Card>{" "}

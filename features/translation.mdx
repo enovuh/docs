@@ -1,14 +1,18 @@
 ---
-title: 'translation system'
-description: 'break language barriers with real-time message translation'
-icon: 'language'
+title: "translation system"
+description: "break language barriers with real-time message translation"
+icon: "language"
 ---
 
 # translation system
 
 enovuh's powerful translation system helps bridge language barriers in your discord server by providing real-time message translation capabilities. whether you have international members or just want to communicate in different languages, enovuh has you covered.
 
-<img className="block mx-auto" src="https://enovuh.lol/images/translation-example.png" alt="Translation example" />
+<img
+  className="block mx-auto"
+  src="https://enovuh.lol/images/translation-example.png"
+  alt="Translation example"
+/>
 
 ## key features
 
@@ -20,13 +24,13 @@ enovuh's powerful translation system helps bridge language barriers in your disc
 
 ## translation commands
 
-| command | description | usage | example |
-| ------- | ----------- | ----- | ------- |
-| `translate` | translate text to your set language | `translate <text>` | `translate bonjour tout le monde` |
-| `translate set` | set your preferred language | `translate set <language code>` | `translate set es` |
-| `translate toggle` | toggle live translation of your messages | `translate toggle` | `translate toggle` |
-| `translate this` | translate text to a specific language | `translate this <lang code> <text>` | `translate this ja hello world` |
-| `translatelist` | show common language codes | `translatelist` | `translatelist` |
+| command            | description                              | usage                               | example                           |
+| ------------------ | ---------------------------------------- | ----------------------------------- | --------------------------------- |
+| `translate`        | translate text to your set language      | `translate <text>`                  | `translate bonjour tout le monde` |
+| `translate set`    | set your preferred language              | `translate set <language code>`     | `translate set es`                |
+| `translate toggle` | toggle live translation of your messages | `translate toggle`                  | `translate toggle`                |
+| `translate this`   | translate text to a specific language    | `translate this <lang code> <text>` | `translate this ja hello world`   |
+| `translatelist`    | show common language codes               | `translatelist`                     | `translatelist`                   |
 
 ## live translation
 
@@ -35,11 +39,13 @@ with live translation, enovuh will automatically translate your messages to your
 ### enabling live translation
 
 1. set your preferred language:
+
 ```
 ,translate set en
 ```
 
 2. enable live translation:
+
 ```
 ,translate toggle
 ```
@@ -49,22 +55,24 @@ once enabled, enovuh will detect the language of your messages and translate the
 ### disabling live translation
 
 to disable live translation:
+
 ```
 ,translate toggle
 ```
 
 ## commonly used language codes
 
-| code | language | code | language |
-| ---- | -------- | ---- | -------- |
-| `en` | english | `ja` | japanese |
-| `es` | spanish | `ko` | korean |
-| `fr` | french | `zh-cn` | chinese (simplified) |
-| `de` | german | `ru` | russian |
-| `it` | italian | `ar` | arabic |
-| `pt` | portuguese | `hi` | hindi |
+| code | language   | code    | language             |
+| ---- | ---------- | ------- | -------------------- |
+| `en` | english    | `ja`    | japanese             |
+| `es` | spanish    | `ko`    | korean               |
+| `fr` | french     | `zh-cn` | chinese (simplified) |
+| `de` | german     | `ru`    | russian              |
+| `it` | italian    | `ar`    | arabic               |
+| `pt` | portuguese | `hi`    | hindi                |
 
 for a full list of supported languages:
+
 ```
 ,translatelist
 ```
@@ -74,6 +82,7 @@ for a full list of supported languages:
 ### basic translation
 
 translate text to your set language:
+
 ```
 ,translate hola cómo estás
 ```
@@ -81,6 +90,7 @@ translate text to your set language:
 ### specific language translation
 
 translate text to a specific language:
+
 ```
 ,translate this fr hello, how are you?
 ```
@@ -88,9 +98,11 @@ translate text to a specific language:
 ### viewing your settings
 
 you can see your current translation settings by using the toggle command:
+
 ```
 ,translate toggle
 ```
+
 this will show your current status along with toggling it.
 
 ## how it works
@@ -117,4 +129,4 @@ if translations aren't working:
 - ensure you've set a valid language code
 - check that live translation is enabled (if using that feature)
 - verify that the message contains enough text to translate
-- try using the direct translation command instead of live translation 
+- try using the direct translation command instead of live translation

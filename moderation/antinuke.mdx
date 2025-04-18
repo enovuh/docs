@@ -1,7 +1,7 @@
 ---
-title: 'antinuke'
-description: 'protect your server from raid and nuke attempts'
-icon: 'shield-halved'
+title: "antinuke"
+description: "protect your server from raid and nuke attempts"
+icon: "shield-halved"
 ---
 
 # antinuke
@@ -132,6 +132,7 @@ configure what happens when the antinuke system detects suspicious activity:
 ```
 
 available actions:
+
 - `none` - only log the detection, no automatic action
 - `strip` - remove all administrative permissions
 - `kick` - remove the user from the server
@@ -149,6 +150,7 @@ in case a nuke attempt succeeds, enovuh provides recovery tools:
 ```
 
 this attempts to:
+
 - restore deleted channels
 - restore deleted roles
 - unban innocent members
@@ -189,6 +191,7 @@ enables emergency protection during active attacks:
 ```
 
 when quarantine mode is active:
+
 - all admin actions require verification
 - new members cannot perform actions
 - server enters temporary lockdown
@@ -217,6 +220,7 @@ assign different levels of trust to users:
 ```
 
 trust levels:
+
 - `0` - no special trust (default)
 - `1` - basic trust (can perform limited actions)
 - `2` - moderate trust (can perform most actions)
@@ -241,6 +245,7 @@ create automatic server backups:
 ```
 
 frequencies:
+
 - `daily` - backup once per day
 - `weekly` - backup once per week
 - `monthly` - backup once per month
@@ -257,9 +262,13 @@ if antinuke isn't working as expected:
 - confirm punishment settings are configured correctly
 
 <Card title="important" icon="circle-exclamation" color="#FECACA">
-  antinuke protection only works when enovuh has proper permissions. the bot needs administrator permissions or equivalent role permissions to properly protect your server.
+  antinuke protection only works when enovuh has proper permissions. the bot
+  needs administrator permissions or equivalent role permissions to properly
+  protect your server.
 </Card>
 
 <Card title="did you know?" icon="lightbulb" color="#FEF3C7">
-  enovuh's antinuke system uses proactive caching of your server's structure, allowing for faster response times and more effective recovery options after an attack attempt.
-</Card> 
+  enovuh's antinuke system uses proactive caching of your server's structure,
+  allowing for faster response times and more effective recovery options after
+  an attack attempt.
+</Card>{" "}

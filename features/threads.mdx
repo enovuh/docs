@@ -1,14 +1,18 @@
 ---
-title: 'thread management'
-description: 'advanced thread control and automation for discord servers'
-icon: 'comments'
+title: "thread management"
+description: "advanced thread control and automation for discord servers"
+icon: "comments"
 ---
 
 # thread management
 
 enovuh provides powerful tools for managing discord threads, helping server admins and moderators maintain organized discussions and improve community engagement.
 
-<img className="block mx-auto" src="https://enovuh.lol/images/threads-example.png" alt="threads example" />
+<img
+  className="block mx-auto"
+  src="https://enovuh.lol/images/threads-example.png"
+  alt="threads example"
+/>
 
 ## key features
 
@@ -22,16 +26,16 @@ enovuh provides powerful tools for managing discord threads, helping server admi
 
 ## thread commands
 
-| command | description | usage | example |
-| ------- | ----------- | ----- | ------- |
-| `thread create` | create a new thread | `thread create <name> [message]` | `thread create welcome please introduce yourself` |
-| `thread archive` | archive a thread | `thread archive [thread]` | `thread archive #introductions` |
-| `thread unarchive` | unarchive a thread | `thread unarchive [thread]` | `thread unarchive #introductions` |
-| `thread lock` | lock a thread | `thread lock [thread]` | `thread lock #support-123` |
-| `thread unlock` | unlock a thread | `thread unlock [thread]` | `thread unlock #support-123` |
-| `thread rename` | rename a thread | `thread rename <name> [thread]` | `thread rename resolved #support-123` |
-| `thread transfer` | transfer thread ownership | `thread transfer @user [thread]` | `thread transfer @moderator` |
-| `thread info` | show thread information | `thread info [thread]` | `thread info #support-123` |
+| command            | description               | usage                            | example                                           |
+| ------------------ | ------------------------- | -------------------------------- | ------------------------------------------------- |
+| `thread create`    | create a new thread       | `thread create <name> [message]` | `thread create welcome please introduce yourself` |
+| `thread archive`   | archive a thread          | `thread archive [thread]`        | `thread archive #introductions`                   |
+| `thread unarchive` | unarchive a thread        | `thread unarchive [thread]`      | `thread unarchive #introductions`                 |
+| `thread lock`      | lock a thread             | `thread lock [thread]`           | `thread lock #support-123`                        |
+| `thread unlock`    | unlock a thread           | `thread unlock [thread]`         | `thread unlock #support-123`                      |
+| `thread rename`    | rename a thread           | `thread rename <name> [thread]`  | `thread rename resolved #support-123`             |
+| `thread transfer`  | transfer thread ownership | `thread transfer @user [thread]` | `thread transfer @moderator`                      |
+| `thread info`      | show thread information   | `thread info [thread]`           | `thread info #support-123`                        |
 
 ## thread auto-creation
 
@@ -60,6 +64,7 @@ set how long threads stay active before archiving:
 ```
 
 available durations:
+
 - `1h` - 1 hour
 - `24h` - 24 hours
 - `3d` - 3 days (requires boost level 1)
@@ -74,12 +79,14 @@ customize the format for automatically created threads:
 ```
 
 variables:
+
 - `{username}` - thread creator's username
 - `{count}` - incremental counter
 - `{topic}` - first 10 words of the message
 - `{date}` - current date
 
 example:
+
 ```
 ,thread format support-{username}-{count}
 ```
@@ -123,6 +130,7 @@ set a cooldown for messages in a thread:
 ```
 
 example:
+
 ```
 ,thread slowmode 5
 ```
@@ -148,6 +156,7 @@ remove inactive threads older than a specified time:
 ```
 
 example:
+
 ```
 ,thread prune 30d
 ```
@@ -163,6 +172,7 @@ automatically archive threads after a period of inactivity:
 ```
 
 example:
+
 ```
 ,thread autoarchive 24h #support
 ```
@@ -176,6 +186,7 @@ set custom welcome messages for new thread members:
 ```
 
 example:
+
 ```
 ,thread welcome Thanks for joining the discussion! Please read the pinned message.
 ```
@@ -207,4 +218,4 @@ if thread commands aren't working:
 - ensure enovuh has "manage threads" permission
 - check if the channel supports threads (text channels and announcements)
 - verify you have the appropriate permissions to manage the thread
-- for auto-thread creation, make sure the channel isn't at the thread limit 
+- for auto-thread creation, make sure the channel isn't at the thread limit

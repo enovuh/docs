@@ -1,7 +1,7 @@
 ---
-title: 'antinuke'
-description: 'protect your server from malicious nuking attempts'
-icon: 'radiation'
+title: "antinuke"
+description: "protect your server from malicious nuking attempts"
+icon: "radiation"
 ---
 
 # antinuke protection
@@ -9,12 +9,17 @@ icon: 'radiation'
 enovuh's antinuke system is designed to protect your server from malicious nuking attempts by monitoring critical administrative actions and automatically punishing users who trigger suspicious activity. this powerful system helps server owners maintain security even when they're offline.
 
 <Frame>
-  <img src="https://enovuh.lol/images/antinuke-example.png" alt="antinuke protection in action" className="rounded-lg" />
+  <img
+    src="https://enovuh.lol/images/antinuke-example.png"
+    alt="antinuke protection in action"
+    className="rounded-lg"
+  />
 </Frame>
 
 ## what is server nuking?
 
 server nuking is the act of maliciously destroying a discord server by:
+
 - mass deleting channels and roles
 - mass banning members
 - changing server permissions
@@ -137,6 +142,7 @@ choose how enovuh responds to detected nuke attempts:
 ```
 
 available punishment types:
+
 - `ban` - permanently removes the attacker (default)
 - `kick` - removes the attacker but allows them to rejoin
 - `jail` - restricts the attacker's permissions without removal
@@ -192,6 +198,7 @@ granular control over which permission changes trigger protection:
 ```
 
 example:
+
 ```
 ,antinuke perm add administrator grant
 ```
@@ -199,6 +206,7 @@ example:
 this would monitor when administrator permissions are granted to roles or users.
 
 to view monitored permissions:
+
 ```
 ,antinuke perm list
 ```
@@ -212,6 +220,7 @@ if you need to manually recover from a nuke attempt:
 ```
 
 to recover roles:
+
 ```
 ,recover roles
 ```
@@ -251,5 +260,7 @@ if antinuke isn't responding as expected:
 - review logs for any error messages
 
 <Card title="stay updated" icon="bell" color="#4B5563">
-  antinuke features are regularly updated to counter new nuking techniques. join our [support server](https://discord.gg/enovuh) to stay informed about the latest security enhancements.
-</Card> 
+  antinuke features are regularly updated to counter new nuking techniques. join
+  our [support server](https://discord.gg/enovuh) to stay informed about the
+  latest security enhancements.
+</Card>{" "}

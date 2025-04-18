@@ -1,7 +1,7 @@
 ---
-title: 'role management'
-description: 'set up and manage automated roles in your server'
-icon: 'users'
+title: "role management"
+description: "set up and manage automated roles in your server"
+icon: "users"
 ---
 
 # role management
@@ -36,6 +36,7 @@ to create a reaction role message:
 ```
 
 this will start an interactive setup process where you'll choose:
+
 1. the channel for the message
 2. the content of the message
 3. the roles and their corresponding reactions
@@ -49,6 +50,7 @@ you can add reaction roles to an existing message:
 ```
 
 example:
+
 ```
 ,reactionrole add 123456789012345678 🔴 @Red
 ```
@@ -76,6 +78,7 @@ you can limit how many reaction roles a member can select from a single message:
 ```
 
 example:
+
 ```
 ,reactionrole limit 123456789012345678 2
 ```
@@ -108,6 +111,7 @@ set up a role to be assigned to all new members:
 ```
 
 example:
+
 ```
 ,autorole add @Member
 ```
@@ -138,6 +142,7 @@ assign roles after a member has been in the server for a certain amount of time:
 ```
 
 example:
+
 ```
 ,autorole delay 24h @Verified
 ```
@@ -151,6 +156,7 @@ require accounts to be a certain age before receiving autoroles:
 ```
 
 example:
+
 ```
 ,autorole age 7
 ```
@@ -166,6 +172,7 @@ create custom colored roles for special members.
 ```
 
 example:
+
 ```
 ,vanityrole create Cool Person #ff5500
 ```
@@ -203,6 +210,7 @@ set the default color for booster roles:
 ```
 
 example:
+
 ```
 ,boosterrole color #ff73fa
 ```
@@ -229,15 +237,15 @@ reset a booster role to default:
 
 ## role management commands
 
-| command | description | usage | example |
-| ------- | ----------- | ----- | ------- |
-| `role info` | display information about a role | `role info <role>` | `role info @Moderator` |
-| `role members` | list members with a specific role | `role members <role>` | `role members @Moderator` |
-| `role add` | add a role to a member | `role add <member> <role>` | `role add @user @Member` |
-| `role remove` | remove a role from a member | `role remove <member> <role>` | `role remove @user @Member` |
-| `role color` | change a role's color | `role color <role> <color>` | `role color @VIP #ff0000` |
-| `role icon` | change a role's icon | `role icon <role> <emoji>` | `role icon @Mod 🛡️` |
-| `role rename` | rename a role | `role rename <role> <new name>` | `role rename @Old New Role` |
+| command        | description                       | usage                           | example                     |
+| -------------- | --------------------------------- | ------------------------------- | --------------------------- |
+| `role info`    | display information about a role  | `role info <role>`              | `role info @Moderator`      |
+| `role members` | list members with a specific role | `role members <role>`           | `role members @Moderator`   |
+| `role add`     | add a role to a member            | `role add <member> <role>`      | `role add @user @Member`    |
+| `role remove`  | remove a role from a member       | `role remove <member> <role>`   | `role remove @user @Member` |
+| `role color`   | change a role's color             | `role color <role> <color>`     | `role color @VIP #ff0000`   |
+| `role icon`    | change a role's icon              | `role icon <role> <emoji>`      | `role icon @Mod 🛡️`         |
+| `role rename`  | rename a role                     | `role rename <role> <new name>` | `role rename @Old New Role` |
 
 ## best practices
 
@@ -247,4 +255,4 @@ reset a booster role to default:
 - **test after setup**: verify roles are being assigned correctly
 - **color coordination**: use colors that match your server's theme for better visual appeal
 - **clear descriptions**: include clear descriptions in reaction role messages
-- **manage permissions**: ensure enovuh has "manage roles" permission and its role is higher than any roles it needs to assign 
+- **manage permissions**: ensure enovuh has "manage roles" permission and its role is higher than any roles it needs to assign

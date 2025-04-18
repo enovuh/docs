@@ -1,7 +1,7 @@
 ---
-title: 'permissions'
-description: 'customizing command access and privileges'
-icon: 'key'
+title: "permissions"
+description: "customizing command access and privileges"
+icon: "key"
 ---
 
 # permission system
@@ -32,14 +32,14 @@ this displays all permission levels and associated roles.
 
 enovuh uses six permission levels:
 
-| level | name | default access | typical roles |
-|-------|------|----------------|--------------|
-| 0 | member | basic utility commands | @everyone |
-| 1 | helper | informational commands | helpers, trial mods |
-| 2 | moderator | moderation tools | moderators |
-| 3 | administrator | configuration commands | admins |
-| 4 | manager | critical server settings | server managers |
-| 5 | owner | all commands | server owner |
+| level | name          | default access           | typical roles       |
+| ----- | ------------- | ------------------------ | ------------------- |
+| 0     | member        | basic utility commands   | @everyone           |
+| 1     | helper        | informational commands   | helpers, trial mods |
+| 2     | moderator     | moderation tools         | moderators          |
+| 3     | administrator | configuration commands   | admins              |
+| 4     | manager       | critical server settings | server managers     |
+| 5     | owner         | all commands             | server owner        |
 
 ## setting permissions
 
@@ -52,11 +52,13 @@ assign a permission level to a role:
 ```
 
 example:
+
 ```
 ,perms role @Moderator 2
 ```
 
 view role permissions:
+
 ```
 ,perms roles
 ```
@@ -72,6 +74,7 @@ assign a permission level to a specific user:
 this overrides the user's role-based permissions.
 
 view user-specific permissions:
+
 ```
 ,perms users
 ```
@@ -95,17 +98,21 @@ change the permission level for a specific command:
 ```
 
 example:
+
 ```
 ,perms override ban 3
 ```
+
 this changes the `ban` command to require level 3 instead of its default.
 
 view all command overrides:
+
 ```
 ,perms overrides
 ```
 
 remove a command override:
+
 ```
 ,perms override <command> reset
 ```
@@ -115,11 +122,13 @@ remove a command override:
 commands are organized into logical groups for easier management.
 
 view command groups:
+
 ```
 ,perms groups
 ```
 
 set permission level for an entire group:
+
 ```
 ,perms group <group-name> <level>
 ```
@@ -135,6 +144,7 @@ restrict a command to specific channels:
 ```
 
 remove channel restrictions:
+
 ```
 ,perms channel <command> reset
 ```
@@ -148,6 +158,7 @@ disable commands in specific channels:
 ```
 
 re-enable commands:
+
 ```
 ,perms enable <#channel> <commands/all>
 ```
@@ -163,11 +174,13 @@ save your current permission setup as a template:
 ```
 
 load a template:
+
 ```
 ,perms template load <name>
 ```
 
 view available templates:
+
 ```
 ,perms templates
 ```
@@ -240,6 +253,7 @@ enable smart permission evaluation:
 ```
 
 when enabled, enovuh considers:
+
 - self-target actions (allowing users to use commands on themselves)
 - role hierarchy (preventing moderation of higher-ranked users)
 - permission inheritance (allowing higher levels to use lower-level commands)
@@ -265,5 +279,7 @@ if someone can't use a command they should have access to, check:
 5. disabled channels with `,perms disabled`
 
 <Card title="pro tip" icon="lightbulb" color="#9333EA">
-  create a special "command access" role that doesn't provide any discord permissions but grants enovuh permission level 1 – this lets you give members access to utility commands without moderation privileges.
-</Card> 
+  create a special "command access" role that doesn't provide any discord
+  permissions but grants enovuh permission level 1 – this lets you give members
+  access to utility commands without moderation privileges.
+</Card>{" "}

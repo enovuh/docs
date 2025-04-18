@@ -1,7 +1,7 @@
 ---
-title: 'xp system'
-description: 'customizable activity-based progression'
-icon: 'chart-line'
+title: "xp system"
+description: "customizable activity-based progression"
+icon: "chart-line"
 ---
 
 # pulse xp system
@@ -46,14 +46,17 @@ earn xp through chat activity:
 the multiplier controls how much xp is earned per qualifying message (default: 1.0).
 
 custom text settings:
+
 ```
 ,pulse text mindist <seconds>
 ```
+
 sets the minimum time between xp awards to prevent spam.
 
 ```
 ,pulse text minlength <characters>
 ```
+
 sets the minimum message length that qualifies for xp.
 
 ### voice activity
@@ -67,14 +70,17 @@ earn xp while in voice channels:
 the multiplier controls xp rate in voice channels (default: 1.0).
 
 voice options:
+
 ```
 ,pulse voice interval <minutes>
 ```
+
 sets how often xp is awarded during voice activity.
 
 ```
 ,pulse voice mute <on/off>
 ```
+
 determines if muted users still earn xp.
 
 ### interactive rewards
@@ -86,6 +92,7 @@ award xp for interactive participation:
 ```
 
 enables xp for:
+
 - reactions given/received
 - thread participation
 - forum post creation
@@ -102,17 +109,20 @@ choose how quickly members advance:
 ```
 
 available curves:
+
 - `linear` - consistent xp requirements
 - `exponential` - increasingly challenging levels
 - `logarithmic` - easier early levels, plateau later
 - `custom` - define your own formula
 
 for custom curves:
+
 ```
 ,pulse formula "<expression>"
 ```
 
 example:
+
 ```
 ,pulse formula "100 * level^1.5"
 ```
@@ -126,14 +136,17 @@ enable advanced progression with multiple tiers:
 ```
 
 prestige configuration:
+
 ```
 ,pulse prestige levels <number>
 ```
+
 sets how many levels before prestige is available.
 
 ```
 ,pulse prestige rewards <on/off>
 ```
+
 toggles special rewards for prestiging.
 
 ## engagement tools
@@ -147,12 +160,14 @@ customize how members are notified of level ups:
 ```
 
 notification modes:
+
 - `current` - in the active channel
 - `private` - via direct message
 - `focused` - in a designated channel
 - `silent` - no notifications
 
 for focused mode:
+
 ```
 ,pulse notify channel <#channel>
 ```
@@ -166,11 +181,13 @@ create special milestone rewards:
 ```
 
 example:
+
 ```
 ,pulse achieve add "night owl" "active after midnight" "messages:night:100" "role:nightowl"
 ```
 
 view all achievements:
+
 ```
 ,pulse achieve list
 ```
@@ -184,6 +201,7 @@ display top members by experience:
 ```
 
 specialized leaderboards:
+
 ```
 ,pulse top voice
 ,pulse top daily
@@ -201,11 +219,13 @@ assign roles when members reach certain levels:
 ```
 
 remove a level reward:
+
 ```
 ,pulse reward <level> remove
 ```
 
 view all rewards:
+
 ```
 ,pulse rewards
 ```
@@ -219,9 +239,11 @@ grant special roles bonus xp:
 ```
 
 example:
+
 ```
 ,pulse boost @supporter 1.5
 ```
+
 gives supporters 50% more xp.
 
 ### seasonal events
@@ -233,9 +255,11 @@ create limited-time xp events:
 ```
 
 example:
+
 ```
 ,pulse event "summer bash" 7d 2.0
 ```
+
 doubles xp for 7 days.
 
 ## customization options
@@ -249,17 +273,20 @@ customize how progress is displayed:
 ```
 
 available templates:
+
 - `minimal` - clean, streamlined design
 - `detailed` - shows extensive statistics
 - `themed` - matches server aesthetic
 - `dynamic` - changes based on level
 
 custom background:
+
 ```
 ,pulse card background <url>
 ```
 
 color scheme:
+
 ```
 ,pulse card colors <primary> <secondary> <accent>
 ```
@@ -273,6 +300,7 @@ create custom badges for different level ranges:
 ```
 
 example:
+
 ```
 ,pulse badge 10-20 🌟
 ```
@@ -288,6 +316,7 @@ adjust xp rates in specific channels:
 ```
 
 example:
+
 ```
 ,pulse channel #general 1.2
 ,pulse channel #off-topic 0.8
@@ -302,11 +331,13 @@ create channel groups with unified settings:
 ```
 
 add channels to a zone:
+
 ```
 ,pulse zone <name> add <#channel1> <#channel2>
 ```
 
 set zone multiplier:
+
 ```
 ,pulse zone <name> rate <multiplier>
 ```
@@ -332,6 +363,7 @@ adjust individual member progress:
 ```
 
 add or remove xp:
+
 ```
 ,pulse add <@user> <amount>
 ,pulse remove <@user> <amount>
@@ -351,6 +383,7 @@ import from other bots:
 ```
 
 supported imports:
+
 - mee6
 - dyno
 - amari
@@ -370,6 +403,7 @@ view system performance:
 ```
 
 this displays:
+
 - engagement metrics
 - level distribution
 - activity patterns
@@ -406,11 +440,14 @@ enable intelligent xp qualification:
 ```
 
 when enabled, the system:
+
 - rewards meaningful contributions
 - identifies and ignores spam patterns
 - adapts to different conversation styles
 - weights xp based on engagement quality
 
 <Card title="pro tip" icon="wand-magic-sparkles" color="#9333EA">
-  create distinct activity zones for different types of engagement - gaming channels, creative showcases, and discussions - each with tailored xp rates to encourage diverse participation.
-</Card> 
+  create distinct activity zones for different types of engagement - gaming
+  channels, creative showcases, and discussions - each with tailored xp rates to
+  encourage diverse participation.
+</Card>{" "}

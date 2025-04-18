@@ -1,7 +1,7 @@
 ---
-title: 'automod'
-description: 'intelligent chat filtering and moderation'
-icon: 'robot'
+title: "automod"
+description: "intelligent chat filtering and moderation"
+icon: "robot"
 ---
 
 # sentinel automod
@@ -39,6 +39,7 @@ control unwanted text content:
 ```
 
 available text filters:
+
 - `profanity` - blocks offensive language
 - `slurs` - blocks discriminatory terms
 - `toxicity` - blocks hostile messages
@@ -55,6 +56,7 @@ detect and block specific patterns:
 ```
 
 available pattern types:
+
 - `caps` - excessive capital letters
 - `emoji` - emoji spam
 - `mentions` - mass user/role tagging
@@ -71,6 +73,7 @@ analyze non-text content:
 ```
 
 available content types:
+
 - `images` - checks for inappropriate images
 - `files` - scans attachments for malware
 - `embeds` - filters embedded content
@@ -85,6 +88,7 @@ create specialized filters for your server's needs:
 ```
 
 example creating a filter for phone numbers:
+
 ```
 ,sentinel custom phone-numbers "(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]??\d{4})" delete
 ```
@@ -98,6 +102,7 @@ define how sentinel responds to violations:
 ```
 
 available actions:
+
 - `log` - only record the violation
 - `warn` - notify the user
 - `delete` - remove the message
@@ -117,6 +122,7 @@ enable ai-powered filtering that improves over time:
 ```
 
 when enabled, sentinel:
+
 - adapts to your server's communication style
 - reduces false positives
 - identifies emerging problematic patterns
@@ -131,6 +137,7 @@ create graduated response to repeated violations:
 ```
 
 example escalation setup:
+
 ```
 ,sentinel escalate 3 mute 10m
 ,sentinel escalate 5 mute 1h
@@ -146,6 +153,7 @@ enable smart filtering that considers message context:
 ```
 
 this allows sentinel to:
+
 - understand conversation flow
 - detect problematic behavior patterns
 - reduce false positives in role-play channels
@@ -162,6 +170,7 @@ apply different rules to different channels:
 ```
 
 available presets:
+
 - `strict` - heavy filtering
 - `normal` - balanced moderation
 - `relaxed` - minimal intervention
@@ -206,6 +215,7 @@ automatically detect and counter chat raids:
 ```
 
 when enabled, sentinel will:
+
 - detect unusual message patterns
 - identify coordinated spam attacks
 - temporarily increase moderation strictness
@@ -220,6 +230,7 @@ isolate problematic users without banning:
 ```
 
 this creates a special role that:
+
 - restricts channel access
 - prevents sending attachments
 - limits message frequency
@@ -236,6 +247,7 @@ link with verification system:
 ```
 
 when enabled:
+
 - new users face stricter moderation
 - verification increases trust score
 - trust score affects filter sensitivity
@@ -249,6 +261,7 @@ allow members to flag content:
 ```
 
 when enabled, members can report content:
+
 ```
 ,report <message-link> <reason>
 ```
@@ -262,6 +275,7 @@ view moderation statistics and patterns:
 ```
 
 this displays:
+
 - recent violation counts
 - most common filter triggers
 - user violation patterns
@@ -278,6 +292,7 @@ automatically identify and block scam links:
 ```
 
 this feature:
+
 - uses real-time database of malicious urls
 - detects obfuscated links
 - recognizes typosquatting domains
@@ -292,11 +307,14 @@ scan images for inappropriate content:
 ```
 
 this feature uses ai to detect:
+
 - explicit imagery
 - violent content
 - hate symbols
 - personal identification
 
 <Card title="did you know?" icon="lightbulb" color="#9333EA">
-  sentinel can be configured to work in "training mode" where it only logs violations without taking action, helping you fine-tune your settings before full deployment.
-</Card> 
+  sentinel can be configured to work in "training mode" where it only logs
+  violations without taking action, helping you fine-tune your settings before
+  full deployment.
+</Card>{" "}

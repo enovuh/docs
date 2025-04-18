@@ -1,14 +1,18 @@
 ---
-title: 'leveling system'
-description: 'reward active members with xp, levels, and role rewards'
-icon: 'arrow-up-right-dots'
+title: "leveling system"
+description: "reward active members with xp, levels, and role rewards"
+icon: "arrow-up-right-dots"
 ---
 
 # leveling system
 
 enovuh's leveling system allows you to reward active members with experience points (xp), levels, and automatic role rewards. this creates a progression system that encourages engagement in your community.
 
-<img className="block mx-auto" src="https://enovuh.lol/images/leveling-example.png" alt="leveling system example" />
+<img
+  className="block mx-auto"
+  src="https://enovuh.lol/images/leveling-example.png"
+  alt="leveling system example"
+/>
 
 ## how it works
 
@@ -79,6 +83,7 @@ adjust how quickly members earn xp:
 ```
 
 example:
+
 ```
 ,levels setrate 1.5
 ```
@@ -94,12 +99,14 @@ customize the message sent when members level up:
 ```
 
 available variables:
+
 - `{user}` - mentions the user
 - `{username}` - user's name without mention
 - `{level}` - the new level
 - `{server}` - server name
 
 example:
+
 ```
 ,levels message **{username}** just reached level {level}! 🎉
 ```
@@ -113,6 +120,7 @@ choose where level-up messages are sent:
 ```
 
 available modes:
+
 - `channel` - send in the same channel (default)
 - `dm` - send via direct message
 - `none` - don't send level-up messages
@@ -136,6 +144,7 @@ automatically assign roles when members reach specific levels.
 ```
 
 example:
+
 ```
 ,levels add @Active Member 5
 ```
@@ -272,4 +281,4 @@ to prevent spam, members can only earn xp once per minute in each server.
 - create a dedicated channel for level-up announcements
 - balance xp rates to make progression feel rewarding but not too easy
 - consider ignoring bot command channels to focus xp on genuine conversation
-- use the leveling system alongside other engagement features for best results 
+- use the leveling system alongside other engagement features for best results

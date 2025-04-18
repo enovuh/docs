@@ -1,14 +1,18 @@
 ---
-title: 'wordcloud generator'
-description: 'create beautiful word clouds from discord conversations'
-icon: 'cloud'
+title: "wordcloud generator"
+description: "create beautiful word clouds from discord conversations"
+icon: "cloud"
 ---
 
 # wordcloud generator
 
 create visual representations of your server's most used words with enovuh's wordcloud generator. this feature analyzes messages in channels or from specific users to generate stunning word clouds that highlight common terms and phrases.
 
-<img className="block mx-auto" src="https://enovuh.lol/images/wordcloud-example.png" alt="Example wordcloud" />
+<img
+  className="block mx-auto"
+  src="https://enovuh.lol/images/wordcloud-example.png"
+  alt="Example wordcloud"
+/>
 
 ## key features
 
@@ -20,11 +24,11 @@ create visual representations of your server's most used words with enovuh's wor
 
 ## wordcloud commands
 
-| command | description | usage | example |
-| ------- | ----------- | ----- | ------- |
-| `wordcloud` | generate a wordcloud from a channel | `wordcloud [#channel] [limit] [scheme]` | `wordcloud #general 500 discord` |
-| `wordcloud user` | generate a wordcloud from a specific user | `wordcloud user @user [limit] [scheme]` | `wordcloud user @username 500 blue` |
-| `wordcloud clear` | clear wordcloud caches (admin only) | `wordcloud clear` | `wordcloud clear` |
+| command           | description                               | usage                                   | example                             |
+| ----------------- | ----------------------------------------- | --------------------------------------- | ----------------------------------- |
+| `wordcloud`       | generate a wordcloud from a channel       | `wordcloud [#channel] [limit] [scheme]` | `wordcloud #general 500 discord`    |
+| `wordcloud user`  | generate a wordcloud from a specific user | `wordcloud user @user [limit] [scheme]` | `wordcloud user @username 500 blue` |
+| `wordcloud clear` | clear wordcloud caches (admin only)       | `wordcloud clear`                       | `wordcloud clear`                   |
 
 ## color schemes
 
@@ -89,6 +93,7 @@ when you request a wordcloud, enovuh:
 ## word filtering
 
 enovuh automatically filters out:
+
 - common english words (e.g., "the", "and", "is")
 - discord-specific terms (e.g., "discord", "http", "www")
 - mentions, emojis, and urls
@@ -111,4 +116,4 @@ if your wordcloud command isn't working:
 - ensure enovuh has permission to read message history in the channel
 - check that enovuh can attach files in the channel
 - try a lower message limit if processing takes too long
-- for user wordclouds, ensure the user has sent enough messages 
+- for user wordclouds, ensure the user has sent enough messages

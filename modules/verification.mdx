@@ -1,7 +1,7 @@
 ---
-title: 'verification'
-description: 'multi-layer member authentication'
-icon: 'fingerprint'
+title: "verification"
+description: "multi-layer member authentication"
+icon: "fingerprint"
 ---
 
 # gatekeeper verification
@@ -11,6 +11,7 @@ enovuh's gatekeeper system provides robust, customizable verification processes 
 ## verification philosophy
 
 gatekeeper uses a risk-based approach where:
+
 - verification difficulty scales with detected risk
 - multiple verification methods can be combined
 - user experience is prioritized for legitimate users
@@ -43,6 +44,7 @@ protect against automated bots with image-based verification:
 ```
 
 captcha options:
+
 ```
 ,gate captcha difficulty <easy/medium/hard>
 ```
@@ -50,6 +52,7 @@ captcha options:
 ```
 ,gate captcha attempts <number>
 ```
+
 sets maximum failed attempts before timeout.
 
 ### reaction verification
@@ -61,6 +64,7 @@ simple, one-click verification process:
 ```
 
 custom reaction message:
+
 ```
 ,gate reaction message <text>
 ```
@@ -74,19 +78,23 @@ filter members based on account criteria:
 ```
 
 screening options:
+
 ```
 ,gate screen age <days>
 ```
+
 requires accounts to be older than specified days.
 
 ```
 ,gate screen avatar <on/off>
 ```
+
 requires members to have a custom avatar.
 
 ```
 ,gate screen username <filter>
 ```
+
 screens for suspicious username patterns.
 
 ### verification questions
@@ -98,6 +106,7 @@ require members to answer custom questions:
 ```
 
 manage questions:
+
 ```
 ,gate questions add <question> <answer>
 ```
@@ -119,14 +128,17 @@ connect discord accounts to email addresses:
 ```
 
 email options:
+
 ```
 ,gate email required <on/off>
 ```
+
 determines if email verification is mandatory.
 
 ```
 ,gate email domains <add/remove> <domain>
 ```
+
 manage allowed email domains.
 
 ### phone verification
@@ -138,9 +150,11 @@ require phone verification for higher security:
 ```
 
 phone options:
+
 ```
 ,gate phone countries <add/remove> <country-code>
 ```
+
 manage allowed country codes.
 
 ## verification flow
@@ -154,9 +168,11 @@ customize the initial greeting:
 ```
 
 dynamic welcome:
+
 ```
 ,gate welcome dynamic <on/off>
 ```
+
 changes welcome message based on server activity.
 
 ### verification channel
@@ -168,14 +184,17 @@ designate where verification occurs:
 ```
 
 channel options:
+
 ```
 ,gate channel type <public/private>
 ```
+
 controls visibility of the verification process.
 
 ```
 ,gate channel timeout <minutes>
 ```
+
 automatically removes inactive verification attempts.
 
 ### completion message
@@ -195,9 +214,11 @@ track verification attempts:
 ```
 
 log options:
+
 ```
 ,gate logs detail <basic/normal/verbose>
 ```
+
 controls the amount of information logged.
 
 ## access management
@@ -217,17 +238,21 @@ configure server access before and after verification:
 ```
 ,gate access before <deny/limited/read>
 ```
+
 sets pre-verification permissions.
 
 ```
 ,gate access after <full/custom>
 ```
+
 sets post-verification permissions.
 
 For custom access:
+
 ```
 ,gate access custom <@role>
 ```
+
 uses an existing role's permissions as a template.
 
 ## advanced configuration
@@ -241,11 +266,13 @@ create multi-step verification processes:
 ```
 
 layer configuration:
+
 ```
 ,gate layer <number> <method>
 ```
 
 example creating a two-layer system:
+
 ```
 ,gate layers 2
 ,gate layer 1 reaction
@@ -263,11 +290,13 @@ enable adaptive verification difficulty:
 when enabled, verification becomes more rigorous for suspicious accounts.
 
 risk triggers:
+
 ```
 ,gate risk <trigger> <on/off>
 ```
 
 available triggers:
+
 - `newaccount` - recently created accounts
 - `noavatar` - accounts without avatars
 - `suspicious` - accounts with suspicious patterns
@@ -283,14 +312,17 @@ activate enhanced verification during detected raids:
 ```
 
 raid options:
+
 ```
 ,gate raid threshold <joins> <seconds>
 ```
+
 defines what constitutes a raid pattern.
 
 ```
 ,gate raid mode <lockdown/challenge/manual>
 ```
+
 determines how the system responds during raids.
 
 ### verification limits
@@ -302,9 +334,11 @@ control verification flow:
 ```
 
 example:
+
 ```
 ,gate limit 10 30
 ```
+
 allows 10 verifications per minute with maximum 30 pending.
 
 ## member management
@@ -326,11 +360,13 @@ exempt certain users from verification:
 ```
 
 exempt roles from verification:
+
 ```
 ,gate bypass role <@role>
 ```
 
 view all exemptions:
+
 ```
 ,gate bypass list
 ```
@@ -344,9 +380,11 @@ require existing members to verify again:
 ```
 
 scheduled reverification:
+
 ```
 ,gate reverify schedule <interval>
 ```
+
 periodically requires members to re-verify.
 
 ## advanced features
@@ -360,6 +398,7 @@ view verification statistics:
 ```
 
 this shows:
+
 - success/failure rates
 - common failure reasons
 - verification times
@@ -386,6 +425,7 @@ enable risk score calculation for new members:
 when enabled, members receive a trust score that can be used with other enovuh features.
 
 view member scores:
+
 ```
 ,gate score <@user>
 ```
@@ -399,11 +439,15 @@ identify and manage alternate accounts:
 ```
 
 alt management:
+
 ```
 ,gate alts action <log/restrict/block>
 ```
+
 determines how alt accounts are handled.
 
 <Card title="pro tip" icon="shield" color="#9333EA">
-  combine gatekeeper with enovuh's sentinel automod system to create a comprehensive security pipeline, where newly verified members are subject to stricter content filtering until they build trust over time.
-</Card> 
+  combine gatekeeper with enovuh's sentinel automod system to create a
+  comprehensive security pipeline, where newly verified members are subject to
+  stricter content filtering until they build trust over time.
+</Card>{" "}

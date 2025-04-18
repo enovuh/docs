@@ -1,7 +1,7 @@
 ---
-title: 'permission issues'
-description: 'troubleshooting permission-related problems with enovuh'
-icon: 'key'
+title: "permission issues"
+description: "troubleshooting permission-related problems with enovuh"
+icon: "key"
 ---
 
 # permission troubleshooting
@@ -14,33 +14,47 @@ enovuh needs specific permissions to function properly. here are the essential p
 
 <AccordionGroup>
   <Accordion title="administrator" icon="user-shield">
-    recommended for full functionality. this permission includes all others and ensures enovuh can perform all actions.
+    recommended for full functionality. this permission includes all others and
+    ensures enovuh can perform all actions.
   </Accordion>
-  
-  <Accordion title="manage server" icon="server">
-    needed for configuration commands, emoji management, and server settings.
-  </Accordion>
-  
-  <Accordion title="manage roles" icon="users">
-    required for role-based features like reaction roles, auto roles, and level rewards.
-  </Accordion>
-  
-  <Accordion title="manage channels" icon="folder-tree">
-    needed for channel management, lockdown features, and thread management.
-  </Accordion>
-  
-  <Accordion title="kick/ban members" icon="user-slash">
-    essential for moderation commands and anti-raid protection.
-  </Accordion>
-  
-  <Accordion title="manage messages" icon="message">
-    required for message cleanup, auto-mod, and message logging.
-  </Accordion>
-  
-  <Accordion title="view audit log" icon="file-contract">
-    needed for security features like anti-nuke.
-  </Accordion>
-  
+
+{" "}
+
+<Accordion title="manage server" icon="server">
+  needed for configuration commands, emoji management, and server settings.
+</Accordion>
+
+{" "}
+
+<Accordion title="manage roles" icon="users">
+  required for role-based features like reaction roles, auto roles, and level
+  rewards.
+</Accordion>
+
+{" "}
+
+<Accordion title="manage channels" icon="folder-tree">
+  needed for channel management, lockdown features, and thread management.
+</Accordion>
+
+{" "}
+
+<Accordion title="kick/ban members" icon="user-slash">
+  essential for moderation commands and anti-raid protection.
+</Accordion>
+
+{" "}
+
+<Accordion title="manage messages" icon="message">
+  required for message cleanup, auto-mod, and message logging.
+</Accordion>
+
+{" "}
+
+<Accordion title="view audit log" icon="file-contract">
+  needed for security features like anti-nuke.
+</Accordion>
+
   <Accordion title="voice permissions" icon="microphone">
     required for music playback and voice channel features.
   </Accordion>
@@ -51,10 +65,12 @@ enovuh needs specific permissions to function properly. here are the essential p
 ### bot cannot respond to commands
 
 **symptoms:**
+
 - bot doesn't respond to commands
 - "bot does not have permission to send messages in this channel" error
 
 **solutions:**
+
 1. check if enovuh has "send messages" permission in the channel
 2. ensure enovuh can "view channel" in the channel
 3. check if the channel has permission overwrites that affect bots
@@ -66,11 +82,13 @@ enovuh needs specific permissions to function properly. here are the essential p
 ### cannot assign roles
 
 **symptoms:**
+
 - reaction roles don't work
 - level rewards fail to assign
 - "missing permissions" error when trying to assign roles
 
 **solutions:**
+
 1. ensure enovuh has "manage roles" permission
 2. check if enovuh's highest role is above the roles it needs to assign
 3. verify the roles aren't managed by integrations (like booster roles)
@@ -82,11 +100,13 @@ enovuh needs specific permissions to function properly. here are the essential p
 ### music commands not working
 
 **symptoms:**
+
 - bot won't join voice channel
 - music doesn't play
 - bot joins but disconnects immediately
 
 **solutions:**
+
 1. ensure enovuh has these voice permissions:
    - connect
    - speak
@@ -101,11 +121,13 @@ enovuh needs specific permissions to function properly. here are the essential p
 ### moderation commands failing
 
 **symptoms:**
+
 - kick or ban commands don't work
 - warnings aren't saved
 - "insufficient permissions" errors
 
 **solutions:**
+
 1. ensure enovuh has appropriate permissions (kick/ban members)
 2. check if the target user has a higher role than enovuh
 3. verify enovuh has "manage messages" for warn commands
@@ -121,13 +143,17 @@ discord follows a strict role hierarchy where users can only manage roles below 
 1. move the enovuh role above all roles it needs to manage
 2. place enovuh's role below any admin roles that should be able to manage it
 
-<img src="https://enovuh.lol/docs/roles-hierarchy.png" alt="role hierarchy diagram" />
+<img
+  src="https://enovuh.lol/docs/roles-hierarchy.png"
+  alt="role hierarchy diagram"
+/>
 
 ## fixing permission issues
 
 ### method 1: reinvite with correct permissions
 
 1. use this invite link to add enovuh with all required permissions:
+
 ```
 https://enovuh.lol/invite
 ```
@@ -153,4 +179,4 @@ if you continue to experience permission issues after trying the solutions above
 3. review discord's audit log for unexpected permission changes
 4. join our [support server](https://enovuh.lol/support) for personalized help
 
-remember that discord's permission system can be complex, with channel overwrites sometimes overriding server-wide permissions. 
+remember that discord's permission system can be complex, with channel overwrites sometimes overriding server-wide permissions.

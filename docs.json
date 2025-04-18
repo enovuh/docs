@@ -1,10 +1,10 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "jugg",
+  "name": "enovuh",
   "theme": "mint",
   "logo": {
-    "dark": "https://jugg.lol/branding/jugg-dark.svg",
-    "light": "https://jugg.lol/branding/jugg-light.svg"
+    "dark": "https://enovuh.lol/branding/enovuh-dark.svg",
+    "light": "https://enovuh.lol/branding/enovuh-light.svg"
   },
   "favicon": "favicon.svg",
   "colors": {
@@ -18,30 +18,30 @@
   },
   "topbarLinks": [
     {
-      "name": "Support Server",
-      "url": "https://jugg.lol/support"
+      "name": "support server",
+      "url": "https://enovuh.lol/support"
     }
   ],
   "topbarCtaButton": {
-    "name": "Home",
-    "url": "https://jugg.lol"
+    "name": "home",
+    "url": "https://enovuh.lol"
   },
   "redirects": [
     {
       "source": "/commands",
-      "destination": "https://jugg.lol/commands"
+      "destination": "https://enovuh.lol/commands"
     },
     {
       "source": "/status",
-      "destination": "https://jugg.lol/status"
+      "destination": "https://enovuh.lol/status"
     },
     {
       "source": "/invite",
-      "destination": "https://jugg.lol/invite"
+      "destination": "https://enovuh.lol/invite"
     },
     {
       "source": "/discord",
-      "destination": "https://discord.gg/jugg"
+      "destination": "https://discord.gg/enovuh"
     }
   ],
   "navigation": {
@@ -52,42 +52,38 @@
     "anchors": [],
     "groups": [
       {
-        "name": "Overview",
+        "name": "overview",
         "pages": [
           "overview/introduction",
-          "overview/features",
-          "overview/installation"
+          "overview/protection",
+          "overview/configuration"
         ]
       },
       {
-        "name": "Protection",
+        "name": "protection",
         "pages": [
           "protection/antinuke",
           "protection/antiraid",
-          "protection/security"
+          "protection/joingate",
+          "protection/automod"
         ]
       },
       {
-        "name": "Server Configuration",
+        "name": "server configuration",
         "pages": [
-          "configuration/roles/vanity",
-          "configuration/roles/booster",
-          "configuration/roles/reaction",
-          "configuration/roles/button",
-          "configuration/messages/system",
-          "configuration/messages/responder",
-          "configuration/messages/timer",
+          "configuration/roles",
+          "configuration/messages",
           "configuration/starboard",
           "configuration/voicemaster",
-          "configuration/level-rewards",
-          "configuration/bump-reminder",
-          "configuration/reaction-triggers",
-          "configuration/command-aliases",
+          "configuration/levels",
+          "configuration/bumpreminder",
+          "configuration/autoresponses",
+          "configuration/aliases",
           "configuration/logging"
         ]
       },
       {
-        "name": "Commands",
+        "name": "commands",
         "pages": [
           "commands/protection",
           "commands/security",
@@ -101,54 +97,36 @@
         ]
       },
       {
-        "name": "Settings",
+        "name": "features",
         "pages": [
-          "settings/customization",
-          "settings/commands",
-          "settings/dashboard"
+          "features/music",
+          "features/economy",
+          "features/leveling",
+          "features/counters"
         ]
       },
       {
-        "name": "Miscellaneous",
-        "pages": [
-          "miscellaneous/music",
-          "miscellaneous/webhook",
-          "miscellaneous/giveaway",
-          "miscellaneous/counters"
-        ]
-      },
-      {
-        "name": "Integrations",
+        "name": "integrations",
         "pages": [
           "integrations/spotify",
           "integrations/lastfm",
-          "integrations/fortnite",
-          "integrations/social-notifications"
+          "integrations/social"
         ]
       },
       {
-        "name": "API",
+        "name": "common issues",
         "pages": [
-          "api/developer-intro",
-          "api/endpoints",
-          "api/authentication",
-          "api/rate-limiting"
-        ]
-      },
-      {
-        "name": "Common Issues",
-        "pages": [
-          "common-issues/ios-dash",
           "common-issues/permissions",
-          "common-issues/server-removal"
+          "common-issues/errors",
+          "common-issues/troubleshooting"
         ]
       }
     ],
     "pages": []
   },
   "footerSocials": {
-    "discord": "https://discord.gg/jugg",
-    "github": "https://github.com/jugg-bot",
-    "twitter": "https://twitter.com/jugg"
+    "discord": "https://discord.gg/enovuh",
+    "github": "https://github.com/enovuh-bot",
+    "twitter": "https://twitter.com/enovuh"
   }
 }

@@ -1,0 +1,157 @@
+---
+title: 'music system'
+description: 'high-quality music playback with multiple source support'
+icon: 'music'
+---
+
+# music system
+
+enovuh offers a feature-rich music system, allowing your server to enjoy high-quality audio from multiple sources including youtube, spotify, soundcloud, and more.
+
+## key features
+
+- high-quality audio streaming
+- support for multiple music platforms
+- extensive queue management
+- audio filters and effects
+- lyrics display
+- 24/7 playback option
+- dj role system
+
+## getting started
+
+to start playing music, you or the bot must be in a voice channel. use the following commands to begin:
+
+```
+,play <song name or url>
+```
+
+for example:
+```
+,play never gonna give you up
+```
+
+or directly with a link:
+```
+,play https://www.youtube.com/watch?v=dQw4w9WgXcQ
+```
+
+## supported platforms
+
+enovuh can play music from:
+
+- youtube
+- spotify (tracks, albums, playlists)
+- soundcloud
+- bandcamp
+- twitch streams
+- direct file links (mp3, wav, etc.)
+
+## playback controls
+
+| command | description | usage | example |
+| ------- | ----------- | ----- | ------- |
+| `play` | play a song or add to queue | `play <song/url>` | `play highway to hell` |
+| `pause` | pause the current playback | `pause` | `pause` |
+| `resume` | resume paused playback | `resume` | `resume` |
+| `skip` | skip to the next song | `skip` | `skip` |
+| `stop` | stop playback and clear queue | `stop` | `stop` |
+| `now` | show currently playing song | `now` | `now` |
+| `seek` | seek to a position in the song | `seek <time>` | `seek 1:30` |
+| `replay` | restart the current song | `replay` | `replay` |
+
+## queue management
+
+| command | description | usage | example |
+| ------- | ----------- | ----- | ------- |
+| `queue` | view the current queue | `queue` | `queue` |
+| `shuffle` | shuffle songs in the queue | `shuffle` | `shuffle` |
+| `loop` | loop the current song or queue | `loop <song/queue>` | `loop queue` |
+| `remove` | remove a song from the queue | `remove <position>` | `remove 3` |
+| `clear` | clear the queue | `clear` | `clear` |
+| `move` | move a song to another position | `move <from> <to>` | `move 2 5` |
+| `skipto` | skip to a specific position | `skipto <position>` | `skipto 4` |
+
+## audio effects
+
+enhance your listening experience with audio filters:
+
+```
+,filter <filter name>
+```
+
+available filters:
+- `bassboost` - enhance bass frequencies
+- `nightcore` - speed up and pitch up
+- `vaporwave` - slow down and pitch down
+- `8d` - rotation effect
+- `karaoke` - reduce vocals
+- `clear` - remove all filters
+
+## playlist management
+
+save and load your favorite playlists:
+
+| command | description | usage | example |
+| ------- | ----------- | ----- | ------- |
+| `playlist create` | create a new playlist | `playlist create <name>` | `playlist create favorites` |
+| `playlist add` | add current song to playlist | `playlist add <name>` | `playlist add favorites` |
+| `playlist remove` | remove song from playlist | `playlist remove <name> <position>` | `playlist remove favorites 2` |
+| `playlist view` | view songs in a playlist | `playlist view <name>` | `playlist view favorites` |
+| `playlist load` | load and play a playlist | `playlist load <name>` | `playlist load favorites` |
+
+## lyrics
+
+display lyrics for the current song:
+
+```
+,lyrics
+```
+
+or search for specific lyrics:
+
+```
+,lyrics <song name>
+```
+
+## dj role setup
+
+restrict music commands to specific users:
+
+```
+,music dj <role>
+```
+
+to remove dj role:
+
+```
+,music dj none
+```
+
+## 24/7 mode
+
+keep enovuh in the voice channel indefinitely:
+
+```
+,music 24/7
+```
+
+## additional settings
+
+| command | description | usage | example |
+| ------- | ----------- | ----- | ------- |
+| `volume` | adjust playback volume | `volume <1-100>` | `volume 75` |
+| `disconnect` | disconnect from voice channel | `disconnect` | `disconnect` |
+| `autoplay` | toggle autoplay related songs | `autoplay` | `autoplay` |
+
+## troubleshooting
+
+if you encounter issues with music playback:
+
+1. ensure enovuh has the necessary permissions
+2. check if the song or playlist is available in your region
+3. try using a direct link instead of a search term
+4. use the `,reconnect` command to refresh the connection
+5. make sure the bot has permission to join and speak in the channel
+
+for persistent issues, contact our support team via the support server. 

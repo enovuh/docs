@@ -1,0 +1,166 @@
+---
+title: 'protection'
+description: 'keep your server safe with enovuh's advanced protection features'
+icon: 'shield'
+---
+
+# server protection
+
+enovuh offers comprehensive protection systems to keep your discord server safe from various threats including raids, nukes, spam, and malicious users. these security features work together to provide multiple layers of defense.
+
+## protection systems overview
+
+<CardGroup cols={2}>
+  <Card title="anti-nuke" icon="radiation" href="#anti-nuke">
+    prevent server destruction attempts by monitoring administrative actions
+  </Card>
+  <Card title="anti-raid" icon="users-slash" href="#anti-raid">
+    detect and stop coordinated join attacks before they disrupt your server
+  </Card>
+  <Card title="join gate" icon="door-closed" href="#join-gate">
+    control who can enter your server with customizable verification
+  </Card>
+  <Card title="auto-moderation" icon="robot" href="#auto-moderation">
+    automatically detect and handle rule violations without manual intervention
+  </Card>
+</CardGroup>
+
+## anti-nuke {#anti-nuke}
+
+the anti-nuke system protects against server destruction attempts by monitoring administrative actions and preventing mass destructive behavior.
+
+### features
+
+- monitors critical actions like channel/role deletions, permission changes, and ban waves
+- intelligent detection of suspicious patterns in administrative actions
+- configurable punishment actions (jail, kick, ban) for detected attackers
+- whitelist system for trusted administrators
+- automatic recovery of deleted channels and roles when possible
+
+### setup
+
+basic setup:
+```
+,antinuke setup
+```
+
+adjust punishment level:
+```
+,antinuke punishment <jail|kick|ban>
+```
+
+add trusted admins:
+```
+,antinuke whitelist add @user
+```
+
+## anti-raid {#anti-raid}
+
+the anti-raid system protects your server from coordinated mass-join attacks by detecting unusual join patterns and taking preventative action.
+
+### features
+
+- real-time join rate monitoring to detect abnormal server join patterns
+- account age verification to prevent newly created accounts from joining
+- ip/vpn detection to identify potentially malicious connections
+- configurable auto-lockdown when raids are detected
+- detailed logs of raid attempts and system actions
+
+### setup
+
+enable anti-raid protection:
+```
+,antiraid enable
+```
+
+configure sensitivity (1-5):
+```
+,antiraid sensitivity <level>
+```
+
+set auto-lockdown options:
+```
+,antiraid lockdown <duration>
+```
+
+## join gate {#join-gate}
+
+the join gate system provides customizable verification methods to control who can enter your server, preventing automated bot accounts and unwanted users.
+
+### features
+
+- multiple verification methods: captcha, role-based, reaction, and more
+- customizable verification messages and requirements
+- temporary quarantine for new joins until verification
+- auto-kick for users who fail to verify within a set time
+- bypass options for specific roles or users
+
+### setup
+
+enable join gate:
+```
+,joingate enable
+```
+
+set verification method:
+```
+,joingate method <captcha|reaction|button>
+```
+
+customize verification channel:
+```
+,joingate channel #verification
+```
+
+## auto-moderation {#auto-moderation}
+
+the auto-moderation system automatically detects and handles rule violations without requiring manual intervention from moderators.
+
+### features
+
+- content filtering for inappropriate language, spam, excessive mentions, and more
+- anti-spam protection with configurable thresholds
+- link filtering with whitelist/blacklist options
+- raid phrase detection to identify coordinated spam attacks
+- escalating punishment system based on violation frequency
+
+### setup
+
+enable auto-moderation:
+```
+,automod enable
+```
+
+configure specific filters:
+```
+,automod <filter> <enable|disable>
+```
+
+set punishment levels:
+```
+,automod punishments setup
+```
+
+## best practices
+
+for optimal server protection:
+
+1. **layer your protection** - enable multiple systems for comprehensive security
+2. **customize thresholds** - adjust sensitivity based on your server's activity level
+3. **regularly review logs** - check security logs to fine-tune your protection
+4. **maintain your whitelist** - keep your trusted admin list up to date
+5. **test your setup** - periodically verify your protection systems are working
+
+## advanced protection commands
+
+access all protection commands and detailed configuration:
+
+```
+,help protection
+```
+
+view current protection status:
+
+```
+,protection status
+``` 

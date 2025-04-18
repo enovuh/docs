@@ -1,21 +1,66 @@
-# jugg Documentation
+# enovuh documentation
 
-This directory contains the documentation for jugg, a powerful Discord bot.
+this repository contains the official documentation for the enovuh discord bot, built using [mintlify](https://mintlify.com).
 
-## Structure
+## local development
 
-- `commands/`: Documentation for all bot commands
-- `overview/`: General information about the bot
-- `docs.json`: Documentation configuration file
+to run the documentation locally:
 
-## Local Development
+1. install mintlify cli:
+```bash
+npm i -g mintlify
+```
 
-To run the documentation locally:
+2. run the development server:
+```bash
+mintlify dev
+```
 
-1. Install Mintlify: `npm install -g mintlify`
-2. Start the development server: `mintlify dev`
-3. Open your browser at `http://localhost:3000`
+the documentation will be available at `http://localhost:3000`.
 
-## Deployment
+## documentation structure
 
-The documentation is automatically deployed when changes are pushed to the main branch.
+- `/overview` - general information about enovuh
+- `/commands` - detailed command documentation
+- `/protection` - security feature documentation
+- `/configuration` - server configuration guides
+- `/features` - detailed feature documentation
+- `/integrations` - external service integrations
+- `/common-issues` - troubleshooting guides
+
+## adding new pages
+
+1. create a new `.mdx` file in the appropriate directory
+2. add the page to `docs.json` in the navigation section
+3. use proper frontmatter:
+
+```md
+---
+title: 'page title'
+description: 'page description'
+icon: 'icon-name'  # optional
+---
+
+content goes here
+```
+
+## formatting standards
+
+- use all lowercase for titles and headings
+- use code blocks for command examples
+- organize commands in tables with consistent columns
+- use cards and accordions for better organization
+- include usage examples for all commands
+
+## deployment
+
+the documentation is automatically deployed when changes are pushed to the main branch. changes typically take a few minutes to appear on the live site.
+
+## contribution guidelines
+
+- ensure all command documentation is accurate and updated
+- follow the lowercase style guide
+- test any changes locally before pushing
+- use consistent formatting across all pages
+
+for any questions or assistance, please contact the enovuh team in our [support server](https://enovuh.lol/support).

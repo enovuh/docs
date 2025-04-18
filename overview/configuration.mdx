@@ -1,0 +1,241 @@
+---
+title: 'configuration'
+description: 'customize enovuh to fit your server's specific needs'
+icon: 'gear'
+---
+
+# server configuration
+
+enovuh offers extensive customization options to adapt the bot to your server's specific requirements. this section covers the main configuration areas and shows you how to personalize enovuh for your community.
+
+## quick configuration
+
+get started with basic server setup using the configuration wizard:
+
+```
+,config setup
+```
+
+this guided process will help you configure essential settings including:
+- command prefix
+- mod roles and channels
+- logging channels
+- welcome/goodbye messages
+- auto role settings
+
+## configuration categories
+
+<CardGroup cols={2}>
+  <Card title="roles" icon="user-group" href="#role-management">
+    set up reaction roles, autoroles, vanity roles, and more
+  </Card>
+  <Card title="messages" icon="comment" href="#message-systems">
+    configure welcome messages, autoreplies, and embedded announcements
+  </Card>
+  <Card title="logging" icon="list-check" href="#logging-configuration">
+    set up comprehensive server event logging
+  </Card>
+  <Card title="commands" icon="terminal" href="#command-settings">
+    customize command permissions and create aliases
+  </Card>
+</CardGroup>
+
+## role management {#role-management}
+
+enovuh provides several systems for role assignment and management.
+
+### reaction roles
+
+allow members to self-assign roles by reacting to messages:
+
+```
+,reactionrole create
+```
+
+### autorole
+
+automatically assign roles to new members:
+
+```
+,autorole add <role>
+```
+
+you can also set requirements based on account age:
+
+```
+,autorole age <days>
+```
+
+### booster roles
+
+create custom roles for server boosters:
+
+```
+,boosterrole create <name> <color>
+```
+
+### vanity roles
+
+create custom roles with unique appearance:
+
+```
+,vanityrole create <name> <color>
+```
+
+## message systems {#message-systems}
+
+customize how enovuh communicates in your server.
+
+### welcome messages
+
+set up customized welcome messages for new members:
+
+```
+,welcome message <message>
+```
+
+add variables like `{user}`, `{server}`, and `{count}` to personalize messages.
+
+### goodbye messages
+
+configure messages for when members leave:
+
+```
+,goodbye message <message>
+```
+
+### autoreplies
+
+create automatic responses to specific triggers:
+
+```
+,autoreply add <trigger> <response>
+```
+
+## logging configuration {#logging-configuration}
+
+track server activity with comprehensive logging options.
+
+### server logs
+
+set up logging for server events:
+
+```
+,logs server #channel
+```
+
+### moderation logs
+
+track moderation actions:
+
+```
+,logs mod #channel
+```
+
+### message logs
+
+log message edits and deletions:
+
+```
+,logs messages #channel
+```
+
+### voice logs
+
+track voice channel activity:
+
+```
+,logs voice #channel
+```
+
+## command settings {#command-settings}
+
+customize how commands work in your server.
+
+### command permissions
+
+restrict commands to specific roles:
+
+```
+,permissions command <command> <role>
+```
+
+### command aliases
+
+create shortcuts for frequently used commands:
+
+```
+,alias add <alias> <command>
+```
+
+### command channels
+
+restrict commands to specific channels:
+
+```
+,permissions channel <channel> <command>
+```
+
+## additional features
+
+### starboard
+
+set up a starboard to highlight popular messages:
+
+```
+,starboard setup #channel
+```
+
+configure the required number of reactions:
+
+```
+,starboard stars <number>
+```
+
+### voicemaster
+
+create custom voice channels that members can control:
+
+```
+,voicemaster setup
+```
+
+### level rewards
+
+automatically assign roles when members reach specific levels:
+
+```
+,levelreward add <level> <role>
+```
+
+### bump reminders
+
+set up reminders to bump your server on listing sites:
+
+```
+,bumpreminder setup #channel
+```
+
+## backup & restore
+
+save your configuration settings:
+
+```
+,backup create
+```
+
+restore settings later:
+
+```
+,backup load <id>
+```
+
+## best practices
+
+for effective configuration:
+
+1. **plan your setup** - consider your server's needs before configuring
+2. **test in stages** - implement and test features one at a time
+3. **document changes** - keep track of your configuration choices
+4. **use the backup feature** - regularly back up your settings
+5. **review periodically** - update your configuration as your server evolves 

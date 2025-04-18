@@ -48,98 +48,75 @@
     "groups": [
       {
         "group": "getting started",
+        "icon": "rocket",
         "pages": [
           "index",
-          "overview/introduction",
-          "overview/protection",
-          "overview/configuration"
+          "overview/introduction"
         ]
       },
       {
-        "group": "protection & security",
+        "group": "security setup",
+        "icon": "shield",
         "pages": [
           "protection/antinuke",
-          "protection/antiraid",
           "protection/joingate",
-          "protection/automod"
+          "protection/moderation",
+          "protection/fake-permissions"
         ]
       },
       {
         "group": "server configuration",
+        "icon": "gear",
         "pages": [
-          {
-            "group": "role management",
-            "pages": [
-              "configuration/roles/reaction-roles",
-              "configuration/roles/autoroles",
-              "configuration/roles/vanity-roles",
-              "configuration/roles/booster-roles"
-            ]
-          },
-          {
-            "group": "messages & notifications",
-            "pages": [
-              "configuration/messages/welcome",
-              "configuration/messages/goodbye",
-              "configuration/messages/autoreplies"
-            ]
-          },
+          "configuration/roles",
+          "configuration/messages",
           "configuration/starboard",
           "configuration/voicemaster",
-          "configuration/levels",
-          "configuration/bumpreminder",
+          "configuration/level-rewards",
+          "configuration/bump-reminder",
+          "configuration/reaction-triggers",
+          "configuration/command-aliases",
           "configuration/logging"
         ]
       },
       {
-        "group": "commands",
-        "pages": [
-          "commands/protection",
-          "commands/security",
-          "commands/utility",
-          "commands/configuration",
-          "commands/levels",
-          "commands/music",
-          "commands/support",
-          "commands/fun",
-          "commands/social"
-        ]
-      },
-      {
-        "group": "features",
+        "group": "miscellaneous",
+        "icon": "sparkles",
         "pages": [
           "features/music",
-          "features/economy",
-          "features/leveling",
-          "features/counters",
-          "features/image-generation",
-          "features/threads",
-          "features/translation",
-          "features/wordcloud"
+          "features/webhook",
+          "features/giveaway",
+          "features/counters"
         ]
       },
       {
         "group": "integrations",
+        "icon": "plug",
         "pages": [
           "integrations/spotify",
           "integrations/lastfm",
-          "integrations/social"
+          "integrations/fortnite",
+          "integrations/social-notifications"
+        ]
+      },
+      {
+        "group": "resources",
+        "icon": "book",
+        "pages": [
+          "resources/syntax",
+          "resources/scripting",
+          "resources/permissions",
+          "resources/speech-voices",
+          "resources/translation-languages"
         ]
       },
       {
         "group": "common issues",
+        "icon": "wrench",
         "pages": [
+          "common-issues/ios-dash",
           "common-issues/permissions",
-          "common-issues/errors",
-          "common-issues/troubleshooting"
-        ]
-      },
-      {
-        "group": "developer resources",
-        "pages": [
-          "developers/api",
-          "developers/self-hosting",
-          "developers/contributing"
+          "common-issues/server-removal"
         ]
       }
     ]

@@ -1,0 +1,342 @@
+---
+title: 'automod'
+description: 'automatic content moderation for your server'
+icon: 'shield-check'
+---
+
+# automod
+
+enovuh's automod system automatically filters and takes action on problematic content without requiring constant moderator presence. it helps maintain a clean and safe environment for your community.
+
+## key features
+
+- **automated content filtering** - detects and removes harmful content
+- **customizable triggers** - create rules based on your server's needs
+- **multiple action types** - from simple warnings to timeouts and bans
+- **threshold-based monitoring** - takes action after repeated offenses
+- **anti-raid protection** - detects and mitigates server raids
+- **detailed logging** - records all automod actions for review
+
+## getting started
+
+enable the automod system for your server:
+
+```
+,automod
+```
+
+to view current automod settings:
+
+```
+,automod config
+```
+
+## filtering modules
+
+the automod system includes several built-in filtering modules that you can enable or disable individually.
+
+### anti-spam
+
+prevents rapid message sending and message repeating:
+
+```
+,automod spam <on/off> [threshold] [time]
+```
+
+- `threshold` - number of messages before triggering (default: 5)
+- `time` - time period in seconds (default: 3)
+
+example:
+```
+,automod spam on 6 4
+```
+this detects when a user sends 6 or more messages within 4 seconds.
+
+### invite filter
+
+blocks Discord invite links from being posted:
+
+```
+,automod invites <on/off>
+```
+
+you can whitelist specific servers whose invites are allowed:
+
+```
+,automod invites whitelist add <server_id>
+```
+
+to remove a whitelisted server:
+```
+,automod invites whitelist remove <server_id>
+```
+
+### word filter
+
+blocks messages containing banned words or phrases:
+
+```
+,automod filter <on/off>
+```
+
+add words to the filter:
+```
+,automod filter add <word>
+```
+
+remove words from the filter:
+```
+,automod filter remove <word>
+```
+
+list all filtered words:
+```
+,automod filter list
+```
+
+the filter is smart enough to detect:
+- variations of words (zero-width characters, special characters)
+- words embedded within other words
+- leetspeak substitutions (e.g., "3" for "e")
+
+### link filter
+
+controls which links can be posted:
+
+```
+,automod links <mode>
+```
+
+available modes:
+- `off` - no link filtering
+- `blacklist` - only block specific domains
+- `whitelist` - block all domains except whitelisted ones
+- `all` - block all links
+
+manage domain lists:
+```
+,automod links add <domain>
+,automod links remove <domain>
+,automod links list
+```
+
+### caps filter
+
+prevents excessive use of capital letters:
+
+```
+,automod caps <on/off> [percentage]
+```
+
+the percentage parameter sets the threshold for what's considered excessive (default: 70%).
+
+### mention spam
+
+prevents mass mentioning of users, roles, or everyone:
+
+```
+,automod mentions <on/off> [threshold]
+```
+
+the threshold sets how many mentions in a single message trigger the filter (default: 5).
+
+### anti-raid
+
+detects and mitigates server raids:
+
+```
+,automod raid <on/off> [joins] [seconds]
+```
+
+- `joins` - number of joins that trigger raid detection (default: 10)
+- `seconds` - time window for those joins (default: 10)
+
+raid actions:
+```
+,automod raid action <action>
+```
+
+available actions:
+- `alert` - notify moderators only
+- `lockdown` - temporarily lock all channels
+- `kick` - kick all new accounts joining during the raid
+- `ban` - ban all new accounts joining during the raid
+
+### scam detection
+
+identifies and removes common scam messages:
+
+```
+,automod scam <on/off>
+```
+
+this uses machine learning to identify phishing links, free nitro scams, and other common Discord scams.
+
+### anti-hoisting
+
+prevents name hoisting (using symbols to appear at the top of member lists):
+
+```
+,automod hoist <on/off>
+```
+
+when enabled, it automatically renames users with hoisted names.
+
+## punishment system
+
+configure what happens when automod rules are triggered:
+
+```
+,automod action <module> <action>
+```
+
+available actions:
+- `delete` - delete the message only
+- `warn` - delete and warn the user
+- `timeout` - delete and timeout the user
+- `kick` - delete and kick the user
+- `ban` - delete and ban the user
+
+example:
+```
+,automod action spam timeout
+```
+
+### threshold-based punishments
+
+set escalating punishments based on violation count:
+
+```
+,automod threshold <count> <action>
+```
+
+example:
+```
+,automod threshold 3 timeout 10m
+,automod threshold 5 ban
+```
+this applies a 10-minute timeout after 3 violations and a ban after 5.
+
+### punishment durations
+
+set the duration for timeouts:
+
+```
+,automod timeout <duration>
+```
+
+the duration format accepts:
+- `s` for seconds
+- `m` for minutes
+- `h` for hours
+- `d` for days
+
+example:
+```
+,automod timeout 2h
+```
+
+## exemptions
+
+certain channels, roles, or users can be exempted from automod:
+
+### exempt channels
+
+```
+,automod exempt channel add <#channel>
+,automod exempt channel remove <#channel>
+,automod exempt channel list
+```
+
+### exempt roles
+
+```
+,automod exempt role add <@role>
+,automod exempt role remove <@role>
+,automod exempt role list
+```
+
+### exempt users
+
+```
+,automod exempt user add <@user>
+,automod exempt user remove <@user>
+,automod exempt user list
+```
+
+## logging
+
+configure where automod actions are logged:
+
+```
+,automod log <#channel>
+```
+
+disable logging:
+```
+,automod log off
+```
+
+## advanced features
+
+### custom filters
+
+create custom automod rules with complex conditions:
+
+```
+,automod custom add <name> <trigger> <action>
+```
+
+- `name` - identifier for the custom rule
+- `trigger` - what activates the rule (regex pattern)
+- `action` - what happens when triggered
+
+example:
+```
+,automod custom add creditcard (\d{4}[-\s]?){4} delete
+```
+this detects and removes messages containing credit card number patterns.
+
+### anti-phishing
+
+automatically detect and remove phishing links:
+
+```
+,automod phishing <on/off>
+```
+
+this uses an up-to-date database of known phishing domains.
+
+### content scanning
+
+detect NSFW content in images and attachments:
+
+```
+,automod content <on/off>
+```
+
+when enabled, it uses machine learning to scan uploaded images.
+
+## best practices
+
+for an effective automod system:
+
+1. **start light** - begin with minimal restrictions, then add more as needed
+2. **use appropriate punishments** - match the severity of the action to the offense
+3. **exempt trusted roles** - prevent automod from interfering with staff
+4. **test new rules** - verify custom filters work as expected before deployment
+5. **review logs regularly** - check for false positives or missed violations
+
+## troubleshooting
+
+if automod isn't working as expected:
+
+- verify enovuh has the necessary permissions (manage messages, moderate members)
+- ensure the automod module is enabled
+- check if the user/channel/role is exempted
+- review your action settings
+- confirm punishment thresholds are configured correctly
+
+<Card title="did you know?" icon="lightbulb" color="#FEF3C7">
+  the automod system works alongside enovuh's manual moderation tools, creating a comprehensive security system. manual actions also count toward automod thresholds.
+</Card> 

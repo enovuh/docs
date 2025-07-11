@@ -1,0 +1,28 @@
+# Social - Pinterest Module
+
+The Pinterest module allows for integration with Pinterest, enabling the bot to fetch and display content from Pinterest boards and profiles directly in your Discord server. This can be useful for sharing visual inspirations, new pins, or showcasing creative content from linked Pinterest accounts.
+
+## Features
+
+- **Pin Notifications**: Get notified in Discord when new pins are added to a tracked Pinterest board.
+- **Profile Information**: Display basic information about a Pinterest profile.
+- **Board/Pin Display**: Show images and details from Pinterest pins and boards.
+
+## Commands
+
+- `/pinterest track board [board_url] [channel]`: Starts tracking a Pinterest board for new pins.
+- `/pinterest untrack board [board_url]`: Stops tracking a Pinterest board.
+- `/pinterest profile [username]`: Shows basic information about a Pinterest profile.
+- `/pinterest latest [board_url]`: Displays the latest pin from a tracked Pinterest board.
+
+## Configuration
+
+Configuration for the Pinterest module involves setting up API access (if required by Pinterest's policies) and defining which channels receive notifications.
+
+```
+# Example configuration for the Pinterest module
+pinterest:
+  enabled: true
+  tracking_channels: {}
+  # api_key: "YOUR_PINTEREST_API_KEY" # May be required depending on Pinterest API changes
+``` 

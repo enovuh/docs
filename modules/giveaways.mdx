@@ -1,0 +1,28 @@
+# Giveaways Module
+
+The Giveaways module allows you to host and manage giveaways directly within your server, making it easy to engage your community and reward active members.
+
+## Features
+
+- **Create Giveaways**: Set up giveaways with custom prizes, durations, and entry requirements.
+- **Automatic Winner Selection**: Randomly select winners at the end of the giveaway.
+- **Role Requirements**: Restrict giveaway entries to users with specific roles.
+
+## Commands
+
+- `/giveaway start [duration] [winners] [prize]`: Starts a new giveaway.
+- `/giveaway end [message_id]`: Ends an ongoing giveaway.
+- `/giveaway reroll [message_id]`: Rerolls a winner for a giveaway.
+
+## Configuration
+
+Configuration for the Giveaways module can be done through the dashboard or by using specific commands.
+
+```
+# Example configuration for the Giveaways module
+giveaways:
+  enabled: true
+  default_duration: "24h"
+  default_winners: 1
+  log_channel_id: ""
+``` 

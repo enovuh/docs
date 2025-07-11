@@ -1,0 +1,28 @@
+# Wordcloud Module
+
+The Wordcloud module generates visual representations of the most frequently used words in your server's chat, offering a fun and insightful way to understand conversation trends.
+
+## Features
+
+- **Generate Wordclouds**: Create word clouds based on messages in specified channels.
+- **Customizable Appearance**: Adjust colors, fonts, and shapes of the word cloud.
+- **Exclusion Lists**: Exclude common words or specific terms from the word cloud generation.
+
+## Commands
+
+- `/wordcloud generate [channel]`: Generates a word cloud for a given channel.
+- `/wordcloud settings`: Configures wordcloud generation settings.
+
+## Configuration
+
+Configuration for the Wordcloud module involves setting up permissions, default channels, and customization options for the generated images.
+
+```
+# Example configuration for the Wordcloud module
+wordcloud:
+  enabled: true
+  excluded_words: ["a", "the", "is", "and"]
+  default_channel_id: ""
+  image_width: 800
+  image_height: 600
+``` 

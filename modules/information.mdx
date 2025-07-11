@@ -1,0 +1,30 @@
+# Information Module
+
+The Information module provides a suite of commands to retrieve various pieces of information about your server, users, and general bot statistics. This helps users quickly find details they need without leaving the platform.
+
+## Features
+
+- **User Info**: Get detailed information about a specific user.
+- **Server Info**: View statistics and details about the current server.
+- **Bot Info**: Display general information about the bot, including uptime and version.
+- **Role Info**: Get details about specific roles.
+- **Channel Info**: View details about text and voice channels.
+
+## Commands
+
+- `/info user [user]`: Shows information about a user.
+- `/info server`: Displays information about the server.
+- `/info bot`: Shows general bot information.
+- `/info role [role]`: Shows information about a specific role.
+- `/info channel [channel]`: Shows information about a specific channel.
+
+## Configuration
+
+Configuration for the Information module is generally minimal, focusing on permissions for who can access certain commands.
+
+```
+# Example configuration for the Information module
+information:
+  enabled: true
+  allowed_roles: []
+``` 

@@ -1,0 +1,28 @@
+# Autorole Module
+
+The Autorole module automatically assigns roles to new members when they join your server. This helps in quickly onboarding new users and maintaining server organization.
+
+## Features
+
+- **Automatic Role Assignment**: Assigns one or more roles to new members.
+- **Bot Exclusion**: Option to exclude bots from receiving autoroles.
+- **Customizable Delay**: Set a delay before roles are assigned.
+
+## Commands
+
+- `/autorole add [role]`: Adds a role to the autorole list.
+- `/autorole remove [role]`: Removes a role from the autorole list.
+- `/autorole list`: Lists all currently configured autoroles.
+
+## Configuration
+
+Configuration for the Autorole module can be done through the dashboard or by using specific commands.
+
+```
+# Example configuration for the Autorole module
+autorole:
+  enabled: true
+  roles: []
+  ignore_bots: true
+  delay_seconds: 5
+``` 

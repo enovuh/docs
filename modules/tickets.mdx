@@ -1,0 +1,32 @@
+# Tickets Module
+
+The Tickets module provides a streamlined support system within your server, allowing users to create private support tickets and communicate directly with staff.
+
+## Features
+
+- **Ticket Creation**: Users can open new support tickets.
+- **Private Channels**: Each ticket creates a private channel for communication.
+- **Staff Access Control**: Only authorized staff can view and manage tickets.
+- **Ticket Transcripts**: Generate logs of ticket conversations.
+
+## Commands
+
+- `/ticket open [reason]`: Opens a new support ticket.
+- `/ticket close [ticket_id]`: Closes an open ticket.
+- `/ticket add [user] [ticket_id]`: Adds a user to a ticket.
+- `/ticket remove [user] [ticket_id]`: Removes a user from a ticket.
+- `/ticket transcript [ticket_id]`: Generates a transcript of a ticket.
+
+## Configuration
+
+Configuration for the Tickets module involves setting up a ticket category, support roles, and default messages.
+
+```
+# Example configuration for the Tickets module
+tickets:
+  enabled: true
+  category_id: "YOUR_TICKET_CATEGORY_ID"
+  support_roles: []
+  welcome_message: "Thank you for opening a ticket! Our team will be with you shortly."
+  log_channel_id: ""
+``` 

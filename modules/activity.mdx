@@ -1,0 +1,27 @@
+# Activity Module
+
+The Activity module is designed to track and display various user activities within your community. This can include anything from message counts to voice channel participation.
+
+## Features
+
+- **User Activity Tracking**: Keep a record of how active users are.
+- **Leaderboards**: Display top users based on their activity.
+- **Customizable Metrics**: Define what constitutes "activity" for your server.
+
+## Commands
+
+- `/activity stats [user]`: Shows the activity statistics for a user.
+- `/activity leaderboard`: Displays the top active users.
+
+## Configuration
+
+Configuration for the Activity module can be done through the dashboard or by using specific commands.
+
+```
+# Example configuration for the Activity module
+activity:
+  enabled: true
+  channel_blacklist: []
+  voice_activity_points: 1
+  message_activity_points: 0.5
+``` 

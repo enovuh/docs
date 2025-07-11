@@ -1,101 +1,122 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
-  "name": "enovuh",
-  "theme": "mint",
+  "name": "Jah.rip Documentation",
   "logo": {
-    "dark": "https://cdn.discordapp.com/avatars/1346591277944148119/e8b7a428a325ddb84d2478210c272915.png?size=1024",
-    "light": "https://cdn.discordapp.com/avatars/1346591277944148119/e8b7a428a325ddb84d2478210c272915.png?size=1024"
+    "dark": "/static/logo-dark.png",
+    "light": "/static/logo-light.png"
   },
-  "favicon": "https://cdn.discordapp.com/avatars/1346591277944148119/e8b7a428a325ddb84d2478210c272915.png?size=256",
+  "favicon": "/static/favicon.png",
   "colors": {
-    "primary": "#6D28D9",
-    "light": "#A78BFA",
-    "dark": "#4C1D95"
+    "primary": "#FF0077",
+    "light": "#FFB8D9",
+    "dark": "#8C0043",
+    "onBackground": "#E6E6E6"
   },
-  "modeToggle": {
-    "default": "dark",
-    "isHidden": true
-  },
-  "topbarLinks": [
-    {
-      "name": "support server",
-      "url": "https://discord.gg/enovuh"
-    }
-  ],
   "topbarCtaButton": {
-    "name": "invite bot",
-    "url": "https://enovuh.lol/invite"
+    "name": "GitHub",
+    "url": "https://github.com/jah.rip"
   },
-  "redirects": [
+  "tabs": [
     {
-      "source": "/commands",
-      "destination": "https://enovuh.lol/commands"
+      "name": "Modules",
+      "url": "modules"
     },
     {
-      "source": "/status",
-      "destination": "https://enovuh.lol/status"
+      "name": "Features",
+      "url": "features"
     },
     {
-      "source": "/invite",
-      "destination": "https://enovuh.lol/invite"
-    },
-    {
-      "source": "/discord",
-      "destination": "https://discord.gg/enovuh"
+      "name": "Commands",
+      "url": "commands"
     }
   ],
-  "navigation": {
-    "groups": [
-      {
-        "group": "start here",
-        "icon": "play",
-        "pages": [
-          "index",
-          "intro/quickstart"
-        ]
-      },
-      {
-        "group": "modules",
-        "icon": "cube",
-        "pages": [
-          "modules/antinuke",
-          "modules/automod",
-          "modules/verification"
-        ]
-      },
-      {
-        "group": "config",
-        "icon": "gear",
-        "pages": []
-      },
-      {
-        "group": "integrations",
-        "icon": "music",
-        "pages": [
-          "integrations/music",
-          "integrations/lastfm",
-          "integrations/spotify"
-        ]
-      },
-      {
-        "group": "social integrations",
-        "icon": "hashtag",
-        "pages": [
-          "social/instagram",
-          "social/pinterest",
-          "social/twitter",
-          "social/youtube",
-          "social/tiktok",
-          "social/twitch",
-          "social/reddit",
-          "social/soundcloud"
-        ]
-      }
-    ]
-  },
-  "footerSocials": {
-    "discord": "https://discord.gg/enovuh",
-    "github": "https://github.com/enovuh-bot",
-    "twitter": "https://twitter.com/enovuh"
-  }
-}
+  "navigation": [
+    {
+      "group": "Introduction",
+      "pages": [
+        {
+          "group": "Getting Started",
+          "pages": ["introduction/getting-started"]
+        }
+      ]
+    },
+    {
+      "group": "Modules",
+      "pages": [
+        {
+          "group": "Activity",
+          "pages": ["modules/activity"]
+        },
+        {
+          "group": "Antinuke",
+          "pages": ["modules/antinuke"]
+        },
+        {
+          "group": "Antiraid",
+          "pages": ["modules/antiraid"]
+        },
+        {
+          "group": "Autorole",
+          "pages": ["modules/autorole"]
+        },
+        {
+          "group": "Giveaways",
+          "pages": ["modules/giveaways"]
+        },
+        {
+          "group": "Information",
+          "pages": ["modules/information"]
+        },
+        {
+          "group": "Last.fm",
+          "pages": ["modules/lastfm"]
+        },
+        {
+          "group": "Moderation",
+          "pages": ["modules/moderation"]
+        },
+        {
+          "group": "Music",
+          "pages": ["modules/music"]
+        },
+        {
+          "group": "Roleplay",
+          "pages": ["modules/roleplay"]
+        },
+        {
+          "group": "Settings",
+          "pages": ["modules/settings"]
+        },
+        {
+          "group": "Social",
+          "pages": [
+            "modules/social/instagram",
+            "modules/social/lastfm",
+            "modules/social/pinterest",
+            "modules/social/reddit",
+            "modules/social/soundcloud",
+            "modules/social/spotify",
+            "modules/social/tiktok",
+            "modules/social/twitter",
+            "modules/social/youtube"
+          ]
+        },
+        {
+          "group": "Spotify",
+          "pages": ["modules/spotify"]
+        },
+        {
+          "group": "Tickets",
+          "pages": ["modules/tickets"]
+        },
+        {
+          "group": "Voicemaster",
+          "pages": ["modules/voicemaster"]
+        },
+        {
+          "group": "Wordcloud",
+          "pages": ["modules/wordcloud"]
+        }
+      ]
+    }
+  ]
+} 

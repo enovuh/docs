@@ -1,0 +1,35 @@
+# Voicemaster Module
+
+The Voicemaster module provides advanced voice channel management features, allowing users to create and manage their own temporary voice channels, and administrators to configure dynamic voice channel settings.
+
+## Features
+
+- **Dynamic Voice Channels**: Users can create their own temporary voice channels.
+- **Channel Customization**: Allow users to rename, limit, or lock their voice channels.
+- **Admin Controls**: Administrators can set global limits and manage voice channel categories.
+- **Auto-kick/move**: Automatically move or kick users from inactive voice channels.
+
+## Commands
+
+- `/vm create`: Creates a new temporary voice channel.
+- `/vm name [new_name]`: Renames your voice channel.
+- `/vm limit [number]`: Sets a user limit for your voice channel.
+- `/vm lock`: Locks your voice channel.
+- `/vm unlock`: Unlocks your voice channel.
+- `/vm kick [user]`: Kicks a user from your voice channel.
+- `/vm permit [user]`: Permits a user to join your locked channel.
+
+## Configuration
+
+Configuration for the Voicemaster module includes setting up a parent category for dynamic channels, default channel settings, and permissions for customization.
+
+```
+# Example configuration for the Voicemaster module
+voicemaster:
+  enabled: true
+  create_channel_id: "YOUR_CREATE_CHANNEL_ID"
+  category_id: "YOUR_VOICEMASTER_CATEGORY_ID"
+  default_limit: 5
+  allow_rename: true
+  allow_limit: true
+``` 

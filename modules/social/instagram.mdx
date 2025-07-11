@@ -1,0 +1,28 @@
+# Social - Instagram Module
+
+The Instagram module allows for integration with Instagram, enabling the bot to fetch and display content from Instagram accounts directly in your Discord server. This can be useful for sharing updates, new posts, or simply showcasing content from linked Instagram profiles.
+
+## Features
+
+- **Post Notifications**: Get notified in Discord when a linked Instagram account posts new content.
+- **Profile Information**: Display basic information about an Instagram profile.
+- **Media Display**: Show images and videos from Instagram posts.
+
+## Commands
+
+- `/instagram track [username]`: Starts tracking a public Instagram account for new posts.
+- `/instagram untrack [username]`: Stops tracking an Instagram account.
+- `/instagram profile [username]`: Shows basic information about an Instagram profile.
+- `/instagram latest [username]`: Displays the latest post from a tracked Instagram account.
+
+## Configuration
+
+Configuration for the Instagram module involves setting up API access (if required by Instagram's policies) and defining which channels receive notifications.
+
+```
+# Example configuration for the Instagram module
+instagram:
+  enabled: true
+  tracking_channels: {}
+  # api_key: "YOUR_INSTAGRAM_API_KEY" # May be required depending on Instagram API changes
+``` 

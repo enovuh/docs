@@ -1,0 +1,29 @@
+# Social - Spotify Module
+
+The Spotify module allows for integration with Spotify, enabling the bot to fetch and display content from Spotify, including tracks, albums, and playlists, directly in your Discord server. This enhances the musical experience within your community by allowing users to share and discover music.
+
+## Features
+
+- **Track/Album/Playlist Display**: Show details and links for Spotify content.
+- **Now Playing**: Display what a user is currently listening to on Spotify.
+- **User Linking**: Seamlessly link a Discord account to a Spotify profile.
+
+## Commands
+
+- `/spotify play [track/album/playlist_url]`: Shares a Spotify track, album, or playlist.
+- `/spotify link [auth_code]`: Links your Discord account to your Spotify profile.
+- `/spotify np [user]`: Displays the song currently playing for you or another user from Spotify.
+- `/spotify unlink`: Unlinks your Spotify account.
+
+## Configuration
+
+Configuration for the Spotify module involves setting up Spotify API credentials (Client ID and Client Secret) and managing user permissions.
+
+```
+# Example configuration for the Spotify module
+spotify:
+  enabled: true
+  client_id: "YOUR_SPOTIFY_CLIENT_ID"
+  client_secret: "YOUR_SPOTIFY_CLIENT_SECRET"
+  # You might want to restrict commands to certain roles or channels.
+``` 

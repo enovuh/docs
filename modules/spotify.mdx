@@ -1,0 +1,27 @@
+# Spotify Module
+
+The Spotify module allows seamless integration with Spotify, enabling users to play music from Spotify directly in voice channels and share their listening activity.
+
+## Features
+
+- **Spotify Playback**: Stream music from Spotify playlists, albums, or tracks.
+- **User Linking**: Link Spotify accounts to Discord for personalized experiences.
+- **Share Listening**: Share what you're listening to with others.
+
+## Commands
+
+- `/spotify play [song/album/playlist_url]`: Plays content from Spotify.
+- `/spotify link [auth_code]`: Links your Spotify account.
+- `/spotify np`: Shows your currently playing Spotify song.
+
+## Configuration
+
+Configuration for the Spotify module involves setting up Spotify API credentials and managing user permissions.
+
+```
+# Example configuration for the Spotify module
+spotify:
+  enabled: true
+  client_id: "YOUR_SPOTIFY_CLIENT_ID"
+  client_secret: "YOUR_SPOTIFY_CLIENT_SECRET"
+``` 

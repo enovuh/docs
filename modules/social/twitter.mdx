@@ -1,0 +1,31 @@
+# Social - Twitter Module
+
+The Twitter module allows for integration with Twitter, enabling the bot to fetch and display content from Twitter profiles and tweets directly in your Discord server. This can be useful for sharing trending tweets, new posts from specific users, or engaging with Twitter discussions.
+
+## Features
+
+- **Tweet Notifications**: Get notified in Discord when a linked Twitter account posts new tweets.
+- **Profile Information**: Display basic information about a Twitter profile.
+- **Tweet Display**: Show tweets with their content, images, and links.
+
+## Commands
+
+- `/twitter track [username]`: Starts tracking a Twitter account for new tweets.
+- `/twitter untrack [username]`: Stops tracking a Twitter account.
+- `/twitter profile [username]`: Shows basic information about a Twitter profile.
+- `/twitter latest [username]`: Displays the latest tweet from a tracked Twitter account.
+
+## Configuration
+
+Configuration for the Twitter module involves setting up API access (if required by Twitter's policies) and defining which channels receive notifications.
+
+```
+# Example configuration for the Twitter module
+twitter:
+  enabled: true
+  tracking_channels: {}
+  # consumer_key: "YOUR_TWITTER_CONSUMER_KEY" # May be required depending on Twitter API changes
+  # consumer_secret: "YOUR_TWITTER_CONSUMER_SECRET" # May be required depending on Twitter API changes
+  # access_token: "YOUR_TWITTER_ACCESS_TOKEN" # May be required depending on Twitter API changes
+  # access_token_secret: "YOUR_TWITTER_ACCESS_TOKEN_SECRET" # May be required depending on Twitter API changes
+``` 

@@ -1,0 +1,28 @@
+# Social - TikTok Module
+
+The TikTok module allows for integration with TikTok, enabling the bot to fetch and display content from TikTok profiles and videos directly in your Discord server. This can be useful for sharing trending videos, new uploads from creators, or showcasing popular TikTok content.
+
+## Features
+
+- **Video Notifications**: Get notified in Discord when a linked TikTok account uploads new videos.
+- **Profile Information**: Display basic information about a TikTok profile.
+- **Video Display**: Show TikTok videos with their captions and links.
+
+## Commands
+
+- `/tiktok track [username]`: Starts tracking a public TikTok account for new videos.
+- `/tiktok untrack [username]`: Stops tracking a TikTok account.
+- `/tiktok profile [username]`: Shows basic information about a TikTok profile.
+- `/tiktok latest [username]`: Displays the latest video from a tracked TikTok account.
+
+## Configuration
+
+Configuration for the TikTok module involves setting up API access (if required by TikTok's policies) and defining which channels receive notifications.
+
+```
+# Example configuration for the TikTok module
+tiktok:
+  enabled: true
+  tracking_channels: {}
+  # api_key: "YOUR_TIKTOK_API_KEY" # May be required depending on TikTok API changes
+``` 

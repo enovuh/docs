@@ -1,0 +1,28 @@
+# Social - YouTube Module
+
+The YouTube module allows for integration with YouTube, enabling the bot to fetch and display content from YouTube channels and videos directly in your Discord server. This can be useful for sharing new video uploads from creators, trending videos, or showcasing popular YouTube content.
+
+## Features
+
+- **Video Notifications**: Get notified in Discord when a linked YouTube channel uploads new videos.
+- **Channel Information**: Display basic information about a YouTube channel.
+- **Video Display**: Show YouTube video embeds with their titles and links.
+
+## Commands
+
+- `/youtube track [channel_id/url]`: Starts tracking a YouTube channel for new videos.
+- `/youtube untrack [channel_id/url]`: Stops tracking a YouTube channel.
+- `/youtube channel [channel_id/url]`: Shows basic information about a YouTube channel.
+- `/youtube latest [channel_id/url]`: Displays the latest video from a tracked YouTube channel.
+
+## Configuration
+
+Configuration for the YouTube module involves setting up API access (if required by YouTube's policies) and defining which channels receive notifications.
+
+```
+# Example configuration for the YouTube module
+youtube:
+  enabled: true
+  tracking_channels: {}
+  # api_key: "YOUR_YOUTUBE_API_KEY" # May be required depending on YouTube API changes
+``` 

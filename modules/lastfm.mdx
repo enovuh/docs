@@ -1,0 +1,28 @@
+# Last.fm Module
+
+The Last.fm module allows your community to integrate their Last.fm profiles with the bot, enabling features like displaying currently playing songs, top artists, and recent tracks directly in Discord.
+
+## Features
+
+- **Now Playing**: Show what a user is currently listening to.
+- **Top Artists/Tracks**: Display a user's most listened to artists or tracks.
+- **User Linking**: Users can link their Last.fm accounts to their Discord profiles.
+
+## Commands
+
+- `/lastfm set [username]`: Links your Last.fm account.
+- `/lastfm np`: Shows your currently playing song.
+- `/lastfm top [artists/tracks] [period]`: Displays your top artists or tracks.
+- `/lastfm recent`: Shows your most recent tracks.
+
+## Configuration
+
+Configuration for the Last.fm module involves setting up API keys and enabling/disabling features.
+
+```
+# Example configuration for the Last.fm module
+lastfm:
+  enabled: true
+  api_key: "YOUR_LASTFM_API_KEY"
+  default_period: "overall"
+``` 

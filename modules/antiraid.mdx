@@ -1,0 +1,31 @@
+# Antiraid Module
+
+The Antiraid module provides automated protection against sudden influxes of new accounts or coordinated attacks, helping to secure your server during potential raid events.
+
+## Features
+
+- **Join Rate Limiting**: Restrict how many new members can join within a specific time frame.
+- **Account Age Verification**: Automatically check the age of new accounts.
+- **Suspicious Join Detection**: Identify and quarantine potentially malicious new members.
+- **Automated Actions**: Configure actions like kicking or banning suspected raiders.
+
+## Commands
+
+- `/antiraid enable`: Enables antiraid protection.
+- `/antiraid disable`: Disables antiraid protection.
+- `/antiraid settings`: Configures antiraid parameters.
+- `/antiraid status`: Shows the current status of antiraid protection.
+
+## Configuration
+
+Configuration for the Antiraid module involves setting thresholds for join rates, account age, and defining response actions.
+
+```
+# Example configuration for the Antiraid module
+antiraid:
+  enabled: true
+  join_limit_per_minute: 10
+  min_account_age_hours: 24
+  action: "kick"
+  alert_channel_id: ""
+``` 

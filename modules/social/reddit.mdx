@@ -1,0 +1,31 @@
+# Social - Reddit Module
+
+The Reddit module allows for integration with Reddit, enabling the bot to fetch and display content from subreddits and user profiles directly in your Discord server. This can be useful for sharing trending posts, new content from specific communities, or engaging with Reddit discussions.
+
+## Features
+
+- **Subreddit Monitoring**: Get notifications in Discord for new hot, top, or new posts from specified subreddits.
+- **User Post Tracking**: Track new posts from specific Reddit users.
+- **Post Display**: Show Reddit posts with their titles, images, and links.
+- **Meme/Image Feeds**: Create channels that automatically pull images from designated subreddits.
+
+## Commands
+
+- `/reddit track subreddit [subreddit_name] [channel] [sort_type]`: Starts tracking a subreddit.
+  - `sort_type`: `hot`, `new`, `top`, `rising`
+- `/reddit untrack subreddit [subreddit_name]`: Stops tracking a subreddit.
+- `/reddit user posts [username]`: Shows recent posts from a Reddit user.
+- `/reddit meme`: Fetches a random meme from popular meme subreddits.
+
+## Configuration
+
+Configuration for the Reddit module involves setting up API access (if required by Reddit's policies) and defining which channels receive notifications.
+
+```
+# Example configuration for the Reddit module
+reddit:
+  enabled: true
+  tracking_channels: {}
+  # client_id: "YOUR_REDDIT_CLIENT_ID" # May be required depending on Reddit API changes
+  # client_secret: "YOUR_REDDIT_CLIENT_SECRET" # May be required depending on Reddit API changes
+``` 

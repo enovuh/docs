@@ -1,0 +1,34 @@
+# Moderation Module
+
+The Moderation module provides a comprehensive suite of tools to help you manage your server and maintain a positive environment. It includes commands for handling rule-breaking, issuing warnings, and managing user access.
+
+## Features
+
+- **Warning System**: Issue warnings to users for minor infractions.
+- **Kick/Ban System**: Remove or permanently ban users from your server.
+- **Mute/Unmute**: Temporarily restrict users from sending messages.
+- **Pruning Messages**: Efficiently delete multiple messages.
+- **Audit Logging**: Keep a detailed log of all moderation actions.
+
+## Commands
+
+- `/warn [user] [reason]`: Issues a warning to a user.
+- `/kick [user] [reason]`: Kicks a user from the server.
+- `/ban [user] [reason]`: Bans a user from the server.
+- `/mute [user] [duration] [reason]`: Mutes a user for a specified duration.
+- `/unmute [user]`: Unmutes a user.
+- `/purge [amount]`: Deletes a specified number of messages.
+
+## Configuration
+
+Configuration for the Moderation module includes setting up moderation roles, log channels, and defining automatic actions based on warning thresholds.
+
+```
+# Example configuration for the Moderation module
+moderation:
+  enabled: true
+  mod_roles: []
+  log_channel_id: ""
+  warning_threshold_kick: 3
+  warning_threshold_ban: 5
+``` 

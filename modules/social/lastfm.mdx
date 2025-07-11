@@ -1,0 +1,33 @@
+# Social - Last.fm Module
+
+The Last.fm social module enhances community engagement by allowing users to share their listening habits directly from Last.fm. This module provides commands to display currently playing songs, top artists, and recent tracks, fostering a musical exchange within your server.
+
+## Features
+
+- **Now Playing Display**: Show what a user is currently listening to on Last.fm.
+- **Top Tracks/Artists**: Display a user's most listened to tracks or artists over various periods.
+- **Recent Tracks**: Show a list of a user's recently played songs.
+- **User Linking**: Seamlessly link a Discord account to a Last.fm profile.
+
+## Commands
+
+- `/lastfm set [lastfm_username]`: Links your Discord account to your Last.fm profile.
+- `/lastfm np [user]`: Displays the song currently playing for you or another user.
+- `/lastfm top [type] [period] [user]`: Shows top tracks or artists for a specified period.
+  - `type`: `tracks` or `artists`
+  - `period`: `overall`, `7day`, `1month`, `3month`, `6month`, `12month`
+- `/lastfm recent [user]`: Shows recent tracks for you or another user.
+- `/lastfm unlink`: Unlinks your Last.fm account.
+
+## Configuration
+
+Configuration for the Last.fm module involves setting up API keys and enabling/disabling features. Ensure you have a valid Last.fm API key for full functionality.
+
+```
+# Example configuration for the Last.fm module
+lastfm:
+  enabled: true
+  api_key: "YOUR_LASTFM_API_KEY"
+  default_top_period: "overall"
+  # You might want to restrict commands to certain roles or channels.
+``` 

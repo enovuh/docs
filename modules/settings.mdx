@@ -1,0 +1,30 @@
+# Settings Module
+
+The Settings module allows administrators to configure core aspects of the bot's behavior and integrations within their server. This includes prefix settings, default permissions, and other global configurations.
+
+## Features
+
+- **Prefix Customization**: Change the bot's command prefix.
+- **Default Permissions**: Set default permissions for new roles or channels.
+- **Language Settings**: Configure the bot's display language.
+- **Module Toggling**: Enable or disable specific modules for your server.
+
+## Commands
+
+- `/settings prefix [new_prefix]`: Sets a new command prefix for the bot.
+- `/settings language [lang_code]`: Changes the bot's language.
+- `/settings module [module_name] [enable/disable]`: Toggles a module on or off.
+- `/settings view`: Displays current server settings.
+
+## Configuration
+
+Configuration for the Settings module is primarily done through commands or the dedicated dashboard interface.
+
+```
+# Example configuration for the Settings module
+settings:
+  enabled: true
+  prefix: "!"
+  language: "en_US"
+  default_permissions: {}
+``` 

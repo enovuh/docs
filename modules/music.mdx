@@ -1,0 +1,33 @@
+# Music Module
+
+The Music module allows users to play music from various sources directly in voice channels, providing a seamless and enjoyable audio experience for your community.
+
+## Features
+
+- **Multiple Sources**: Supports playback from YouTube, Spotify, and other popular platforms.
+- **Queue Management**: Easily add, remove, and reorder songs in the playback queue.
+- **Playback Controls**: Commands for play, pause, skip, stop, and volume control.
+- **24/7 Playback**: Keep music playing continuously in a voice channel.
+
+## Commands
+
+- `/play [song/url]`: Plays a song or adds it to the queue.
+- `/queue`: Displays the current song queue.
+- `/skip`: Skips the current song.
+- `/stop`: Stops the music and clears the queue.
+- `/volume [level]`: Adjusts the playback volume.
+- `/loop [off/song/queue]`: Sets the loop mode.
+- `/nowplaying`: Shows the currently playing song.
+
+## Configuration
+
+Configuration for the Music module involves setting up permissions, default volume, and enabling/disabling specific music sources.
+
+```
+# Example configuration for the Music module
+music:
+  enabled: true
+  default_volume: 50
+  max_queue_length: 50
+  allowed_sources: ["youtube", "spotify"]
+``` 

@@ -1,0 +1,29 @@
+# Social - Soundcloud Module
+
+The Soundcloud module allows for integration with Soundcloud, enabling the bot to fetch and display content from Soundcloud profiles and tracks directly in your Discord server. This can be useful for sharing new music, mixes, or showcasing audio content from linked Soundcloud accounts.
+
+## Features
+
+- **Track Notifications**: Get notified in Discord when a linked Soundcloud account uploads new tracks.
+- **Profile Information**: Display basic information about a Soundcloud profile.
+- **Track Display**: Show details and links for Soundcloud tracks.
+
+## Commands
+
+- `/soundcloud track [username]`: Starts tracking a Soundcloud account for new uploads.
+- `/soundcloud untrack [username]`: Stops tracking a Soundcloud account.
+- `/soundcloud profile [username]`: Shows basic information about a Soundcloud profile.
+- `/soundcloud latest [username]`: Displays the latest track from a tracked Soundcloud account.
+
+## Configuration
+
+Configuration for the Soundcloud module involves setting up API access (if required by Soundcloud's policies) and defining which channels receive notifications.
+
+```
+# Example configuration for the Soundcloud module
+soundcloud:
+  enabled: true
+  tracking_channels: {}
+  # client_id: "YOUR_SOUNDCLOUD_CLIENT_ID" # May be required depending on Soundcloud API changes
+  # client_secret: "YOUR_SOUNDCLOUD_CLIENT_SECRET" # May be required depending on Soundcloud API changes
+``` 
